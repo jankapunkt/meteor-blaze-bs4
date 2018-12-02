@@ -1,0 +1,47 @@
+<template name="badges">
+    <h1>Badges</h1>
+    <hr>
+
+    <h2>Example</h2>
+    <h1>Example heading {{> badge type="secondary" content="New"}}</h1>
+    <h2>Example heading {{> badge type="secondary" content="New"}}</h2>
+    <h3>Example heading {{> badge type="secondary" content="New"}}</h3>
+    <h4>Example heading {{> badge type="secondary" content="New"}}</h4>
+    <h5>Example heading {{> badge type="secondary" content="New"}}</h5>
+    <h6>Example heading {{> badge type="secondary" content="New"}}</h6>
+
+    <h2>Button</h2>
+    <button type="button" class="btn btn-primary">
+        Notifications {{> badge type="light" content=4}}
+    </button>
+
+    <h2>Contextual variations</h2>
+    {{> badge type="primary" content="Primary"}}
+    {{> badge type="secondary" content="Secondary"}}
+    {{> badge type="success" content="Success"}}
+    {{> badge type="danger" content="Danger"}}
+    {{> badge type="warning" content="Warning"}}
+    {{> badge type="info" content="Info"}}
+    {{> badge type="light" content="Light"}}
+    {{> badge type="dark" content="Dark"}}
+
+    <h2>Pill badges</h2>
+    {{> badge type="primary" content="Primary" pill=true}}
+    {{> badge type="secondary" content="Secondary" pill=true}}
+    {{> badge type="success" content="Success" pill=true}}
+    {{> badge type="danger" content="Danger" pill=true}}
+    {{> badge type="warning" content="Warning" pill=true}}
+    {{> badge type="info" content="Info" pill=true}}
+    {{> badge type="light" content="Light" pill=true}}
+    {{> badge type="dark" content="Dark" pill=true}}
+
+    <h2>Links</h2>
+    {{> badge type="primary" content="Primary" link=true atts=atts}}
+    {{> badge type="secondary" content="Secondary" link=true atts=atts}}
+    {{> badge type="success" content="Success" link=true atts=atts}}
+    {{> badge type="danger" content="Danger" link=true atts=atts}}
+    {{> badge type="warning" content="Warning" link=true atts=atts}}
+    {{> badge type="info" content="Info" link=true atts=atts}}
+    {{> badge type="light" content="Light" link=true atts=atts}}
+    {{> badge type="dark" content="Dark" link=true atts=atts}}
+</template>

@@ -1,0 +1,10 @@
+<template name="badge">
+    {{#if link}}
+        <a id="{{id}}" {{atts}} href="{{href}}"
+           class="badge {{#if pill}}badge-pill{{/if}} badge-{{type}}">
+            {{content}}
+        </a>
+    {{else}}
+        <span id="{{id}}" {{atts}} class="badge {{#if pill}}badge-pill{{/if}} badge-{{type}}">{{content}}</span>
+    {{/if}}
+</template>

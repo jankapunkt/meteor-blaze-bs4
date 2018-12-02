@@ -18,6 +18,7 @@ Package.onUse(function (api) {
   api.use('templating')
   api.addFiles([
     'alert/alert.js',
-    'alert/alert.html'
+    'alert/alert.html',
+    'badge/badge.html'
   ], 'client')
 })
