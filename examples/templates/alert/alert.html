@@ -1,0 +1,52 @@
+<template name="alerts">
+    <h1>Alerts</h1>
+    <hr>
+    <h6>Simple Alerts</h6>
+    {{#alert type="primary"}}
+        A simple primary alert—check it out!
+    {{/alert}}
+    {{#alert type="secondary"}}
+        A simple primary alert—check it out!
+    {{/alert}}
+    {{#alert type="success"}}
+        A simple primary alert—check it out!
+    {{/alert}}
+    {{#alert type="danger"}}
+        A simple primary alert—check it out!
+    {{/alert}}
+    {{#alert type="warning"}}
+        A simple primary alert—check it out!
+    {{/alert}}
+    {{#alert type="info"}}
+        A simple primary alert—check it out!
+    {{/alert}}
+    {{#alert type="light"}}
+        A simple primary alert—check it out!
+    {{/alert}}
+    {{#alert type="dark"}}
+        A simple primary alert—check it out!
+    {{/alert}}
+
+    <h6>Additional content</h6>
+    {{#alert type="primary" heading="Well done!"}}
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
+            so
+            that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    {{/alert}}
+
+    <h6>Dismissing</h6>
+    {{#alert type="secondary" heading="Dismissible" dismissible=true}}
+        <p>Click the x Button to dismiss this alert.</p>
+    {{/alert}}
+
+    <h6>With events</h6>
+    {{#alert type="secondary" heading="OnClose" dismissible=true onClose=onClose}}
+        <p>You can hook up events like <code>onClose</code>.</p>
+    {{/alert}}
+
+    {{#alert type="info" heading="OnClosed" dismissible=true onClosed=onClosed}}
+        <p>You can hook up events like <code>onClosed</code>.</p>
+    {{/alert}}
+</template>
