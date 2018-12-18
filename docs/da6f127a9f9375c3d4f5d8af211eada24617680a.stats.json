@@ -3,22 +3,22 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 699382,
-  "totalMinifiedGzipBytes": 194557,
+  "totalMinifiedBytes": 703888,
+  "totalMinifiedGzipBytes": 195827,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      311853,
+      311908,
       {
         "node_modules": {
           "meteor": {
             "modules": {
               "client.js": 124,
               "css.js": 261,
-              "install-packages.js": 1862,
+              "install-packages.js": 1917,
               "process.js": 347,
               "reify.js": 71,
               "stubs.js": 97,
@@ -498,6 +498,19 @@
     "packages/standard-minifier-js.js": 40,
     "packages/shell-server.js": 32,
     "packages/autopublish.js": 31,
+    "packages/reactive-dict.js": [
+      3920,
+      {
+        "node_modules": {
+          "meteor": {
+            "reactive-dict": {
+              "migration.js": 774,
+              "reactive-dict.js": 2649
+            }
+          }
+        }
+      }
+    ],
     "packages/underscore.js": 14349,
     "packages/jquery.js": [
       97271,
@@ -571,11 +584,11 @@
       }
     ],
     "app/global-imports.js": [
-      728,
+      779,
       {}
     ],
     "app/app.js": [
-      9056,
+      9534,
       {
         "templates": {
           "alert": {
@@ -586,25 +599,22 @@
           "badge": {
             "badge.html": 57,
             "template.badge.js": 2807,
-            "badge.js": 137
+            "badge.js": 185
           },
           "breadcrumb": {
             "breadcrumb.html": 62,
             "template.breadcrumb.js": 340,
-            "breadcrumb.js": 240
+            "breadcrumb.js": 288
           },
           "helpers": {
-            "codeblock.html": 61,
-            "template.codeblock.js": 634,
-            "codeblock.js": 302,
-            "helpers.js": 216,
+            "helpers.js": 194,
             "shared.js": 186
           }
         },
         "client": {
           "main.html": 56,
-          "template.main.js": 328,
-          "main.js": 353
+          "template.main.js": 1294,
+          "main.js": 847
         }
       }
     ]
