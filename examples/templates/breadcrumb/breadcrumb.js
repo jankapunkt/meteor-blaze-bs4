@@ -1,7 +1,8 @@
+import { Template } from 'meteor/templating'
 import './breadcrumb.html'
 
 Template.breadcrumbs.helpers({
-  bredcrumbEntries() {
+  bredcrumbEntries () {
     return [
       {
         title: 'home',
