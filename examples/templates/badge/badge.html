@@ -15,33 +15,19 @@
         Notifications {{> badge type="light" content=4}}
     </button>
 
+
     <h2>Contextual variations</h2>
-    {{> badge type="primary" content="Primary"}}
-    {{> badge type="secondary" content="Secondary"}}
-    {{> badge type="success" content="Success"}}
-    {{> badge type="danger" content="Danger"}}
-    {{> badge type="warning" content="Warning"}}
-    {{> badge type="info" content="Info"}}
-    {{> badge type="light" content="Light"}}
-    {{> badge type="dark" content="Dark"}}
+    {{#each themeColors}}
+        {{> badge type=this content=this}}
+    {{/each}}
 
     <h2>Pill badges</h2>
-    {{> badge type="primary" content="Primary" pill=true}}
-    {{> badge type="secondary" content="Secondary" pill=true}}
-    {{> badge type="success" content="Success" pill=true}}
-    {{> badge type="danger" content="Danger" pill=true}}
-    {{> badge type="warning" content="Warning" pill=true}}
-    {{> badge type="info" content="Info" pill=true}}
-    {{> badge type="light" content="Light" pill=true}}
-    {{> badge type="dark" content="Dark" pill=true}}
+    {{#each themeColors}}
+        {{> badge type=this content=this pill=true}}
+    {{/each}}
 
     <h2>Links</h2>
-    {{> badge type="primary" content="Primary" link=true atts=atts}}
-    {{> badge type="secondary" content="Secondary" link=true atts=atts}}
-    {{> badge type="success" content="Success" link=true atts=atts}}
-    {{> badge type="danger" content="Danger" link=true atts=atts}}
-    {{> badge type="warning" content="Warning" link=true atts=atts}}
-    {{> badge type="info" content="Info" link=true atts=atts}}
-    {{> badge type="light" content="Light" link=true atts=atts}}
-    {{> badge type="dark" content="Dark" link=true atts=atts}}
+    {{#each themeColors}}
+        {{> badge type=this content=this link=true atts=atts}}
+    {{/each}}
 </template>
