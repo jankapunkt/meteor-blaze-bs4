@@ -56,8 +56,8 @@ Wherever referenced as parameters (and not stated otherwise) these values are re
 
 The following properties are documented:
 
-* name - the name of the template as it will be included
-* dynamic - whether a template is dynamic (`{{#example}}<p>custom markup</p>{{/example}}`) or not (`{{> example}}`)
+* name - the **name of the template** as it will be included
+* dynamic - whether a template is dynamic (`{{#example}}<p>custom markup</p>{{/example}}`) or not (`{{> example}}`). Sometimes both are possible.
 * param - description of a parameter; follows the pattern `name` - `type` - `description`
 * event - description of an event callback that can be passed from another template; follows the pattern `name` - `eventName` - `description` 
 
@@ -65,7 +65,7 @@ The following properties are documented:
 
 **name:** `alert`
 
-**dynamic:** yes
+**dynamic:** yes (optional)
 
 **param** type (String) - One of the theme color names.
 
@@ -77,7 +77,7 @@ The following properties are documented:
 
 **param** onClosed ('closed.bs.alert') - This event is fired when the alert has been closed (will wait for CSS transitions to complete).
 
-**param**
+**example**
 
 ```html
 <template name="myTemplate">
@@ -89,7 +89,6 @@ The following properties are documented:
     <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 {{/alert}}
 </template>
-
 ```
 
 ```javascript
@@ -104,3 +103,28 @@ Template.myTemplate.helpers({
   }
 })
 ```
+
+**example**
+
+```html
+<template name="myTemplate">
+{{> alert type="success" heading="Yeah, one-liners!" dismiss=true onClose=onClose onClosed=onClosed}}
+</template>
+```
+
+#### Badge
+
+name: `badge`
+
+**dynamic:** no
+
+**param** type (String) - One of the theme color names.
+
+
+**example**
+
+```html
+<template name="myTemplate">
+  <h1>Example heading {{> badge type="secondary" content="New"}}</h1>
+</template>
+``` 
