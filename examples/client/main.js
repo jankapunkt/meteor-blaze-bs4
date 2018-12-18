@@ -39,7 +39,6 @@ Template.body.helpers({
 
 Template.body.events({
   'click .template-select' (event, templateInstance) {
-    event.preventDefault()
     const template = templateInstance.$(event.currentTarget).data('template')
     templateInstance.state.set('current', template)
   }
