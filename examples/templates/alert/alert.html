@@ -1,31 +1,15 @@
 <template name="alerts">
     <h1>Alerts</h1>
     <hr>
+    <h6>One-Liner</h6>
+    {{>alert type="secondary" heading="One-Liner, yeah!"}}
+
     <h6>Simple Alerts</h6>
-    {{#alert type="primary"}}
-        A simple primary alert—check it out!
-    {{/alert}}
-    {{#alert type="secondary"}}
-        A simple primary alert—check it out!
-    {{/alert}}
-    {{#alert type="success"}}
-        A simple primary alert—check it out!
-    {{/alert}}
-    {{#alert type="danger"}}
-        A simple primary alert—check it out!
-    {{/alert}}
-    {{#alert type="warning"}}
-        A simple primary alert—check it out!
-    {{/alert}}
-    {{#alert type="info"}}
-        A simple primary alert—check it out!
-    {{/alert}}
-    {{#alert type="light"}}
-        A simple primary alert—check it out!
-    {{/alert}}
-    {{#alert type="dark"}}
-        A simple primary alert—check it out!
-    {{/alert}}
+    {{#each themeColors}}
+        {{#alert type=this}}
+            A simple {{this}} alert—check it out!
+        {{/alert}}
+    {{/each}}
 
     <h6>Additional content</h6>
     {{#alert type="primary" heading="Well done!"}}
