@@ -27,6 +27,32 @@ global.Popper = popper // fixes some issues with Popper and Meteor
 
 The templates are automatically added and are immediately available.
 
+## Developmnent Progress
+
+- [x] Alerts
+- [x] Badge
+- [x] Breadcrumb
+- [ ] Buttons
+- [ ] Button group
+- [ ] Card
+- [ ] Carousel
+- [ ] Collapse
+- [ ] Dropdowns
+- [ ] Forms
+- [ ] Input group
+- [ ] Jumbotron
+- [ ] List group
+- [ ] Modal
+- [ ] Navs
+- [ ] Navbar
+- [ ] Pagination
+- [ ] Popovers
+- [ ] Progress
+- [ ] Scrollspy
+- [ ] Tooltips 
+
+
+
 ## Usage
 
 ### Some general info
