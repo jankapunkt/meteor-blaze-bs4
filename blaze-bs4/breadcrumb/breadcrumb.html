@@ -1,0 +1,15 @@
+<template name="breadcrumb">
+    <nav aria-label="breadcrumb" {{navatts}}>
+        <ol class="breadcrumb" {{olatts}}>
+            {{#each entries}}
+                {{#if this.active}}
+                    <li class="breadcrumb-item active" aria-current="page">{{this.title}}</li>
+                {{else}}
+                    <li class="breadcrumb-item">
+                        <a {{this}}>{{this.title}}</a>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ol>
+    </nav>
+</template>

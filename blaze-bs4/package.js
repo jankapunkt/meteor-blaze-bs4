@@ -19,6 +19,7 @@ Package.onUse(function (api) {
   api.addFiles([
     'alert/alert.js',
     'alert/alert.html',
-    'badge/badge.html'
+    'badge/badge.html',
+    'breadcrumb/breadcrumb.html'
   ], 'client')
 })
