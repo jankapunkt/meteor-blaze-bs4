@@ -128,3 +128,18 @@ name: `badge`
   <h1>Example heading {{> badge type="secondary" content="New"}}</h1>
 </template>
 ``` 
+
+#### Breadcrumb
+
+name: `breadcrumb`
+
+dynamic: no
+
+param: entries (Array) - List of all entries for being rendered as links.
+
+entries.entry (Object) - Representing all required data to create a link.
+
+entry.title (String) - The title / label to be displayed
+entry.href (String) - The route / url
+entry.classes (String) - Optional. Add optional classnames to each link
+entry.<html a attributes> - any html <a> related attributes
