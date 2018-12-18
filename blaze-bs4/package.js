@@ -20,6 +20,8 @@ Package.onUse(function (api) {
     'alert/alert.js',
     'alert/alert.html',
     'badge/badge.html',
-    'breadcrumb/breadcrumb.html'
+    'breadcrumb/breadcrumb.html',
+    'button/button.html',
+    'button/button.js'
   ], 'client')
 })

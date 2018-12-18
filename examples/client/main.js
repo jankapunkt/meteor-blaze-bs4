@@ -9,6 +9,7 @@ import '../templates/helpers/helpers'
 import '../templates/alert/alert'
 import '../templates/badge/badge'
 import '../templates/breadcrumb/breadcrumb'
+import '../templates/buttons/buttons'
 import './main.html'
 
 global.Popper = popper
@@ -16,7 +17,8 @@ global.Popper = popper
 const allTemplates = [
   'alerts',
   'badges',
-  'breadcrumbs'
+  'breadcrumbs',
+  'buttons'
 ]
 
 Template.body.onCreated(function () {

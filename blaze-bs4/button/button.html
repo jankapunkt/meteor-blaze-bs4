@@ -1,0 +1,13 @@
+<template name="button">
+    <button {{atts}}
+            id="{{id}}"
+            type="{{#if type}}{{type}}{{else}}button{{/if}}"
+            class="btn {{#if size}}btn-{{size}}{{/if}} btn-{{#if outline}}outline-{{/if}}{{colortype}} {{class}}"
+            disabled="{{#if disabled}}disabled{{/if}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </button>
+</template>

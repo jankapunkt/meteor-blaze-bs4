@@ -32,7 +32,7 @@ The templates are automatically added and are immediately available.
 - [x] Alerts
 - [x] Badge
 - [x] Breadcrumb
-- [ ] Buttons
+- [x] Buttons
 - [ ] Button group
 - [ ] Card
 - [ ] Carousel
@@ -157,11 +157,11 @@ name: `badge`
 
 #### Breadcrumb
 
-name: `breadcrumb`
+**name** `breadcrumb`
 
-dynamic: no
+**dynamic** no
 
-param: entries (Array) - List of all entries for being rendered as links.
+**param** entries (Array) - List of all entries for being rendered as links.
 
 entries.entry (Object) - Representing all required data to create a link.
 
@@ -169,3 +169,75 @@ entry.title (String) - The title / label to be displayed
 entry.href (String) - The route / url
 entry.classes (String) - Optional. Add optional classnames to each link
 entry.<html a attributes> - any html <a> related attributes
+
+example
+
+```javascript
+Template.myTemplate.helpers({
+  bredcrumbEntries () {
+    return [
+      {
+        title: 'home',
+        active: false,
+        href: '/'
+      },
+      {
+        title: 'examples',
+        active: false,
+        href: '/examples'
+      },
+      {
+        title: 'breadcrumbs',
+        active: true,
+        href: '/examples/breadcrumbs'
+      }
+    ]
+  }
+})
+```
+
+```html
+<template name="myTemplate">
+  {{> breadcrumb entries=bredcrumbEntries}}
+</template>
+```
+
+#### Button
+
+
+**name** `button`
+
+**dynamic** yes / no
+
+**param** type (String) - One of "button", "submit", "reset"
+
+**param** colortype (String) - One of the theme color names. Additional possible: "link"
+
+**param** id (String) - id of the button
+
+**param** class (String) - additional classes
+
+**param** atts (Object) - Dynamic attributes, overrides attributes, that are manually set.
+
+**param** label (String) - Set this to a string to display a label in non-dynamic buttons. Leave out if you want dynamic content blocks.
+
+**param** size (String) - one of "lg", "sm", "block", leave for default
+
+**param** outline (Boolean) - convert to outline button style
+
+**param** disabed (Boolean) - disable component (no events fired if true)
+
+**example non-dynamic**
+
+```html
+{{> button colortype="primary" label="Large Button" size="lg"}}
+```
+
+**example dynamic**
+
+```html
+{{# button colortype="primary" size="lg"}}
+    <i class="fa fa-fw fa-pencil"></i>
+    <span>Custom Label</span>
+{{/button}}
+```
