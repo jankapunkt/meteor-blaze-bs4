@@ -4,9 +4,12 @@
 </head>
 
 <body>
-<div class="container">
-    {{> alerts}}
-    {{> badges}}
-    {{> breadcrumbs}}
+<div class="container mt-4">
+    {{#each bstemplates}}
+        <a class="btn btn-sm {{#if isCurrent this}}btn-primary{{else}}btn-secondary{{/if}} template-select"
+                data-template="{{this}}" href="#{{this}}">{{this}}</a>
+    {{/each}}
+    <hr>
+    {{> Template.dynamic template=current}}
 </div>
 </body>
