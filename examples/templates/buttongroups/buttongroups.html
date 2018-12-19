@@ -27,4 +27,36 @@
             {{> button colortype="secondary" label="8"}}
         {{/buttonGroup}}
     {{/buttonToolbar}}
+
+
+    {{#buttonToolbar class="my-3" label="Toolbar with button groups"}}
+        {{#buttonGroup class="mr-2" label="First group"}}
+            {{> button colortype="secondary" label="1"}}
+            {{> button colortype="secondary" label="2"}}
+            {{> button colortype="secondary" label="3"}}
+            {{> button colortype="secondary" label="4"}}
+        {{/buttonGroup}}
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text" id="btnGroupAddon">@</div>
+            </div>
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+        </div>
+    {{/buttonToolbar}}
+
+    {{#buttonToolbar class="my-3 justify-content-between" label="Toolbar with button groups"}}
+        {{#buttonGroup class="mr-2" label="First group"}}
+            {{> button colortype="secondary" label="1"}}
+            {{> button colortype="secondary" label="2"}}
+            {{> button colortype="secondary" label="3"}}
+            {{> button colortype="secondary" label="4"}}
+        {{/buttonGroup}}
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text" id="btnGroupAddon2">@</div>
+            </div>
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+        </div>
+    {{/buttonToolbar}}
+
 </template>
