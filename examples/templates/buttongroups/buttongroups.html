@@ -59,4 +59,24 @@
         </div>
     {{/buttonToolbar}}
 
+    <h2 class="my-4">Sizing</h2>
+
+    {{#buttonGroup size="lg" label="Basic example"}}
+        {{> button colortype="secondary" label="left"}}
+        {{> button colortype="secondary" label="middle"}}
+        {{> button colortype="secondary" label="right"}}
+    {{/buttonGroup}}
+    <br><br> <!-- bs4 docs also uses <br> here -->
+    {{#buttonGroup label="Basic example"}}
+        {{> button colortype="secondary" label="left"}}
+        {{> button colortype="secondary" label="middle"}}
+        {{> button colortype="secondary" label="right"}}
+    {{/buttonGroup}}
+    <br><br> <!-- bs4 docs also uses <br> here -->
+    {{#buttonGroup size="sm" label="Basic example"}}
+        {{> button colortype="secondary" label="left"}}
+        {{> button colortype="secondary" label="middle"}}
+        {{> button colortype="secondary" label="right"}}
+    {{/buttonGroup}}
+
 </template>
