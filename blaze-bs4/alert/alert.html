@@ -1,5 +1,5 @@
 <template name="alert">
-    <div id="{{id}}" class="alert alert-{{type}} {{#if dismissible}}alert-dismissible fade show{{/if}}" role="alert">
+    <div id="{{id}}" class="alert alert-{{#if type}}{{type}}{{else}}secondary{{/if}} {{#if dismissible}}alert-dismissible fade show{{/if}}" role="alert">
         {{#with heading}}<h4 class="alert-heading">{{this}}</h4>{{/with}}
         {{> Template.contentBlock ..}}
         {{#if dismissible}}

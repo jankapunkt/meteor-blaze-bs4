@@ -2,7 +2,7 @@
     <h1>Alerts</h1>
     <hr>
     <h6>One-Liner</h6>
-    {{>alert type="secondary" heading="One-Liner, yeah!"}}
+    {{>alert heading="One-Liner, yeah!"}}
 
     <h6>Simple Alerts</h6>
     {{#each themeColors}}
@@ -21,12 +21,12 @@
     {{/alert}}
 
     <h6>Dismissing</h6>
-    {{#alert type="secondary" heading="Dismissible" dismissible=true}}
+    {{#alert heading="Dismissible" dismissible=true}}
         <p>Click the x Button to dismiss this alert.</p>
     {{/alert}}
 
     <h6>With events</h6>
-    {{#alert type="secondary" heading="OnClose" dismissible=true onClose=onClose}}
+    {{#alert heading="OnClose" dismissible=true onClose=onClose}}
         <p>You can hook up events like <code>onClose</code>.</p>
     {{/alert}}
 

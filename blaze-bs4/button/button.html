@@ -2,7 +2,7 @@
     <button {{atts}}
             id="{{id}}"
             type="{{#if type}}{{type}}{{else}}button{{/if}}"
-            class="btn {{#if size}}btn-{{size}}{{/if}} btn-{{#if outline}}outline-{{/if}}{{colortype}} {{class}}"
+            class="btn {{#if size}}btn-{{size}}{{/if}} btn-{{#if outline}}outline-{{/if}}{{#if colortype}}{{colortype}}{{else}}secondary{{/if}} {{class}}"
             disabled="{{#if disabled}}disabled{{/if}}">
         {{#if label}}
             {{label}}
@@ -13,13 +13,13 @@
 </template>
 
 <template name="buttonGroup">
-    <div class="btn-group {{class}}" role="group" aria-label="{{label}}">
+    <div class="btn-group {{#if size}}btn-group-{{size}}{{/if}} {{class}}" role="group" aria-label="{{label}}">
         {{> Template.contentBlock ..}}
     </div>
 </template>
 
 <template name="buttonToolbar">
-    <div class="btn-toolbar {{classes}}" role="toolbar" aria-label="{{label}}">
+    <div class="btn-toolbar {{class}}" role="toolbar" aria-label="{{label}}">
         {{> Template.contentBlock ..}}
     </div>
 </template>
