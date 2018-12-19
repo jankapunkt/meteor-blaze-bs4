@@ -10,6 +10,7 @@ import '../templates/alert/alert'
 import '../templates/badge/badge'
 import '../templates/breadcrumb/breadcrumb'
 import '../templates/buttons/buttons'
+import '../templates/buttongroups/buttongroups.html'
 import './main.html'
 
 global.Popper = popper
@@ -18,7 +19,8 @@ const allTemplates = [
   'alerts',
   'badges',
   'breadcrumbs',
-  'buttons'
+  'buttons',
+  'buttongroups'
 ]
 
 Template.body.onCreated(function () {

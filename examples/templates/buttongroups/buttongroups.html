@@ -1,0 +1,30 @@
+<template name="buttongroups">
+    <h1>Button Groups</h1>
+    <hr>
+
+    <h2 class="my-4">Basic Example</h2>
+    {{#buttonGroup label="Basic example"}}
+        {{> button colortype="secondary" label="left"}}
+        {{> button colortype="secondary" label="middle"}}
+        {{> button colortype="secondary" label="right"}}
+    {{/buttonGroup}}
+
+    <h2 class="my-4">Button Toolbar</h2>
+
+    {{#buttonToolbar label="Toolbar with button groups"}}
+        {{#buttonGroup class="mr-2" label="First group"}}
+            {{> button colortype="secondary" label="1"}}
+            {{> button colortype="secondary" label="2"}}
+            {{> button colortype="secondary" label="3"}}
+            {{> button colortype="secondary" label="4"}}
+        {{/buttonGroup}}
+        {{#buttonGroup class="mr-2" label="Second group"}}
+            {{> button colortype="secondary" label="5"}}
+            {{> button colortype="secondary" label="6"}}
+            {{> button colortype="secondary" label="7"}}
+        {{/buttonGroup}}
+        {{#buttonGroup label="Third group"}}
+            {{> button colortype="secondary" label="8"}}
+        {{/buttonGroup}}
+    {{/buttonToolbar}}
+</template>

@@ -11,3 +11,15 @@
         {{/if}}
     </button>
 </template>
+
+<template name="buttonGroup">
+    <div class="btn-group {{class}}" role="group" aria-label="{{label}}">
+        {{> Template.contentBlock ..}}
+    </div>
+</template>
+
+<template name="buttonToolbar">
+    <div class="btn-toolbar {{classes}}" role="toolbar" aria-label="{{label}}">
+        {{> Template.contentBlock ..}}
+    </div>
+</template>
