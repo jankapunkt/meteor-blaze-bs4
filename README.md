@@ -33,7 +33,7 @@ The templates are automatically added and are immediately available.
 - [x] Badge
 - [x] Breadcrumb
 - [x] Buttons
-- [ ] Button group
+- [x] Button group
 - [ ] Card
 - [ ] Carousel
 - [ ] Collapse
@@ -77,6 +77,8 @@ There will be sometimes a reference to the "theme color names". These include th
 * `dark`
 
 Wherever referenced as parameters (and not stated otherwise) these values are required as listed above and without any prefix.
+
+**Note:** Components which strictly require a given color of the theme colors will default to `secondary` if none is given. 
 
 ### Components / Templates
 
