@@ -4,88 +4,91 @@
 
     <h2 class="my-4">Basic Example</h2>
     {{#buttonGroup label="Basic example"}}
-        {{> button colortype="secondary" label="left"}}
-        {{> button colortype="secondary" label="middle"}}
-        {{> button colortype="secondary" label="right"}}
+        {{> button label="left"}}
+        {{> button label="middle"}}
+        {{> button label="right"}}
     {{/buttonGroup}}
 
     <h2 class="my-4">Button Toolbar</h2>
 
     {{#buttonToolbar label="Toolbar with button groups"}}
         {{#buttonGroup class="mr-2" label="First group"}}
-            {{> button colortype="secondary" label="1"}}
-            {{> button colortype="secondary" label="2"}}
-            {{> button colortype="secondary" label="3"}}
-            {{> button colortype="secondary" label="4"}}
+            {{> button label="1"}}
+            {{> button label="2"}}
+            {{> button label="3"}}
+            {{> button label="4"}}
         {{/buttonGroup}}
         {{#buttonGroup class="mr-2" label="Second group"}}
-            {{> button colortype="secondary" label="5"}}
-            {{> button colortype="secondary" label="6"}}
-            {{> button colortype="secondary" label="7"}}
+            {{> button label="5"}}
+            {{> button label="6"}}
+            {{> button label="7"}}
         {{/buttonGroup}}
         {{#buttonGroup label="Third group"}}
-            {{> button colortype="secondary" label="8"}}
+            {{> button label="8"}}
         {{/buttonGroup}}
     {{/buttonToolbar}}
 
 
     {{#buttonToolbar class="my-3" label="Toolbar with button groups"}}
         {{#buttonGroup class="mr-2" label="First group"}}
-            {{> button colortype="secondary" label="1"}}
-            {{> button colortype="secondary" label="2"}}
-            {{> button colortype="secondary" label="3"}}
-            {{> button colortype="secondary" label="4"}}
+            {{> button label="1"}}
+            {{> button label="2"}}
+            {{> button label="3"}}
+            {{> button label="4"}}
         {{/buttonGroup}}
         <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text" id="btnGroupAddon">@</div>
             </div>
-            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example"
+                   aria-describedby="btnGroupAddon">
         </div>
     {{/buttonToolbar}}
 
     {{#buttonToolbar class="my-3 justify-content-between" label="Toolbar with button groups"}}
         {{#buttonGroup class="mr-2" label="First group"}}
-            {{> button colortype="secondary" label="1"}}
-            {{> button colortype="secondary" label="2"}}
-            {{> button colortype="secondary" label="3"}}
-            {{> button colortype="secondary" label="4"}}
+            {{> button label="1"}}
+            {{> button label="2"}}
+            {{> button label="3"}}
+            {{> button label="4"}}
         {{/buttonGroup}}
         <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text" id="btnGroupAddon2">@</div>
             </div>
-            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example"
+                   aria-describedby="btnGroupAddon2">
         </div>
     {{/buttonToolbar}}
 
     <h2 class="my-4">Sizing</h2>
 
     {{#buttonGroup size="lg" label="Basic example"}}
-        {{> button colortype="secondary" label="left"}}
-        {{> button colortype="secondary" label="middle"}}
-        {{> button colortype="secondary" label="right"}}
+        {{> button label="left"}}
+        {{> button label="middle"}}
+        {{> button label="right"}}
     {{/buttonGroup}}
     <br><br> <!-- bs4 docs also uses <br> here -->
     {{#buttonGroup label="Basic example"}}
-        {{> button colortype="secondary" label="left"}}
-        {{> button colortype="secondary" label="middle"}}
-        {{> button colortype="secondary" label="right"}}
+        {{> button label="left"}}
+        {{> button label="middle"}}
+        {{> button label="right"}}
     {{/buttonGroup}}
     <br><br> <!-- bs4 docs also uses <br> here -->
     {{#buttonGroup size="sm" label="Basic example"}}
-        {{> button colortype="secondary" label="left"}}
-        {{> button colortype="secondary" label="middle"}}
-        {{> button colortype="secondary" label="right"}}
+        {{> button label="left"}}
+        {{> button label="middle"}}
+        {{> button label="right"}}
     {{/buttonGroup}}
 
     <h2 class="my-4">Nesting</h2>
 
     {{#buttonGroup label="Button group with nested dropdown"}}
-        {{> button colortype="secondary" label="1"}}
-        {{> button colortype="secondary" label="2"}}
+        {{> button label="1"}}
+        {{> button label="2"}}
         {{#buttonGroup}}
-            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                 Dropdown
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
