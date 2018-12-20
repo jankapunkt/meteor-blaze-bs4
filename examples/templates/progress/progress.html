@@ -1,0 +1,59 @@
+<template name="progressbars">
+    <h1>Progress</h1>
+    <hr>
+
+    <h2 class="my-4">Basic Example</h2>
+
+    <div class="example-container">
+        {{>progress value=0 }}
+        <br>
+        {{>progress value=25}}
+        <br>
+        {{>progress value=50}}
+        <br>
+        {{>progress value=100}}
+    </div>
+
+    <h2 class="my-4">Label</h2>
+
+    {{>progress value=25 label="25%"}}
+
+
+    <h2 class="my-4">Height</h2>
+
+    {{>progress value=25 height="1px"}}
+    <br>
+    {{>progress value=25 height="20px"}}
+
+    <h2 class="my-4">Backgrounds</h2>
+
+    {{>progress value=25 type="success"}}
+    <br>
+    {{>progress value=50 type="info"}}
+    <br>
+    {{>progress value=75 type="warning"}}
+    <br>
+    {{>progress value=100 type="danger"}}
+
+    <h2 class="my-4">Multiple Bars</h2>
+
+    {{> alert heading="Not yet implemented"}}
+
+    <h2 class="my-4">Striped</h2>
+
+    {{>progress value=10 striped=true}}
+    <br>
+    {{>progress value=25 type="success" striped=true}}
+    <br>
+    {{>progress value=50 type="info" striped=true}}
+    <br>
+    {{>progress value=75 type="warning" striped=true}}
+    <br>
+    {{>progress value=100 type="danger" striped=true}}
+
+    <h2 class="my-4">Animated</h2>
+
+    {{>progress value=75 striped=true animated=isAnimated}}
+    <br>
+    {{> button class="toggle-progress-bar" label="Toggle animation"}}
+</template>

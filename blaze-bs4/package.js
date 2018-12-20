@@ -22,6 +22,8 @@ Package.onUse(function (api) {
     'badge/badge.html',
     'breadcrumb/breadcrumb.html',
     'button/button.html',
-    'button/button.js'
+    'button/button.js',
+    'progress/progress.html',
+    'progress/progress.js'
   ], 'client')
 })

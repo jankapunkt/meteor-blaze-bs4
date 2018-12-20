@@ -1,0 +1,12 @@
+<template name="progress">
+    <div class="progress" style="{{#if height}}height: {{height}};{{/if}}">
+        <div class="progress-bar {{#if type}}bg-{{type}}{{/if}} {{#if striped}}progress-bar-striped{{/if}} {{#if animated}}progress-bar-animated{{/if}} {{class}}"
+             role="progressbar"
+             aria-valuenow="{{value}}"
+             aria-valuemin="{{#if min}}{{min}}{{else}}0{{/if}}"
+             aria-valuemax="{{#if max}}{{max}}{{else}}100{{/if}}"
+             style="width: {{#if perc}}{{perc}}{{else}}{{value}}{{/if}}%">
+            {{label}}
+        </div>
+    </div>
+</template>

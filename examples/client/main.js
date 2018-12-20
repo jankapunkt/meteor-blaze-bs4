@@ -11,6 +11,7 @@ import '../templates/badge/badge'
 import '../templates/breadcrumb/breadcrumb'
 import '../templates/buttons/buttons'
 import '../templates/buttongroups/buttongroups.html'
+import '../templates/progress/progress'
 import './main.html'
 
 global.Popper = popper
@@ -20,7 +21,8 @@ const allTemplates = [
   'badges',
   'breadcrumbs',
   'buttons',
-  'buttongroups'
+  'buttongroups',
+  'progressbars'
 ]
 
 Template.body.onCreated(function () {

@@ -47,7 +47,7 @@ The templates are automatically added and are immediately available.
 - [ ] Navbar
 - [ ] Pagination
 - [ ] Popovers
-- [ ] Progress
+- [x] Progress
 - [ ] Scrollspy
 - [ ] Tooltips 
 
@@ -55,26 +55,26 @@ The templates are automatically added and are immediately available.
 
 ## Usage
 
-### Some general info
+### Conventions
 
-The template are named like the respective components in the [Bootstrap documentation](https://getbootstrap.com/docs/4.1/components/alerts/) in lowercase.
+* The template are named like the respective components in the [Bootstrap documentation](https://getbootstrap.com/docs/4.1/components/alerts/) in lowercase.
 Some Templates allow to insert dynamic content, while others don't. Therefore you should check the documentation for each component's example code.
 
-Many templates are parameterized and offer optional functionality. The component's documentation should also show you, which parameter formats are required.
+* Many templates are parameterized and offer optional functionality. The component's documentation should also show you, which parameter formats are required.
 
-The github repository comes also with an example project that includes all components for demonstration purposes.
+* The github repository comes also with an example project that includes all components for demonstration purposes.
 Consider to check it's code in order to get a better understanding of all the possible parameters.
 
-There will be sometimes a reference to the "theme color names". These include the following values:
+* There will be sometimes a reference to the "theme color names". These include the following values:
 
-* `primary`
-* `secondary`
-* `success`
-* `warning`
-* `danger`
-* `info`
-* `light`
-* `dark`
+  * `primary`
+  * `secondary`
+  * `success`
+  * `warning`
+  * `danger`
+  * `info`
+  * `light`
+  * `dark`
 
 Wherever referenced as parameters (and not stated otherwise) these values are required as listed above and without any prefix.
 
@@ -243,3 +243,34 @@ Template.myTemplate.helpers({
     <span>Custom Label</span>
 {{/button}}
 ```
+
+### Progress
+
+**name** `progress`
+
+**dynamic** no
+
+**param** value (Number) - Required. Defines a progress value between 0 and 100. Alternative values are allowed but you then need to use `perc` to describe progress width.
+
+**param** perc (Number) - Optional. Defines a progress value if min and/or max are beyond default values of 0 and 100.
+
+**param** type (String) - One of the theme colors. Defaults to primary if none is given.
+
+**param** class (String) - Optional. additional classes
+
+**param** min (Number) - Optional. Defines a min value. Defaults to 0 if none is given.
+
+**param** max (Number) - Optional. Defines a max value. Defaults to 100 if none is given.
+
+**param** label (String) - Optional. Sets a label to be displayed inside the progress bar.
+
+**param** height (String) - Optional. Sets the height of the progress. Note, that you need to provide a css measurement unit, too. Valid examples: "20px" or "4rem" etc.
+
+**param** striped (Boolean) - Optional. Renders a striped background.
+
+**param** animated (Boolean) - Optional. Renders the progress bar background animation.
+
+**example non-dynamic**
+
+```html
+{{>progress value=75 striped=true animated=true label="Progress: 75%"}}
