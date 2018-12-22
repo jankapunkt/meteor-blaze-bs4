@@ -1,17 +1,30 @@
 <template name="alerts">
     <h1>Alerts</h1>
     <hr>
-    <h6>One-Liner</h6>
+
+    <h2>One-Liner</h2>
     {{>alert heading="One-Liner, yeah!"}}
 
-    <h6>Simple Alerts</h6>
+    {{#code}}
+        {{|>alert heading="One-Liner, yeah!"}}
+    {{/code}}
+
+    <h2>Simple Alerts</h2>
     {{#each themeColors}}
         {{#alert type=this}}
             A simple {{this}} alert—check it out!
         {{/alert}}
     {{/each}}
 
-    <h6>Additional content</h6>
+    {{#code}}
+        {{|#each themeColors}}
+            {{|#alert type=this}}
+                A simple {{|this}} alert—check it out!
+            {{|/alert}}
+        {{|/each}}
+    {{/code}}
+
+    <h2>Additional content</h2>
     {{#alert type="primary" heading="Well done!"}}
         <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
             so
@@ -20,17 +33,44 @@
         <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
     {{/alert}}
 
-    <h6>Dismissing</h6>
+    {{#code}}
+        {{|#alert type="primary" heading="Well done!"}}
+            &lt;p&gt;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
+            &lt;hr&gt;
+            &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
+        {{|/alert}}
+    {{/code}}
+
+    <h2>Dismissing</h2>
     {{#alert heading="Dismissible" dismissible=true}}
         <p>Click the x Button to dismiss this alert.</p>
     {{/alert}}
 
-    <h6>With events</h6>
+    {{#code}}
+        {{|#alert heading="Dismissible" dismissible=true}}
+            &lt;p&gt;Click the x Button to dismiss this alert.&lt;/p&gt;
+        {{|/alert}}
+    {{/code}}
+
+    <h2>With events</h2>
     {{#alert heading="OnClose" dismissible=true onClose=onClose}}
         <p>You can hook up events like <code>onClose</code>.</p>
     {{/alert}}
 
+    {{#code}}
+        {{|#alert heading="OnClose" dismissible=true onClose=onClose}}
+            &lt;p&gt;You can hook up events like &lt;code&gt;onClose&lt;/code&gt;.&lt;/p&gt;
+        {{|/alert}}
+    {{/code}}
+
     {{#alert type="info" heading="OnClosed" dismissible=true onClosed=onClosed}}
         <p>You can hook up events like <code>onClosed</code>.</p>
     {{/alert}}
+
+    {{#code}}
+        {{|#alert type="info" heading="OnClosed" dismissible=true onClosed=onClosed}}
+            &lt;p&gt;You can hook up events like &lt;code&gt;onClosed&lt;/code&gt;.&lt;/p&gt;
+        {{|/alert}}
+    {{/code}}
+
 </template>
