@@ -1,5 +1,29 @@
 <template name="breadcrumbs">
     <h1>Breadcrumbs</h1>
 
-    {{> breadcrumb entries=bredcrumbEntries}}
+    {{> breadcrumb entries=breadcrumbEntries}}
+
+    {{#code}}
+        {{|> breadcrumb entries=breadcrumbEntries}}
+    {{/code}}
+
+    {{#code}}
+        Template.breadcrumbs.helpers({
+          breadcrumbEntries () {
+            return [{
+              title: 'home',
+              active: false,
+              href: '/'
+            }, {
+              title: 'examples',
+              active: false,
+              href: '/examples'
+            }, {
+              title: 'breadcrumbs',
+              active: true,
+              href: '/examples/breadcrumbs'
+            }]
+          }
+        })
+    {{/code}}
 </template>
