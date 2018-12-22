@@ -2,6 +2,7 @@
   "name": "tests",
   "private": true,
   "scripts": {
+    "build": "METEOR_PACKAGE_DIRS=../ meteor meteor-build-client ../docs -t ../build/template.html && cp ../docs/index.html ../docs/index.md",
     "examples": "METEOR_PACKAGE_DIRS=../ meteor",
     "start": "meteor run",
     "test": "TEST_WATCH=1 meteor test --driver-package meteortesting:mocha",
