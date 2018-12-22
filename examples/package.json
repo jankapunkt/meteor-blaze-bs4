@@ -2,7 +2,7 @@
   "name": "tests",
   "private": true,
   "scripts": {
-    "build": "METEOR_PACKAGE_DIRS=../ meteor meteor-build-client ../docs -t ../build/template.html -p \"\" && cp ../docs/index.html ../docs/index.md",
+    "build": "METEOR_PACKAGE_DIRS=../ meteor meteor-build-client ../docs -t ../build/template.html -p \"\" && cp ../docs/index.html ../docs/index.md && cp ../build/loadingScreen.css ../docs",
     "examples": "METEOR_PACKAGE_DIRS=../ meteor",
     "kill": "kill -9 `ps ax | grep node | grep meteor | awk '{print $1}'`",
     "start": "meteor run",
