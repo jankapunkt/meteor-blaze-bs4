@@ -8,6 +8,16 @@
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     {{/jumbotron}}
+    
+    {{#code}}
+        {{|#jumbotron}}
+            &lt;h1 class="display-4"&gt;Hello, world!&lt;/h1&gt;
+            &lt;p class="lead"&gt;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p&gt;
+            &lt;hr class="my-4"&gt;
+            &lt;p&gt;It uses utility classes for typography and spacing to space content out within the larger container.&lt;/p&gt;
+            &lt;a class="btn btn-primary btn-lg" href="#" role="button"&gt;Learn more&lt;/a&gt;
+        {{|/jumbotron}}
+    {{/code}}    
 
     <br>
 
@@ -17,4 +27,14 @@
             <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
     {{/jumbotron}}
+    
+    {{#code}}
+        {{|#jumbotron fluid=true}}
+            &lt;div class="container"&gt;
+                &lt;h1 class="display-4"&gt;Fluid jumbotron&lt;/h1&gt;
+                &lt;p class="lead"&gt;This is a modified jumbotron that occupies the entire horizontal space of its parent.&lt;/p&gt;
+            &lt;/div&gt;
+        {{|/jumbotron}}
+    {{/code}}
+        
 </template>
