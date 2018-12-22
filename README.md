@@ -1,5 +1,7 @@
-# meteor-blaze-bs4
-Generic Bootstrap 4 components library for Meteor Blaze.
+<div align="center">
+<h1>Meteor Blaze Bootstrap 4 Components</h1>
+<p>Generic Bootstrap 4 components library for Meteor Blaze.</p>
+</div>
 
 ## Getting started
 

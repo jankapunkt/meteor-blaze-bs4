@@ -191,6 +191,18 @@ Template.myTemplate.helpers({
 {{/button}}
 ```
 
+### Jumbotron
+
+
+**name** `jumbotron`
+
+**dynamic** no
+
+**param** fluid (Boolean) - Optional. Renders a fluid jumbotron.
+
+**param** class (String) - Optional. additional classes
+
+
 ### Progress
 
 **name** `progress`

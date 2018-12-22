@@ -11,6 +11,7 @@ import '../templates/badge/badge'
 import '../templates/breadcrumb/breadcrumb'
 import '../templates/buttons/buttons'
 import '../templates/buttongroups/buttongroups.html'
+import '../templates/jumbotron/jumbotron.html'
 import '../templates/progress/progress'
 import './main.html'
 
@@ -22,6 +23,7 @@ const allTemplates = [
   'breadcrumbs',
   'buttons',
   'buttongroups',
+  'jumbotrons',
   'progressbars'
 ]
 

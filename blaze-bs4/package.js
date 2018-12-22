@@ -1,7 +1,7 @@
 /* eslint-env meteor */
 Package.describe({
   name: 'jkuester:blaze-bs4',
-  version: '0.6.0',
+  version: '0.7.0',
   // Brief, one-line summary of the package.
   summary: '',
   // URL to the Git repository containing the source code for this package.
@@ -23,6 +23,7 @@ Package.onUse(function (api) {
     'breadcrumb/breadcrumb.html',
     'button/button.html',
     'button/button.js',
+    'jumbotron/jumbotron.html',
     'progress/progress.html',
     'progress/progress.js'
   ], 'client')
