@@ -3,22 +3,22 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 703888,
-  "totalMinifiedGzipBytes": 195827,
+  "totalMinifiedBytes": 730006,
+  "totalMinifiedGzipBytes": 198650,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      311908,
+      311937,
       {
         "node_modules": {
           "meteor": {
             "modules": {
               "client.js": 124,
               "css.js": 261,
-              "install-packages.js": 1917,
+              "install-packages.js": 1946,
               "process.js": 347,
               "reify.js": 71,
               "stubs.js": 97,
@@ -511,6 +511,7 @@
         }
       }
     ],
+    "packages/fortawesome_fontawesome.js": 43,
     "packages/underscore.js": 14349,
     "packages/jquery.js": [
       97271,
@@ -534,7 +535,7 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      4650,
+      10411,
       {
         "node_modules": {
           "meteor": {
@@ -542,13 +543,25 @@
               "alert": {
                 "alert.js": 585,
                 "alert.html": 57,
-                "template.alert.js": 1044
+                "template.alert.js": 1184
               },
               "badge": {
-                "template.badge.js": 1012
+                "template.badge.js": 1322
               },
               "breadcrumb": {
                 "template.breadcrumb.js": 1040
+              },
+              "button": {
+                "button.html": 58,
+                "template.button.js": 2533,
+                "button.js": 115
+              },
+              "jumbotron": {
+                "template.jumbotron.js": 484
+              },
+              "progress": {
+                "template.progress.js": 1612,
+                "progress.js": 12
               }
             }
           }
@@ -588,23 +601,41 @@
       {}
     ],
     "app/app.js": [
-      9534,
+      29817,
       {
         "templates": {
           "alert": {
             "alert.html": 57,
-            "template.alert.js": 2579,
+            "template.alert.js": 2480,
             "alert.js": 187
           },
           "badge": {
             "badge.html": 57,
-            "template.badge.js": 2807,
+            "template.badge.js": 2609,
             "badge.js": 185
           },
           "breadcrumb": {
             "breadcrumb.html": 62,
             "template.breadcrumb.js": 340,
             "breadcrumb.js": 288
+          },
+          "buttongroups": {
+            "buttongroups.html": 64,
+            "template.buttongroups.js": 9099
+          },
+          "buttons": {
+            "buttons.html": 59,
+            "template.buttons.js": 4142,
+            "buttons.js": 299
+          },
+          "jumbotron": {
+            "jumbotron.html": 61,
+            "template.jumbotron.js": 1176
+          },
+          "progress": {
+            "progress.html": 60,
+            "template.progress.js": 4180,
+            "progress.js": 443
           },
           "helpers": {
             "helpers.js": 194,
@@ -613,8 +644,8 @@
         },
         "client": {
           "main.html": 56,
-          "template.main.js": 1294,
-          "main.js": 847
+          "template.main.js": 1434,
+          "main.js": 1455
         }
       }
     ]
