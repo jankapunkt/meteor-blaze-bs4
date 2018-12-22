@@ -2,6 +2,7 @@
   "name": "tests",
   "private": true,
   "scripts": {
+    "examples": "METEOR_PACKAGE_DIRS=../ meteor",
     "start": "meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
