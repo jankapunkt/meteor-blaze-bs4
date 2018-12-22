@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import popper from 'popper.js'
 
 import '../templates/helpers/helpers'
+import '../templates/code/code.html'
+
 import '../templates/alert/alert'
 import '../templates/badge/badge'
 import '../templates/breadcrumb/breadcrumb'
@@ -13,6 +15,7 @@ import '../templates/buttons/buttons'
 import '../templates/buttongroups/buttongroups.html'
 import '../templates/jumbotron/jumbotron.html'
 import '../templates/progress/progress'
+
 import './main.html'
 
 global.Popper = popper
