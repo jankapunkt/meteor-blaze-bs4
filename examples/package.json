@@ -2,8 +2,9 @@
   "name": "tests",
   "private": true,
   "scripts": {
-    "build": "METEOR_PACKAGE_DIRS=../ meteor meteor-build-client ../docs -t ../build/template.html && cp ../docs/index.html ../docs/index.md",
+    "build": "METEOR_PACKAGE_DIRS=../ meteor meteor-build-client ../docs -t ../build/template.html -p \"\" && cp ../docs/index.html ../docs/index.md",
     "examples": "METEOR_PACKAGE_DIRS=../ meteor",
+    "kill": "kill -9 `ps ax | grep node | grep meteor | awk '{print $1}'`",
     "start": "meteor run",
     "test": "TEST_WATCH=1 meteor test --driver-package meteortesting:mocha",
     "test-cli": "meteor test --once --driver-package meteortesting:mocha",
