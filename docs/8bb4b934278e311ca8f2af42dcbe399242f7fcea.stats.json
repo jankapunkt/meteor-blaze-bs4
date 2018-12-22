@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 730006,
-  "totalMinifiedGzipBytes": 198648,
+  "totalMinifiedBytes": 739232,
+  "totalMinifiedGzipBytes": 199578,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
@@ -601,23 +601,23 @@
       {}
     ],
     "app/app.js": [
-      29817,
+      39043,
       {
         "templates": {
           "alert": {
             "alert.html": 57,
-            "template.alert.js": 2480,
+            "template.alert.js": 5322,
             "alert.js": 187
           },
           "badge": {
             "badge.html": 57,
-            "template.badge.js": 2609,
+            "template.badge.js": 5571,
             "badge.js": 185
           },
           "breadcrumb": {
             "breadcrumb.html": 62,
-            "template.breadcrumb.js": 340,
-            "breadcrumb.js": 288
+            "template.breadcrumb.js": 1032,
+            "breadcrumb.js": 289
           },
           "buttongroups": {
             "buttongroups.html": 64,
@@ -628,9 +628,13 @@
             "template.buttons.js": 4142,
             "buttons.js": 299
           },
+          "code": {
+            "code.html": 56,
+            "template.code.js": 453
+          },
           "jumbotron": {
             "jumbotron.html": 61,
-            "template.jumbotron.js": 1176
+            "template.jumbotron.js": 3318
           },
           "progress": {
             "progress.html": 60,
@@ -645,7 +649,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 1434,
-          "main.js": 1455
+          "main.js": 1493
         }
       }
     ]
