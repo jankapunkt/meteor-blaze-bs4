@@ -6,12 +6,20 @@
 <body>
 <div class="container my-4">
     <nav class="text-center">
-     <h1>Blaze Bootstrap 4 Components</h1>
-    {{#each bstemplates}}
-        <a class="btn btn-sm {{#if isCurrent this}}btn-primary{{else}}btn-secondary{{/if}} template-select"
-                data-template="{{this}}" href="#{{this}}">{{this}}</a>
-    {{/each}}
-        <a href="https://github.com/jankapunkt/meteor-blaze-bs4"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>    </nav>
+        <h1>Blaze Bootstrap 4 Components</h1>
+        <div class="form-inline">
+            <select class="form-control template-select">
+            {{#each bstemplates}}
+                <option  selected="{{#if isCurrent this.template}}selected{{/if}}" value="{{this.template}}">{{this.name}}</option><!---->
+            {{/each}}
+            </select>
+        </div>
+
+        <a href="https://github.com/jankapunkt/meteor-blaze-bs4">
+            <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+                 alt="Fork me on GitHub">
+        </a>
+    </nav>
     <hr>
     {{> Template.dynamic template=current}}
 </div>

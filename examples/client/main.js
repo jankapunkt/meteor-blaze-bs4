@@ -18,19 +18,26 @@ import './main.html'
 global.Popper = popper
 
 const allTemplates = [
-  'alerts',
-  'badges',
-  'breadcrumbs',
-  'buttons',
-  'buttongroups',
-  'jumbotrons',
-  'progressbars'
+  { template: 'alerts', name: 'Alert' },
+  { template: 'badges', name: 'Badge' },
+  { template: 'breadcrumbs', name: 'Breadcrumb' },
+  { template: 'buttons', name: 'Button' },
+  { template: 'buttongroups', name: 'Button Group' },
+  { template: 'jumbotrons', name: 'Jumbotron' },
+  { template: 'progressbars', name: 'Progress' },
 ]
 
 Template.body.onCreated(function () {
   const instance = this
   instance.state = new ReactiveDict()
-  instance.state.set('current', allTemplates[ 0 ])
+  const param = global.window.location.href.split('#')
+  if (param.length === 1) {
+    instance.state.set('current', allTemplates[ 0 ].template)
+  } else {
+    const templateName = param[ 1 ]
+    const current = allTemplates.find(el => el.template === templateName) || allTemplates[ 0 ]
+    instance.state.set('current', current.template)
+  }
 })
 
 Template.body.helpers({
@@ -46,8 +53,9 @@ Template.body.helpers({
 })
 
 Template.body.events({
-  'click .template-select' (event, templateInstance) {
-    const template = templateInstance.$(event.currentTarget).data('template')
+  'change .template-select' (event, templateInstance) {
+    const template = templateInstance.$(event.currentTarget).val()
+    global.window.location.href = `#${template}`
     templateInstance.state.set('current', template)
   }
 })
