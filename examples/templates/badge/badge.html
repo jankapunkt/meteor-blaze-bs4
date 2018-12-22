@@ -3,6 +3,7 @@
     <hr>
 
     <h2>Example</h2>
+
     <h1>Example heading {{> badge content="New"}}</h1>
     <h2>Example heading {{> badge content="New"}}</h2>
     <h3>Example heading {{> badge content="New"}}</h3>
@@ -10,24 +11,68 @@
     <h5>Example heading {{> badge content="New"}}</h5>
     <h6>Example heading {{> badge content="New"}}</h6>
 
+    {{#code}}
+        &lt;h1&gt;Example heading {{|&gt; badge content="New"}}&lt;/h1&gt;
+        &lt;h2&gt;Example heading {{|&gt; badge content="New"}}&lt;/h2&gt;
+        &lt;h3&gt;Example heading {{|&gt; badge content="New"}}&lt;/h3&gt;
+        &lt;h4&gt;Example heading {{|&gt; badge content="New"}}&lt;/h4&gt;
+        &lt;h5&gt;Example heading {{|&gt; badge content="New"}}&lt;/h5&gt;
+        &lt;h6&gt;Example heading {{|&gt; badge content="New"}}&lt;/h6&gt;
+    {{/code}}
+
     <h2>Button</h2>
     <button type="button" class="btn btn-primary">
         Notifications {{> badge type="light" content=4}}
     </button>
-
+    
+    {{#code}}
+        &lt;button type="button" class="btn btn-primary"&gt;
+            Notifications {{|&gt; badge type="light" content=4}}
+        &lt;/button&gt;
+    {{/code}}
 
     <h2>Contextual variations</h2>
     {{#each themeColors}}
         {{> badge type=this content=this}}
     {{/each}}
+    
+    {{#code}}
+        {{|#each themeColors}}
+            {{|> badge type=this content=this}}
+        {{|/each}}
+    {{/code}}
 
     <h2>Pill badges</h2>
     {{#each themeColors}}
         {{> badge type=this content=this pill=true}}
     {{/each}}
 
+    {{#code}}
+        {{|#each themeColors}}
+            {{|> badge type=this content=this pill=true}}
+        {{|/each}}
+    {{/code}}
+
     <h2>Links</h2>
     {{#each themeColors}}
         {{> badge type=this content=this link=true atts=atts}}
     {{/each}}
+
+    {{#code}}
+        {{|#each themeColors}}
+            {{|> badge type=this content=this pill=true atts=atts}}
+        {{|/each}}
+    {{/code}}
+
+    {{#code}}
+        Template.badges.helpers({
+          atts () {
+            return {
+              href: '//www.blazejs.org',
+              target: '_blank',
+              'data-foo': 'bar'
+            }
+          }
+        })
+    {{/code}}
 </template>
