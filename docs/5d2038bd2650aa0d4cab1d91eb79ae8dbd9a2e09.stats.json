@@ -3,15 +3,15 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 739232,
-  "totalMinifiedGzipBytes": 199578,
+  "totalMinifiedBytes": 762102,
+  "totalMinifiedGzipBytes": 204433,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      311937,
+      330889,
       {
         "node_modules": {
           "meteor": {
@@ -38,19 +38,13 @@
           "bootstrap": {
             "dist": {
               "css": {
-                "bootstrap.css": 139639
+                "bootstrap.css": 151969
               },
               "js": {
-                "bootstrap.js": 51144
+                "bootstrap.js": 57766
               }
             },
             "package.json": 86
-          },
-          "jquery": {
-            "package.json": 80,
-            "dist": {
-              "jquery.js": 86609
-            }
           },
           "popper.js": {
             "package.json": 88,
@@ -58,6 +52,12 @@
               "umd": {
                 "popper.js": 20941
               }
+            }
+          },
+          "jquery": {
+            "package.json": 80,
+            "dist": {
+              "jquery.js": 86609
             }
           },
           "meteor-node-stubs": {
@@ -601,9 +601,13 @@
       {}
     ],
     "app/app.js": [
-      39043,
+      42961,
       {
         "templates": {
+          "about": {
+            "about.html": 57,
+            "template.about.js": 3746
+          },
           "alert": {
             "alert.html": 57,
             "template.alert.js": 5322,
@@ -649,7 +653,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 1434,
-          "main.js": 1493
+          "main.js": 1565
         }
       }
     ]
