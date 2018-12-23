@@ -7,6 +7,7 @@ import popper from 'popper.js'
 
 import '../templates/helpers/helpers'
 import '../templates/code/code.html'
+import '../templates/about/about.html'
 
 import '../templates/alert/alert'
 import '../templates/badge/badge'
@@ -21,6 +22,7 @@ import './main.html'
 global.Popper = popper
 
 const allTemplates = [
+  { template: 'about', name: 'About' },
   { template: 'alerts', name: 'Alert' },
   { template: 'badges', name: 'Badge' },
   { template: 'breadcrumbs', name: 'Breadcrumb' },

@@ -1,0 +1,64 @@
+<template name="about">
+    <h1>About this package</h1>
+    <hr>
+
+    <h2>Goal and perspective</h2>
+
+    <p>
+        Consider some Bootstrap-infused HTML template code that is mixed with Blaze. The code gets easily complex when helpers, conditions, iterations and object contexts are introduced.
+    </p>
+    <p>
+        An abstraction of the most generic rendering logic can help you to keep things clean.
+    </p>
+    <p>
+        The goal is therefore to provide a library of Blaze Templates that makes it easy to include Bootstrap 4 components and manipulate their behavior by parameters.
+        This abstraction may reduce code overhead and errors and make it easier to reason about your template's functionality.
+    </p>
+
+
+    <h2>Conventions</h2>
+
+    <p>This package aims to be as un-opinionated as possible. If you find any component to be unflexible please <a target="_blank" href="https://github.com/jankapunkt/meteor-blaze-bs4/issues/new">leave an issue</a>.</p>
+    <ul>
+        <li>The templates are named like the respective components in the <a href="https://getbootstrap.com" target="_blank">Bootstrap documentation</a> in lowercase.</li>
+        <li>Components should be stateless, unless it is impossible for certain functionality.</li>
+        <li>The components need to allow additional styling and attribute definitions.</li>
+        <li>Naming of parameters should be close to the naming of event-names, class-names or fragments of class-names that are triggered or modified by them.</li>
+        <li>Classnames should as few as possible be provided as full named paramter. It rater makes sense to extract the meaning into a Boolean variable to toggle some class name presence or a String parameter with the most relevant fraction of the classname.</li>
+        <li>Components with dynamic inner content need to be dynamic, so it is up to the developer what child content is provided and if this child content is part of this library or custom HTML/Template code.</li>
+    </ul>
+
+    <h2>Theme colors</h2>
+
+    <p>There will be sometimes a reference to the "theme color names" or in code as <code>themeColors</code>. These include the following values:</p>
+
+    <ul>
+        <li><code>primary</code></li>
+        <li><code>secondary</code></li>
+        <li><code>success</code></li>
+        <li><code>warning</code></li>
+        <li><code>danger</code></li>
+        <li><code>info</code></li>
+        <li><code>light</code></li>
+        <li><code>dark</code></li>
+    </ul>
+
+    <p>Wherever referenced as parameters (and not stated otherwise) these values are required as listed above and without any prefix.</p>
+
+    <strong>Note</strong>
+
+    <p>Components which strictly require a given color of the theme colors will default to `secondary` if none is given.</p>
+
+
+    <h2>Properties documentation</h2>
+
+    The following properties are documented:
+
+    <ul>
+        <li><strong>name</strong> - The name of the template as it will be included</li>
+        <li><strong>dynamic</strong> - Whether a template is dynamic (<code>{{|#example}}...custom code...{{|/example}}</code>) or not (<code>{{|> example}}</code>). Sometimes both are possible.</li>
+        <li><strong>param</strong> - Description of a parameter; follows the pattern <code>name - type - description</code></li>
+        <li><strong>event</strong> - Description of an event callback that can be passed from another template; follows the pattern <code>name - eventName - description</code></li>
+    </ul>
+
+</template>
