@@ -1,3 +1,3 @@
-# CODE of CONDUCT
+# CODE of CONDUCT: Be nice.
 
-Be nice.
+Otherwise, please report to `info [at] jankuester.com`
