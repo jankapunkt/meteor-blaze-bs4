@@ -112,31 +112,13 @@ This package does not need additional deployment configuration. Atmosphere publi
 
 ## Contributing
 
-Please see the contibution guidelines.
+Please see the contribution guidelines.
 
 ### Current Progress
 
-- [x] Alerts
-- [x] Badge
-- [x] Breadcrumb
-- [x] Buttons
-- [x] Button group
-- [ ] Card
-- [ ] Carousel
-- [ ] Collapse
-- [ ] Dropdowns
-- [ ] Forms
-- [ ] Input group
-- [ ] Jumbotron
-- [ ] List group
-- [ ] Modal
-- [ ] Navs
-- [ ] Navbar
-- [ ] Pagination
-- [ ] Popovers
-- [x] Progress
-- [ ] Scrollspy
-- [ ] Tooltips 
+#### 1.0
+
+See the [project overview](https://github.com/jankapunkt/meteor-blaze-bs4/projects/1). 
 
 ## Versioning
 
