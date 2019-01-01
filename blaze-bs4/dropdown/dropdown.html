@@ -1,0 +1,28 @@
+<template name="dropdown">
+	<div class="btn-group drop{{#if direction}}{{direction}}{{else}}down{{/if}} bbs4-dropdown-container {{class}}">
+		{{#if split}}
+			<button id="{{#if split}}{{id}}{{/if}}"
+					type="button" class="btn {{#if size}}btn-{{size}}{{/if}} btn-{{#if type}}{{type}}{{else}}secondary{{/if}}">
+				{{#if icon}}<i class="fa fa-{{icon}} fa-fw {{iconclass}}"></i>{{/if}} {{label}}
+			</button>
+		{{/if}}
+		<button class="btn btn-{{#if type}}{{type}}{{else}}secondary{{/if}} {{#if size}}btn-{{size}}{{/if}} dropdown-toggle {{#if
+				split}}dropdown-toggle-split{{/if}} {{btnclass}}"
+				type="button"
+				id="{{#unless split}}{{id}}{{/unless}}"
+				data-toggle="dropdown"
+				data-offset="{{offset}}"
+				data-reference="{{reference}}"
+				aria-haspopup="true"
+				aria-expanded="false">
+			{{#if split}}
+				<span class="sr-only">Toggle Dropdown</span>
+			{{else}}
+				{{#if icon}}<i class="fa fa-{{icon}} fa-fw {{iconclass}}"></i>{{/if}} {{label}}
+			{{/if}}
+		</button>
+		<div class="dropdown-menu {{menuclass}}" style="{{menustyle}}" aria-labelledby="{{id}}">
+			{{> Template.contentBlock ..}}
+		</div>
+	</div>
+</template>
