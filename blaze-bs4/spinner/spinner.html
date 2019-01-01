@@ -1,0 +1,9 @@
+<template name="spinner">
+	<div class="spinner-{{#if grow}}grow{{else}}border{{/if}} {{#if sm}}spinner-{{#if
+			grow}}grow{{else}}border{{/if}}-sm{{/if}} {{#if type}}text-{{type}}{{/if}} {{class}}"
+		 style="{{style}}"
+		 role="status"
+		 aria-hidden="{{#unless label}}true{{/unless}}">
+		<span class="sr-only">{{#if label}}{{label}}{{/if}}</span>
+	</div>
+</template>

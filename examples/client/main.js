@@ -16,6 +16,7 @@ import '../templates/buttons/buttons'
 import '../templates/buttongroups/buttongroups.html'
 import '../templates/jumbotron/jumbotron.html'
 import '../templates/progress/progress'
+import '../templates/spinners/spinners.html'
 
 import './main.html'
 
@@ -30,6 +31,7 @@ const allTemplates = [
   { template: 'buttongroups', name: 'Button Group' },
   { template: 'jumbotrons', name: 'Jumbotron' },
   { template: 'progressbars', name: 'Progress' },
+  { template: 'spinners', name: 'Spinner' },
 ]
 
 Template.body.onCreated(function () {

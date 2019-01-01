@@ -1,0 +1,168 @@
+<template name="spinners">
+	<h1>Spinners</h1>
+	<hr>
+
+	<h2 class="my-4">Border spinner</h2>
+
+	{{> spinner }}
+
+	{{#code}}
+		{{|> spinner }}
+	{{/code}}
+
+	<h2 class="my-4">Colors</h2>
+
+	{{> spinner type="primary"}}
+	{{> spinner type="secondary"}}
+	{{> spinner type="success"}}
+	{{> spinner type="danger"}}
+	{{> spinner type="warning"}}
+	{{> spinner type="info"}}
+	{{> spinner type="light"}}
+	{{> spinner type="dark"}}
+
+	{{#code}}
+		{{|> spinner type="primary"}}
+		{{|> spinner type="secondary"}}
+		{{|> spinner type="success"}}
+		{{|> spinner type="danger"}}
+		{{|> spinner type="warning"}}
+		{{|> spinner type="info"}}
+		{{|> spinner type="light"}}
+		{{|> spinner type="dark"}}
+	{{/code}}
+
+	<h2 class="my-4">Growing spinner</h2>
+
+	{{> spinner grow=true}}
+
+
+	{{#code}}
+		{{|> spinner grow=true}}
+	{{/code}}
+
+	{{> spinner grow=true type="primary"}}
+	{{> spinner grow=true type="secondary"}}
+	{{> spinner grow=true type="success"}}
+	{{> spinner grow=true type="danger"}}
+	{{> spinner grow=true type="warning"}}
+	{{> spinner grow=true type="info"}}
+	{{> spinner grow=true type="light"}}
+	{{> spinner grow=true type="dark"}}
+
+	{{#code}}
+		{{|> spinner grow=true type="primary"}}
+		{{|> spinner grow=true type="secondary"}}
+		{{|> spinner grow=true type="success"}}
+		{{|> spinner grow=true type="danger"}}
+		{{|> spinner grow=true type="warning"}}
+		{{|> spinner grow=true type="info"}}
+		{{|> spinner grow=true type="light"}}
+		{{|> spinner grow=true type="dark"}}
+	{{/code}}
+
+	<h2 class="my-4">Alignment</h2>
+
+	<h3 class="my-4">Margin</h3>
+
+	{{> spinner class="m-5"}}
+
+	{{#code}}
+		{{|> spinner class="m-5"}}
+	{{/code}}
+
+	<h3 class="my-4">Placement</h3>
+
+	<h4>Flex</h4>
+
+	<div class="d-flex justify-content-center">
+		{{>spinner}}
+	</div>
+
+	{{#code}}
+		&lt;div class="d-flex justify-content-center"&gt;
+			{{|>spinner}}
+		&lt;/div&gt;
+	{{/code}}
+
+	<div class="d-flex align-items-center">
+		<strong>Loading...</strong>
+		{{> spinner class="ml-auto"}}
+	</div>
+
+	<h4>Floats</h4>
+
+	<div class="clearfix">
+		{{> spinner class="float-right"}}
+	</div>
+
+	<h4>Text align</h4>
+
+	<div class="text-center">
+		{{> spinner}}
+	</div>
+
+	<h2 class="my-4">Size</h2>
+
+	{{> spinner sm=true}}
+	{{> spinner sm=true grow=true}}
+
+	{{#code}}
+		{{|> spinner sm=true}}
+		{{|> spinner sm=true grow=true}}
+	{{/code}}
+
+	{{> spinner sm=true style="width: 3rem; height: 3rem;"}}
+	{{> spinner sm=true style="width: 3rem; height: 3rem;" grow=true}}
+
+	{{#code}}
+		{{|> spinner sm=true style="width: 3rem; height: 3rem;"}}
+		{{|> spinner sm=true style="width: 3rem; height: 3rem;" grow=true}}
+	{{/code}}
+
+	<h2 class="my-4">Buttons</h2>
+
+	{{#button colortype="primary" disabled=true}}
+		{{> spinner sm=true}}
+		<span class="sr-only">Loading...</span>
+	{{/button}}
+
+	{{#button colortype="primary" disabled=true}}
+		{{> spinner sm=true}}
+		Loading...
+	{{/button}}
+
+	{{#code}}
+		{{|#button colortype="primary" disabled=true}}
+			{{|> spinner sm=true}}
+			&lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+		{{|/button}}
+
+		{{|#button colortype="primary" disabled=true}}
+			{{|> spinner sm=true}}
+			Loading...
+		{{|/button}}
+	{{/code}}
+
+	{{#button colortype="primary" disabled=true}}
+		{{> spinner sm=true grow=true}}
+		<span class="sr-only">Loading...</span>
+	{{/button}}
+
+	{{#button colortype="primary" disabled=true}}
+		{{> spinner sm=true grow=true}}
+		Loading...
+	{{/button}}
+
+	{{#code}}
+		{{|#button colortype="primary" disabled=true}}
+			{{|> spinner sm=true grow=true}}
+			&lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+		{{|/button}}
+
+		{{|#button colortype="primary" disabled=true}}
+			{{|> spinner sm=true grow=true}}
+			Loading...
+		{{|/button}}
+	{{/code}}
+</template>
