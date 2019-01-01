@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 772726,
-  "totalMinifiedGzipBytes": 205364,
+  "totalMinifiedBytes": 802647,
+  "totalMinifiedGzipBytes": 207414,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
@@ -535,7 +535,7 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      11510,
+      15704,
       {
         "node_modules": {
           "meteor": {
@@ -555,6 +555,11 @@
                 "button.html": 58,
                 "template.button.js": 2533,
                 "button.js": 115
+              },
+              "dropdown": {
+                "dropdown.html": 60,
+                "template.dropdown.js": 3122,
+                "dropdown.js": 804
               },
               "jumbotron": {
                 "template.jumbotron.js": 484
@@ -604,7 +609,7 @@
       {}
     ],
     "app/app.js": [
-      52522,
+      78249,
       {
         "templates": {
           "about": {
@@ -639,6 +644,11 @@
             "code.html": 56,
             "template.code.js": 453
           },
+          "dropdowns": {
+            "dropdowns.html": 61,
+            "template.dropdowns.js": 25149,
+            "dropdowns.js": 364
+          },
           "jumbotron": {
             "jumbotron.html": 61,
             "template.jumbotron.js": 3318
@@ -660,7 +670,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 1434,
-          "main.js": 1648
+          "main.js": 1730
         }
       }
     ]
