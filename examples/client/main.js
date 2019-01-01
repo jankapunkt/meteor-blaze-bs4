@@ -58,6 +58,9 @@ Template.body.helpers({
   },
   isCurrent (name) {
     return Template.instance().state.get('current') === name
+  },
+  fluid () {
+    return Template.instance().state.get('fluid')
   }
 })
 
@@ -66,5 +69,10 @@ Template.body.events({
     const template = templateInstance.$(event.currentTarget).val()
     global.window.location.href = `#${template}`
     templateInstance.state.set('current', template)
+  },
+  'click .toggle-fluid' (event, templateInstance) {
+    event.preventDefault()
+    const fluid = templateInstance.state.get('fluid')
+    templateInstance.state.set('fluid', !fluid)
   }
 })

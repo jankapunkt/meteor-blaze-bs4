@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<div class="container my-4">
+<div class="container{{#if fluid}}-fluid{{/if}} my-4">
     <nav class="text-center">
         <h1>Blaze Bootstrap 4 Components</h1>
         <div class="form-inline">
@@ -23,6 +23,7 @@
                 <option  selected="{{#if isCurrent this.template}}selected{{/if}}" value="{{this.template}}">{{this.name}}</option><!---->
             {{/each}}
             </select>
+			<button class="ml-1 btn btn-{{#if fluid}}primary{{else}}secondary{{/if}} toggle-fluid">Toggle fluid</button>
         </div>
 
         <a href="https://github.com/jankapunkt/meteor-blaze-bs4">
