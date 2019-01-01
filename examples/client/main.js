@@ -14,6 +14,7 @@ import '../templates/badge/badge'
 import '../templates/breadcrumb/breadcrumb'
 import '../templates/buttons/buttons'
 import '../templates/buttongroups/buttongroups.html'
+import '../templates/dropdowns/dropdowns'
 import '../templates/jumbotron/jumbotron.html'
 import '../templates/progress/progress'
 import '../templates/spinners/spinners.html'
@@ -29,6 +30,7 @@ const allTemplates = [
   { template: 'breadcrumbs', name: 'Breadcrumb' },
   { template: 'buttons', name: 'Button' },
   { template: 'buttongroups', name: 'Button Group' },
+  { template: 'dropdowns', name: 'Dropdown' },
   { template: 'jumbotrons', name: 'Jumbotron' },
   { template: 'progressbars', name: 'Progress' },
   { template: 'spinners', name: 'Spinner' },
