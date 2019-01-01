@@ -3,15 +3,15 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 762102,
-  "totalMinifiedGzipBytes": 204433,
+  "totalMinifiedBytes": 772726,
+  "totalMinifiedGzipBytes": 205364,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      330889,
+      330853,
       {
         "node_modules": {
           "meteor": {
@@ -75,7 +75,7 @@
           },
           "@babel": {
             "runtime": {
-              "package.json": 397,
+              "package.json": 361,
               "helpers": {
                 "interopRequireDefault.js": 79,
                 "objectSpread.js": 380,
@@ -535,7 +535,7 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      10411,
+      11510,
       {
         "node_modules": {
           "meteor": {
@@ -562,6 +562,9 @@
               "progress": {
                 "template.progress.js": 1612,
                 "progress.js": 12
+              },
+              "spinner": {
+                "template.spinner.js": 993
               }
             }
           }
@@ -601,7 +604,7 @@
       {}
     ],
     "app/app.js": [
-      42961,
+      52522,
       {
         "templates": {
           "about": {
@@ -645,6 +648,10 @@
             "template.progress.js": 4180,
             "progress.js": 443
           },
+          "spinners": {
+            "spinners.html": 60,
+            "template.spinners.js": 9366
+          },
           "helpers": {
             "helpers.js": 194,
             "shared.js": 186
@@ -653,7 +660,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 1434,
-          "main.js": 1565
+          "main.js": 1648
         }
       }
     ]
