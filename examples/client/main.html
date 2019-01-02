@@ -15,7 +15,7 @@
 
 <body>
 <div class="container{{#if fluid}}-fluid{{/if}} my-4">
-    <nav class="text-center">
+    <nav>
         <h1>Blaze Bootstrap 4 Components</h1>
         <div class="form-inline">
             <select class="form-control template-select">
@@ -23,9 +23,14 @@
                 <option  selected="{{#if isCurrent this.template}}selected{{/if}}" value="{{this.template}}">{{this.name}}</option><!---->
             {{/each}}
             </select>
+			<select class="form-control theme-select ml-1">
+				<option selected="{{#if isTheme}}selected{{/if}}">Default theme</option>
+				{{#each bsthemes}}
+					<option  selected="{{#if isTheme this.value}}selected{{/if}}" value="{{this.value}}">{{this.name}}</option><!---->
+				{{/each}}
+			</select>
 			<button class="ml-1 btn btn-{{#if fluid}}primary{{else}}secondary{{/if}} toggle-fluid">Toggle fluid</button>
         </div>
-
         <a href="https://github.com/jankapunkt/meteor-blaze-bs4">
             <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
                  alt="Fork me on GitHub">
@@ -34,4 +39,5 @@
     <hr>
     {{> Template.dynamic template=current}}
 </div>
+<link id="bbs4-custom-theme" rel="stylesheet" type="text/css" href="">
 </body>

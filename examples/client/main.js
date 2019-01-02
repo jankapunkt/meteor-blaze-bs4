@@ -36,6 +36,31 @@ const allTemplates = [
   { template: 'spinners', name: 'Spinner' },
 ]
 
+const allThemes = [
+  {value: 'cerulean', name: 'Cerulean'},
+  {value: 'cosmo', name: 'Cosmo'},
+  {value: 'cyborg', name: 'Cyborg'},
+  {value: 'darkly', name: 'Darkly'},
+  {value: 'flatly', name: 'Flatly'},
+  {value: 'journal', name: 'Journal'},
+  {value: 'litera', name: 'Litera'},
+  {value: 'lumen', name: 'Lumen'},
+  {value: 'lux', name: 'Lux'},
+  {value: 'materia', name: 'Materia'},
+  {value: 'minty', name: 'Minty'},
+  {value: 'pulse', name: 'Pulse'},
+  {value: 'minty', name: 'Minty'},
+  {value: 'sandstone', name: 'Sandstone'},
+  {value: 'simplex', name: 'Simplex'},
+  {value: 'sketchy', name: 'Sketchy'},
+  {value: 'slate', name: 'Slate'},
+  {value: 'solar', name: 'Solar'},
+  {value: 'spacelab', name: 'Spacelab'},
+  {value: 'superhero', name: 'Superhero'},
+  {value: 'united', name: 'United'},
+  {value: 'yeti', name: 'Yeti'},
+]
+
 Template.body.onCreated(function () {
   const instance = this
   instance.state = new ReactiveDict()
@@ -53,11 +78,17 @@ Template.body.helpers({
   bstemplates () {
     return allTemplates
   },
+  bsthemes () {
+    return allThemes
+  },
   current () {
     return Template.instance().state.get('current')
   },
   isCurrent (name) {
     return Template.instance().state.get('current') === name
+  },
+  isTheme (value) {
+    return Template.instance().state.get('theme') === value
   },
   fluid () {
     return Template.instance().state.get('fluid')
@@ -74,5 +105,11 @@ Template.body.events({
     event.preventDefault()
     const fluid = templateInstance.state.get('fluid')
     templateInstance.state.set('fluid', !fluid)
+  },
+  'change .theme-select' (event, templateInstance) {
+    const theme = templateInstance.$(event.currentTarget).val()
+    const href = `/themes/${theme}.min.css`
+    console.log(theme, href)
+    $('#bbs4-custom-theme').prop('href', href)
   }
 })
