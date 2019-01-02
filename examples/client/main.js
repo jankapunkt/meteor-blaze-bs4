@@ -108,7 +108,7 @@ Template.body.events({
   },
   'change .theme-select' (event, templateInstance) {
     const theme = templateInstance.$(event.currentTarget).val()
-    const href = `/themes/${theme}.min.css`
+    const href = `themes/${theme}.min.css`
     console.log(theme, href)
     $('#bbs4-custom-theme').prop('href', href)
   }
