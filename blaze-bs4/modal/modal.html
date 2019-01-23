@@ -6,7 +6,8 @@
          aria-hidden="true"
 		 data-backdrop="{{#if static}}static{{else}}none{{/if}}"
 		 data-keyboard="{{#if static}}true{{else}}false{{/if}}">
-		<div class="modal-dialog {{#if large}}modal-lg{{/if}}" role="document">
+		<div class="modal-dialog {{#if large}}modal-lg{{/if}} {{#if centered}}modal-dialog-centered{{/if}}"
+             role="document">
 			<!-- Modal content-->
 			<div class="modal-content">
 				{{> Template.contentBlock ..}}
