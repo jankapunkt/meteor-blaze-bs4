@@ -1,7 +1,24 @@
 <div align="center">
 <h1>Meteor Blaze Bootstrap 4 Components</h1>
-<p>Generic Bootstrap 4 components library for Meteor Blaze.</p>
+<p>Generic Bootstrap 4 components library for Meteor Blaze. See the <a href="https://jankapunkt.github.io/meteor-blaze-bs4/">DEMO</a></p>
 </div>
+
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![GitLicense](https://gitlicense.com/badge/jankapunkt/meteor-blaze-bs4)](https://gitlicense.com/license/jankapunkt/meteor-blaze-bs4)
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+
+Note, that we are in status WIP, which means "Initial development is in progress, but there has not yet been a stable, usable release suitable for the public."
+However, there are already releases on atmosphere for trying out the latest state.
+
+## Features
+
+* All Bootstrap components as parameterized Blaze Templates (see the [project overview](https://github.com/jankapunkt/meteor-blaze-bs4/projects/1) for supported components)
+* Write Template code that is easier to reason about
+* Keeps the naming conventions from Bootstrap
+* Abstracts base classes (like `btn`) away, so you can focus on the code that matters
+* Passing arbitrary `data-` attributes to components without the need for further config
+* Pass events as parameters or use the classic event mapping from Blaze
+* Rich [examples DEMO](https://jankapunkt.github.io/meteor-blaze-bs4/) that runs in analogy to the Bootstrap documentation
 
 ## Getting started
 
