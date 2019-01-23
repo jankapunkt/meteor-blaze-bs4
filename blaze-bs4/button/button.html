@@ -1,5 +1,6 @@
 <template name="button">
     <button {{atts}}
+            {{dataAtts}}
             id="{{id}}"
             type="{{#if type}}{{type}}{{else}}button{{/if}}"
             class="btn {{#if size}}btn-{{size}}{{/if}} btn-{{#if outline}}outline-{{/if}}{{#if colortype}}{{colortype}}{{else}}secondary{{/if}} {{class}}"
