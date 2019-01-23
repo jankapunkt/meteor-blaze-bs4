@@ -1,1 +1,1 @@
-import './modal.html';
+import './modal.html'
