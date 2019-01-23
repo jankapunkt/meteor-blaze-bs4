@@ -1,13 +1,13 @@
 <template name="modal">
 	<div id="{{id}}"
-		 class="modal fade {{class}}"
+		 class="modal {{#unless nofade}}fade{{/unless}} {{class}}"
 		 role="dialog"
          tabindex="-1" aria-labelledby="{{id}}"
          aria-hidden="true"
 		 data-backdrop="{{#if static}}static{{else}}none{{/if}}"
 		 data-keyboard="{{#if static}}true{{else}}false{{/if}}">
 		<div class="modal-dialog {{#if large}}modal-lg{{/if}} {{#if centered}}modal-dialog-centered{{/if}}"
-             role="document">
+                role="document">
 			<!-- Modal content-->
 			<div class="modal-content">
 				{{> Template.contentBlock ..}}
