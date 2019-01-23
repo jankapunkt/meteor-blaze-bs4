@@ -3,15 +3,15 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 804911,
-  "totalMinifiedGzipBytes": 207943,
+  "totalMinifiedBytes": 827102,
+  "totalMinifiedGzipBytes": 209955,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      330853,
+      330889,
       {
         "node_modules": {
           "meteor": {
@@ -75,7 +75,7 @@
           },
           "@babel": {
             "runtime": {
-              "package.json": 361,
+              "package.json": 397,
               "helpers": {
                 "interopRequireDefault.js": 79,
                 "objectSpread.js": 380,
@@ -535,7 +535,7 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      15704,
+      19454,
       {
         "node_modules": {
           "meteor": {
@@ -553,8 +553,8 @@
               },
               "button": {
                 "button.html": 58,
-                "template.button.js": 2533,
-                "button.js": 115
+                "template.button.js": 2589,
+                "button.js": 237
               },
               "dropdown": {
                 "dropdown.html": 60,
@@ -564,12 +564,20 @@
               "jumbotron": {
                 "template.jumbotron.js": 484
               },
+              "modal": {
+                "modal.html": 57,
+                "template.modal.js": 2827,
+                "modal.js": 39
+              },
               "progress": {
                 "template.progress.js": 1612,
                 "progress.js": 12
               },
               "spinner": {
                 "template.spinner.js": 993
+              },
+              "utils": {
+                "dataAtts.js": 442
               }
             }
           }
@@ -609,7 +617,7 @@
       {}
     ],
     "app/app.js": [
-      80513,
+      98918,
       {
         "templates": {
           "about": {
@@ -653,6 +661,11 @@
             "jumbotron.html": 61,
             "template.jumbotron.js": 3318
           },
+          "modals": {
+            "modals.html": 58,
+            "template.modals.js": 17844,
+            "modals.js": 374
+          },
           "progress": {
             "progress.html": 60,
             "template.progress.js": 4180,
@@ -670,7 +683,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 2590,
-          "main.js": 2777
+          "main.js": 2847
         }
       }
     ]
