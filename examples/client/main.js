@@ -16,6 +16,7 @@ import '../templates/buttons/buttons'
 import '../templates/buttongroups/buttongroups.html'
 import '../templates/dropdowns/dropdowns'
 import '../templates/jumbotron/jumbotron.html'
+import '../templates/modals/modals'
 import '../templates/progress/progress'
 import '../templates/spinners/spinners.html'
 
@@ -32,6 +33,7 @@ const allTemplates = [
   { template: 'buttongroups', name: 'Button Group' },
   { template: 'dropdowns', name: 'Dropdown' },
   { template: 'jumbotrons', name: 'Jumbotron' },
+  { template: 'modals', name: 'Modal' },
   { template: 'progressbars', name: 'Progress' },
   { template: 'spinners', name: 'Spinner' },
 ]
