@@ -1,0 +1,232 @@
+<template name="modals">
+    <h2 class="my-4">Live demo</h2>
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModal" label="Launch demo modal"}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModal"}}
+        {{>modalheader title="Modal title" dismiss=true}}
+        {{#modalbody}}
+            ...
+        {{/modalbody}}
+        {{#modalfooter}}
+            {{> button colortype="secondary" label="Close" data-dismiss="modal" }}
+            {{> button colortype="primary" label="Save changes"}}
+        {{/modalfooter}}
+    {{/modal}}
+
+    <h2 class="my-4">Scrolling long content</h2>
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalLong" label="Launch demo modal"}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModalLong"}}
+        {{>modalheader title="Modal title" dismiss=true}}
+        {{#modalbody}}
+
+
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                laoreet rutrum faucibus dolor auctor.</p>
+
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                laoreet rutrum faucibus dolor auctor.</p>
+
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                laoreet rutrum faucibus dolor auctor.</p>
+
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                laoreet rutrum faucibus dolor auctor.</p>
+
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                laoreet rutrum faucibus dolor auctor.</p>
+
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                laoreet rutrum faucibus dolor auctor.</p>
+
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+        {{/modalbody}}
+        {{#modalfooter}}
+            {{> button colortype="secondary" label="Close" data-dismiss="modal" }}
+            {{> button colortype="primary" label="Save changes"}}
+        {{/modalfooter}}
+    {{/modal}}
+
+    <h2 class="my-4">Vertically centered</h2>
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalCenter" label="Launch demo modal"}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModalCenter" centered=true}}
+        {{>modalheader title="Modal title" dismiss=true}}
+        {{#modalbody}}
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        {{/modalbody}}
+        {{#modalfooter}}
+            {{> button colortype="secondary" label="Close" data-dismiss="modal" }}
+            {{> button colortype="primary" label="Save changes"}}
+        {{/modalfooter}}
+    {{/modal}}
+
+    <!-- TODO Tooltips and popovers, once they are implemented as Templates -->
+
+    <h2 class="my-4">Using the grid</h2>
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalGrid" label="Launch demo modal"}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModalGrid"}}
+        {{>modalheader title="Modal title" dismiss=true}}
+        {{#modalbody}}
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 border border-secondary">.col-md-4</div>
+                    <div class="col-md-4 ml-auto border border-secondary">.col-md-4 .ml-auto</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 ml-auto border border-secondary">.col-md-3 .ml-auto</div>
+                    <div class="col-md-2 ml-auto border border-secondary">.col-md-2 .ml-auto</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 ml-auto border border-secondary">.col-md-6 .ml-auto</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9 border border-secondary">
+                        Level 1: .col-sm-9
+                        <div class="row">
+                            <div class="col-8 col-sm-6 border border-secondary">
+                                Level 2: .col-8 .col-sm-6
+                            </div>
+                            <div class="col-4 col-sm-6 border border-secondary">
+                                Level 2: .col-4 .col-sm-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/modalbody}}
+        {{#modalfooter}}
+            {{> button colortype="secondary" label="Close" data-dismiss="modal" }}
+            {{> button colortype="primary" label="Save changes"}}
+        {{/modalfooter}}
+    {{/modal}}
+
+    <h2 class="my-4">Varying modal content</h2>
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalWhatever"
+            data-whatever="@mdo" label="Open modal for @mdo"}}
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalWhatever"
+            data-whatever="@fat" label="Open modal for @fat"}}
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalWhatever"
+            data-whatever="@bootstrap" label="Open modal for @bootstrap"}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModalWhatever"}}
+        {{>modalheader title="New message" dismiss=true}}
+        {{#modalbody}}
+            <form>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                </div>
+            </form>
+        {{/modalbody}}
+        {{#modalfooter}}
+            {{> button colortype="secondary" label="Close" data-dismiss="modal" }}
+            {{> button colortype="primary" label="Send message"}}
+        {{/modalfooter}}
+    {{/modal}}
+
+    <!-- TODO Change animation -->
+
+    <h2 class="my-4">Remove animation</h2>
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalNofade" label="Launch demo modal"}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModalNofade" nofade=true}}
+        {{>modalheader title="Modal title" dismiss=true}}
+        {{#modalbody}}
+            ...
+        {{/modalbody}}
+        {{#modalfooter}}
+            {{> button colortype="secondary" label="Close" data-dismiss="modal" }}
+            {{> button colortype="primary" label="Save changes"}}
+        {{/modalfooter}}
+    {{/modal}}
+
+
+    <h2 class="my-4">Optional sizes</h2>
+
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalXlarge" label="Extra large modal"}}
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalLarge" label="Large modal"}}
+    {{> button colortype="primary" data-toggle="modal" data-target="#exampleModalSmall" label="Small modal"}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModalXlarge" xlarge=true}}
+        {{>modalheader title="Modal title" dismiss=true}}
+        {{#modalbody}}
+            ...
+        {{/modalbody}}
+    {{/modal}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModalLarge" large=true}}
+        {{>modalheader title="Modal title" dismiss=true}}
+        {{#modalbody}}
+            ...
+        {{/modalbody}}
+    {{/modal}}
+
+    <!-- Modal -->
+    {{#modal id="exampleModalSmall" small=true}}
+        {{>modalheader title="Modal title" dismiss=true}}
+        {{#modalbody}}
+            ...
+        {{/modalbody}}
+    {{/modal}}
+
+
+    <!-- TODO Events -->
+</template>
