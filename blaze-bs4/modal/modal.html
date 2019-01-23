@@ -1,0 +1,43 @@
+<template name="modal">
+	<div id="{{id}}"
+		 class="modal fade {{class}}"
+		 role="dialog"
+         tabindex="-1" aria-labelledby="{{id}}"
+         aria-hidden="true"
+		 data-backdrop="{{#if static}}static{{else}}none{{/if}}"
+		 data-keyboard="{{#if static}}true{{else}}false{{/if}}">
+		<div class="modal-dialog {{#if large}}modal-lg{{/if}}" role="document">
+			<!-- Modal content-->
+			<div class="modal-content">
+				{{> Template.contentBlock ..}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="modalheader">
+	<div class="modal-header {{class}}">
+		{{#if title}}
+			<h5 class="modal-title">{{title}}</h5>
+		{{/if}}
+
+		{{#if dismiss}}
+            <button type="button" class="close" data-dismiss="modal" aria-label="x">
+                <span aria-hidden="true">&times;</span>
+            </button>
+		{{/if}}
+	</div>
+</template>
+
+<template name="modalbody">
+	<div class="modal-body">
+		{{> Template.contentBlock ..}}
+	</div>
+</template>
+
+<template name="modalfooter">
+	<div class="modal-footer">
+		{{> Template.contentBlock ..}}
+	</div>
+</template>
+
