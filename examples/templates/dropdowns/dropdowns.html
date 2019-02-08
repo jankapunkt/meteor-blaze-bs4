@@ -5,35 +5,60 @@
 	<h2 class="my-4">Single button</h2>
 
 	{{#dropdown label="Dropdown button"}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+		{{> item type="dropdown" href="#dropdowns" label="Action"}}
+		{{> item type="dropdown" href="#dropdowns" label="Another action"}}
+		{{> item type="dropdown" href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
-	
-	{{#code}}
+
+	{{#code label="Default example with auto lookup for parent to dtermine type. Slower, but less code clutter."}}
 		{{|#dropdown label="Dropdown button"}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+			{{|> item href="#dropdowns" label="Action"}}
+			{{|> item href="#dropdowns" label="Another action"}}
+			{{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 	{{/code}}
+
+	{{#code label="With explicit type declaration. Faster, but more code to write"}}
+		{{|#dropdown label="Dropdown button"}}
+			{{|> item type="dropdown" href="#dropdowns" label="Action"}}
+			{{|> item type="dropdown" href="#dropdowns" label="Another action"}}
+			{{|> item type="dropdown" href="#dropdowns" label="Something else here"}}
+		{{|/dropdown}}
+	{{/code}}
+
+    <h3 class="my-4">Use custom HTML inside Dropdown Item</h3>
+    
+    {{#dropdown label="Dropdown button"}}
+        {{#item href="#dropdowns"}}<strong>Action</strong>{{/item}}
+        {{#item href="#dropdowns"}}<u>Another action</u>{{/item}}
+        {{#item href="#dropdowns"}}<i>Something else here</i>{{/item}}
+    {{/dropdown}}
+
+    {{#code}}
+        {{|#dropdown label="Dropdown button"}}
+            {{|#item href="#dropdowns"}}&lt;strong&gt;Action&lt;/strong&gt;{{|/item}}
+            {{|#item href="#dropdowns"}}&lt;u&gt;Another action&lt;/u&gt;{{|/item}}
+            {{|#item href="#dropdowns"}}&lt;i&gt;Something else here&lt;/i&gt;{{|/item}}
+        {{|/dropdown}}
+    {{/code}}
+
 
 	<h2 class="my-4">Theme colors</h2>
 
 	{{#each themeColors}}
 		{{#dropdown label=this type=this}}
-			<a class="dropdown-item" href="#dropdowns">Action</a>
-			<a class="dropdown-item" href="#dropdowns">Another action</a>
-			<a class="dropdown-item" href="#dropdowns">Something else here</a>
+            {{> item href="#dropdowns" label="Action"}}
+            {{> item href="#dropdowns" label="Another action"}}
+            {{> item href="#dropdowns" label="Something else here"}}
 		{{/dropdown}}
 	{{/each}}
 
 	{{#code}}
 		{{|#each themeColors}}
 			{{|#dropdown label=this type=this}}
-				&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-				&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-				&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+			{{|> item href="#dropdowns" label="Action"}}
+			{{|> item href="#dropdowns" label="Another action"}}
+			{{|> item href="#dropdowns" label="Something else here"}}
 			{{|/dropdown}}
 		{{|/each}}
 	{{/code}}
@@ -42,18 +67,18 @@
 
 	{{#each themeColors}}
 		{{#dropdown label=this type=this split=true}}
-			<a class="dropdown-item" href="#dropdowns">Action</a>
-			<a class="dropdown-item" href="#dropdowns">Another action</a>
-			<a class="dropdown-item" href="#dropdowns">Something else here</a>
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{/dropdown}}
 	{{/each}}
 
 	{{#code}}
 		{{|#each themeColors}}
 			{{|#dropdown label=this type=this split=true}}
-				&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-				&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-				&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+                {{|> item href="#dropdowns" label="Action"}}
+                {{|> item href="#dropdowns" label="Another action"}}
+                {{|> item href="#dropdowns" label="Something else here"}}
 			{{|/dropdown}}
 		{{|/each}}
 	{{/code}}
@@ -61,138 +86,138 @@
 	<h2 class="my-4">Sizing</h2>
 
 	{{#dropdown label="Large button" size="lg"}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#dropdown label="Large split button" size="lg" split=true}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#code}}
 		{{|#dropdown label="Large button" size="lg"}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 
 		{{|#dropdown label="Large split button" size="lg" split=true}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 	{{/code}}
 
 	{{#dropdown label="Small button" size="sm"}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#dropdown label="Small split button" size="sm" split=true}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#code}}
-		{{|#dropdown label="Large button" size="sm"}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+		{{|#dropdown label="Small button" size="sm"}}
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 
-		{{|#dropdown label="Large split button" size="sm" split=true}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+		{{|#dropdown label="Small split button" size="sm" split=true}}
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 	{{/code}}
 
 	<h2 class="my-4">Dropup</h2>
 
 	{{#dropdown label="Dropup" direction="up"}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#dropdown label="Split dropup" direction="up" split=true}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#code}}
 		{{|#dropdown label="Dropup" direction="up"}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 
 		{{|#dropdown label="Split dropup" direction="up" split=true}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 	{{/code}}
 
 	<h2 class="my-4">Dropright</h2>
 
 	{{#dropdown label="Dropright" direction="right"}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#dropdown label="Split dropright" direction="right" split=true}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#code}}
 		{{|#dropdown label="Dropright" direction="right"}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 
 		{{|#dropdown label="Split dropright" direction="right" split=true}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 	{{/code}}
 
 	<h2 class="my-4">Dropleft</h2>
 
 	{{#dropdown label="Dropleft" direction="left"}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#dropdown label="Split dropleft" direction="left" split=true}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#code}}
 		{{|#dropdown label="Dropleft" direction="left"}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 
 		{{|#dropdown label="Split dropleft" direction="left" split=true}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 	{{/code}}
 
@@ -206,68 +231,68 @@
 	<h3>Offset</h3>
 
 	{{#dropdown label="Dropdown button" offset="10,20"}}
-		<a class="dropdown-item" href="#dropdowns">Action</a>
-		<a class="dropdown-item" href="#dropdowns">Another action</a>
-		<a class="dropdown-item" href="#dropdowns">Something else here</a>
+        {{> item href="#dropdowns" label="Action"}}
+        {{> item href="#dropdowns" label="Another action"}}
+        {{> item href="#dropdowns" label="Something else here"}}
 	{{/dropdown}}
 
 	{{#code}}
 		{{|#dropdown label="Dropdown button" offset="10,20"}}
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" label="Action"}}
+            {{|> item href="#dropdowns" label="Another action"}}
+            {{|> item href="#dropdowns" label="Something else here"}}
 		{{|/dropdown}}
 	{{/code}}
 
 	<h2 class="my-4">Events</h2>
 
 	{{#dropdown id="eventsExample1" label="On show" onShow=getOnShow}}
-		<a class="dropdown-item" href="#dropdowns" data-value="Action">Action</a>
-		<a class="dropdown-item" href="#dropdowns" data-value="Another action">Another action</a>
-		<a class="dropdown-item" href="#dropdowns" data-value="Something else here">Something else here</a>
+        {{> item href="#dropdowns" label="Action" data-value="Action"}}
+        {{> item href="#dropdowns" label="Another action" data-value="Another action"}}
+        {{> item href="#dropdowns" label="Something else here" data-value="Something else here"}}
 	{{/dropdown}}
 
 	{{#dropdown id="eventsExample2" label="On shown" onShown=getOnShown}}
-		<a class="dropdown-item" href="#dropdowns" data-value="Action">Action</a>
-		<a class="dropdown-item" href="#dropdowns" data-value="Another action">Another action</a>
-		<a class="dropdown-item" href="#dropdowns" data-value="Something else here">Something else here</a>
+        {{> item href="#dropdowns" label="Action" data-value="Action"}}
+        {{> item href="#dropdowns" label="Another action" data-value="Another action"}}
+        {{> item href="#dropdowns" label="Something else here" data-value="Something else here"}}
 	{{/dropdown}}
 
 	{{#dropdown id="eventsExample3" label="On hide" onHide=getOnHide}}
-		<a class="dropdown-item" href="#dropdowns" data-value="Action">Action</a>
-		<a class="dropdown-item" href="#dropdowns" data-value="Another action">Another action</a>
-		<a class="dropdown-item" href="#dropdowns" data-value="Something else here">Something else here</a>
+        {{> item href="#dropdowns" label="Action" data-value="Action"}}
+        {{> item href="#dropdowns" label="Another action" data-value="Another action"}}
+        {{> item href="#dropdowns" label="Something else here" data-value="Something else here"}}
 	{{/dropdown}}
 
 	{{#dropdown id="eventsExample4" label="On hidden" onHidden=getOnHidden}}
-		<a class="dropdown-item" href="#dropdowns" data-value="Action">Action</a>
-		<a class="dropdown-item" href="#dropdowns" data-value="Another action">Another action</a>
-		<a class="dropdown-item" href="#dropdowns" data-value="Something else here">Something else here</a>
+        {{> item href="#dropdowns" label="Action" data-value="Action"}}
+        {{> item href="#dropdowns" label="Another action" data-value="Another action"}}
+        {{> item href="#dropdowns" label="Something else here" data-value="Something else here"}}
 	{{/dropdown}}
 
 	{{#code}}
 		{{|#dropdown id="eventsExample1" label="On show" onShow=getOnShow}}
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Action"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Another action"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Something else here"&gt;Something else here&lt;/a&gt;
+			{{|> item href="#dropdowns" data-value="Action" label="Action"}}
+			{{|> item href="#dropdowns" data-value="Another action" label="Another action"}}
+			{{|> item href="#dropdowns" data-value="Something else here" label="Something else here"}}
 		{{|/dropdown}}
 
 		{{|#dropdown id="eventsExample2" label="On shown" onShown=getOnShown}}
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Action"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Another action"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Something else here"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" data-value="Action" label="Action"}}
+            {{|> item href="#dropdowns" data-value="Another action" label="Another action"}}
+            {{|> item href="#dropdowns" data-value="Something else here" label="Something else here"}}
 		{{|/dropdown}}
 
 		{{|#dropdown id="eventsExample3" label="On hide" onHide=getOnHide}}
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Action"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Another action"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Something else here"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" data-value="Action" label="Action"}}
+            {{|> item href="#dropdowns" data-value="Another action" label="Another action"}}
+            {{|> item href="#dropdowns" data-value="Something else here" label="Something else here"}}
 		{{|/dropdown}}
 
 		{{|#dropdown id="eventsExample4" label="On hidden" onHidden=getOnHidden}}
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Action"&gt;Action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Another action"&gt;Another action&lt;/a&gt;
-			&lt;a class="dropdown-item" href="#dropdowns" data-value="Something else here"&gt;Something else here&lt;/a&gt;
+            {{|> item href="#dropdowns" data-value="Action" label="Action"}}
+            {{|> item href="#dropdowns" data-value="Another action" label="Another action"}}
+            {{|> item href="#dropdowns" data-value="Something else here" label="Something else here"}}
 		{{|/dropdown}}
 	{{/code}}
 
