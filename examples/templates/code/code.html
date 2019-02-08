@@ -1,7 +1,7 @@
 <template name="code">
 	<div class="card my-4">
 		<div class="card-header bg-light">
-			<small class="text-muted">Code example</small>
+			<small class="text-muted">{{#if label}}{{label}}{{else}}Code example{{/if}}</small>
 		</div>
 		<pre><code>{{> Template.contentBlock ..}}</code></pre>
 	</div>
