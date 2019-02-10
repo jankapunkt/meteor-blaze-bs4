@@ -1,0 +1,71 @@
+<template name="navbars">
+    <h2 class="my-4">Brand</h2>
+
+    {{#navbar}}
+        {{>brand href="#" label="Navbar"}}
+    {{/navbar}}
+
+    <div class="my-2"></div>
+
+    {{#navbar}}
+        <span class="navbar-brand mb-0 h1">Navbar</span>
+    {{/navbar}}
+
+    <div class="my-2"></div>
+
+    {{#navbar}}
+        {{#brand href="#" }}
+            <img src="./media/logo.svg" height="30"/>
+        {{/brand}}
+    {{/navbar}}
+
+    <div class="my-2"></div>
+
+    {{#navbar}}
+        {{#brand href="#" }}
+            <img src="./media/logo.svg" height="30"/>
+            Blaze Bootstrap 4
+        {{/brand}}
+    {{/navbar}}
+
+    <h2 class="my-4">Nav</h2>
+
+    {{#navbar expand="lg"}}
+        {{>brand href="#" label="Navbar"}}
+        {{>toggler target="exampleNav"}}
+        {{#collapse navbar=true id="exampleNav"}}
+            {{#nav navbar=true}}
+                {{> link href="#navbars" label="Home" active=true }}
+                {{> link href="#navbars" label="Features"}}
+                {{> link href="#navbars" label="Pricing"}}
+                {{> link href="#navbars" label="Disabled" disabled=true}}
+            {{/nav}}
+        {{/collapse}}
+    {{/navbar}}
+
+    <div class="my-2"></div>
+
+    {{#navbar expand="lg"}}
+        {{>brand href="#" label="Navbar"}}
+        {{>toggler target="exampleNav"}}
+        {{#collapse navbar=true id="exampleNav"}}
+            {{#nav navbar=true}}
+                {{> link href="#" label="Home" active=true }}
+                {{> link href="#" label="Features"}}
+                {{> link href="#" label="Pricing"}}
+                {{> link href="#" label="Disabled" disabled=true}}
+                {{#item type="nav" dropdown=true}}
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {{> item type="dropdown" href="#dropdowns" label="Action" data-value="Action"}}
+                        {{> item type="dropdown" href="#dropdowns" label="Another action" data-value="Another action"}}
+                        {{> item type="dropdown" href="#dropdowns" label="Something else here" data-value="Something else here"}}
+                    </div>
+                {{/item}}
+            {{/nav}}
+        {{/collapse}}
+    {{/navbar}}
+</template>
