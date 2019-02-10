@@ -5,13 +5,22 @@
         {{>brand href="#" label="Navbar"}}
     {{/navbar}}
 
-    <div class="my-2"></div>
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar}}
+        {{|>brand href="#" label="Navbar"}}
+    {{|/navbar}}
+    {{/code}}
 
     {{#navbar}}
         <span class="navbar-brand mb-0 h1">Navbar</span>
     {{/navbar}}
 
-    <div class="my-2"></div>
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar}}
+        &lt;span class="navbar-brand mb-0 h1"&gt;Navbar&lt;/span&gt;
+    {{|/navbar}}
+    {{/code}}
+    
 
     {{#navbar}}
         {{#brand href="#" }}
@@ -19,7 +28,14 @@
         {{/brand}}
     {{/navbar}}
 
-    <div class="my-2"></div>
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar}}
+        {{|#brand href="#" }}
+            &lt;img src="./media/logo.svg" height="30"/&gt;
+        {{|/brand}}
+    {{|/navbar}}
+    {{/code}}
+
 
     {{#navbar}}
         {{#brand href="#" }}
@@ -27,6 +43,15 @@
             Blaze Bootstrap 4
         {{/brand}}
     {{/navbar}}
+
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar}}
+        {{|#brand href="#" }}
+            &lt;img src="./media/logo.svg" height="30"/&gt;
+            Blaze Bootstrap 4
+        {{|/brand}}
+    {{|/navbar}}
+    {{/code}}
 
     <h2 class="my-4">Nav</h2>
 
@@ -42,6 +67,21 @@
             {{/nav}}
         {{/collapse}}
     {{/navbar}}
+
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar expand="lg"}}
+        {{|>brand href="#" label="Navbar"}}
+        {{|>toggler target="exampleNav"}}
+        {{|#collapse navbar=true id="exampleNav"}}
+            {{|#nav navbar=true}}
+                {{|> link href="#navbars" label="Home" active=true }}
+                {{|> link href="#navbars" label="Features"}}
+                {{|> link href="#navbars" label="Pricing"}}
+                {{|> link href="#navbars" label="Disabled" disabled=true}}
+            {{|/nav}}
+        {{|/collapse}}
+    {{|/navbar}}
+    {{/code}}
 
     <div class="my-2"></div>
 
@@ -68,4 +108,154 @@
             {{/nav}}
         {{/collapse}}
     {{/navbar}}
+
+    <h2 class="my-4">Forms</h2>
+
+    {{#navbar}}
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    {{/navbar}}
+
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar}}
+        &lt;form class="form-inline"&gt;
+            &lt;input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"&gt;
+            &lt;button class="btn btn-outline-success my-2 my-sm-0" type="submit"&gt;Search&lt;/button&gt;
+        &lt;/form&gt;
+    {{|/navbar}}
+    {{/code}}
+
+    {{#navbar}}
+        {{>brand href="#" label="Navbar"}}
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    {{/navbar}}
+
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar}}
+        {{|>brand href="#" label="Navbar"}}
+        &lt;form class="form-inline"&gt;
+            &lt;input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"&gt;
+            &lt;button class="btn btn-outline-success my-2 my-sm-0" type="submit"&gt;Search&lt;/button&gt;
+        &lt;/form&gt;
+    {{|/navbar}}
+    {{/code}}
+
+    <h2 class="my-4">Text</h2>
+
+    {{#navbar expand="lg" }}
+        {{>brand href="#" label="Navbar w/ text"}}
+        {{>toggler target="exampleNav"}}
+        {{#collapse navbar=true id="exampleNav"}}
+            {{#nav navbar=true class="mr-auto"}}
+                {{> link href="#navbars" label="Home" active=true }}
+                {{> link href="#navbars" label="Features"}}
+                {{> link href="#navbars" label="Pricing"}}
+            {{/nav}}
+            <span class="navbar-text">
+             Navbar text with an inline element
+            </span>
+        {{/collapse}}
+    {{/navbar}}
+
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar expand="lg" }}
+        {{|>brand href="#" label="Navbar w/ text"}}
+        {{|>toggler target="exampleNav"}}
+        {{|#collapse navbar=true id="exampleNav"}}
+            {{|#nav navbar=true class="mr-auto"}}
+                {{|> link href="#navbars" label="Home" active=true }}
+                {{|> link href="#navbars" label="Features"}}
+                {{|> link href="#navbars" label="Pricing"}}
+            {{|/nav}}
+            &lt;span class="navbar-text"&gt;
+             Navbar text with an inline element
+            &lt;/span&gt;
+        {{|/collapse}}
+    {{|/navbar}}
+    {{/code}}
+
+    <h2 class="my-4">Color schemes</h2>
+
+    {{#navbar expand="lg" dark=true bg="dark"}}
+        {{>brand href="#" label="Navbar"}}
+        {{>toggler target="exampleNav"}}
+        {{#collapse navbar=true id="exampleNav"}}
+            {{#nav navbar=true}}
+                {{> link href="#navbars" label="Home" active=true }}
+                {{> link href="#navbars" label="Features"}}
+                {{> link href="#navbars" label="Pricing"}}
+                {{> link href="#navbars" label="Disabled" disabled=true}}
+            {{/nav}}
+        {{/collapse}}
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    {{/navbar}}
+
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar dark=true bg="dark"}}
+        &lt;!-- Navbar content --&gt;
+    {{|/navbar}}
+    {{/code}}
+
+    {{#navbar expand="lg" dark=true bg="primary"}}
+        {{>brand href="#" label="Navbar"}}
+        {{>toggler target="exampleNav"}}
+        {{#collapse navbar=true id="exampleNav"}}
+            {{#nav navbar=true}}
+                {{> link href="#navbars" label="Home" active=true }}
+                {{> link href="#navbars" label="Features"}}
+                {{> link href="#navbars" label="Pricing"}}
+                {{> link href="#navbars" label="Disabled" disabled=true}}
+            {{/nav}}
+        {{/collapse}}
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    {{/navbar}}
+
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar dark=true bg="primary"}}
+        &lt;!-- Navbar content --&gt;
+    {{|/navbar}}
+    {{/code}}
+
+    {{#navbar expand="lg" style="background-color: #e3f2fd !important;" }}
+        {{>brand href="#" label="Navbar"}}
+        {{>toggler target="exampleNav"}}
+        {{#collapse navbar=true id="exampleNav"}}
+            {{#nav navbar=true}}
+                {{> link href="#navbars" label="Home" active=true }}
+                {{> link href="#navbars" label="Features"}}
+                {{> link href="#navbars" label="Pricing"}}
+                {{> link href="#navbars" label="Disabled" disabled=true}}
+            {{/nav}}
+        {{/collapse}}
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    {{/navbar}}
+
+    {{#code}} <!-- =================== CODE ==================== -->
+    {{|#navbar style="background-color: #e3f2fd !important;"}}
+        &lt;!-- Navbar content --&gt;
+    {{|/navbar}}
+    {{/code}}
+    <h2 class="my-4">Containers</h2>
+
+    Currently there is every navbar surrounded by a div with a container class. Pass in the fluid parameter to determine
+    fluidness of the container.
+
+    <h2 class="my">Responsive behaviors</h2>
+
+    You can use the <code>{{|>toggler}}</code> template in combination with the <code>{{|#collapse}}</code> Template in
+    order to create a responsive toggle-able navbar. See the examples above on how to use toggler and collapse.
 </template>

@@ -1,25 +1,26 @@
 <template name="navbar">
-  <nav class="navbar {{#if expand}}navbar-expand-{{expand}}{{/if}} {{#if fixed}}fixed-{{fixed}}{{/if}} {{#if
-          dark}}navbar-dark{{else}}navbar-light{{/if}} {{#if bg}}bg-{{bg}}{{else}}bg-light{{/if}} {{class}}">
-    <div class="container{{#if fluid}}-fluid{{/if}}">
-      {{> Template.contentBlock ..}}
-    </div>
-  </nav>
+    <nav class="navbar {{#if expand}}navbar-expand-{{expand}}{{/if}} {{#if fixed}}fixed-{{fixed}}{{/if}} {{#if
+            dark}}navbar-dark{{else}}navbar-light{{/if}} {{#if bg}}bg-{{bg}}{{else}}bg-light{{/if}} {{class}}"
+         style="{{style}}">
+        <div class="container{{#if fluid}}-fluid{{/if}}">
+            {{> Template.contentBlock ..}}
+        </div>
+    </nav>
 </template>
 
 <template name="brand">
-  <a class="navbar-brand {{class}}" href="{{href}}" title="{{title}}">
-    {{#if label}}
-      {{label}}
-    {{else}}
-      {{>Template.contentBlock ..}}
-    {{/if}}
-  </a>
+    <a class="navbar-brand {{class}}" href="{{href}}" title="{{title}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{>Template.contentBlock ..}}
+        {{/if}}
+    </a>
 </template>
 
 <template name="toggler">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#{{target}}"
-          aria-controls="{{target}}" aria-expanded="false" aria-label="{{label}}">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#{{target}}"
+            aria-controls="{{target}}" aria-expanded="false" aria-label="{{label}}">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 </template>
