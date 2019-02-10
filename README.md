@@ -1,4 +1,5 @@
 <div align="center">
+<img src="../resources/logo.svg"/>
 <h1>Meteor Blaze Bootstrap 4 Components</h1>
 <p>Generic Bootstrap 4 components library for Meteor Blaze. See the <a href="https://jankapunkt.github.io/meteor-blaze-bs4/">DEMO</a></p>
 </div>
