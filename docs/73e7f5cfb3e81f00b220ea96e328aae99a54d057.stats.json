@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 829832,
-  "totalMinifiedGzipBytes": 210702,
+  "totalMinifiedBytes": 858735,
+  "totalMinifiedGzipBytes": 213118,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
@@ -535,7 +535,7 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      21635,
+      27604,
       {
         "node_modules": {
           "meteor": {
@@ -556,6 +556,11 @@
                 "template.button.js": 2589,
                 "button.js": 237
               },
+              "collapse": {
+                "collapse.html": 60,
+                "template.collapse.js": 524,
+                "collapse.js": 42
+              },
               "dropdown": {
                 "dropdown.html": 60,
                 "template.dropdown.js": 3122,
@@ -563,7 +568,7 @@
               },
               "item": {
                 "item.html": 56,
-                "template.item.js": 1012,
+                "template.item.js": 1963,
                 "item.js": 590
               },
               "jumbotron": {
@@ -573,6 +578,12 @@
                 "modal.html": 57,
                 "template.modal.js": 2827,
                 "modal.js": 39
+              },
+              "nav": {
+                "template.nav.js": 1631
+              },
+              "navbar": {
+                "template.navbar.js": 2361
               },
               "progress": {
                 "template.progress.js": 1612,
@@ -623,12 +634,12 @@
       {}
     ],
     "app/app.js": [
-      99467,
+      122401,
       {
         "templates": {
           "about": {
             "about.html": 57,
-            "template.about.js": 3746
+            "template.about.js": 3916
           },
           "alert": {
             "alert.html": 57,
@@ -672,6 +683,11 @@
             "template.modals.js": 17844,
             "modals.js": 374
           },
+          "navbars": {
+            "navbars.html": 59,
+            "template.navbars.js": 21389,
+            "navbars.js": 41
+          },
           "progress": {
             "progress.html": 60,
             "template.progress.js": 4180,
@@ -688,8 +704,8 @@
         },
         "client": {
           "main.html": 56,
-          "template.main.js": 2590,
-          "main.js": 2847
+          "template.main.js": 3728,
+          "main.js": 2921
         }
       }
     ]
