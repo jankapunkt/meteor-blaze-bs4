@@ -3,7 +3,7 @@
     <title>Meteor Blaze BS4</title>
     <meta name="application-name" content="Meteor Blaze BS4">
     <meta name="description" content="Generic Bootstrap 4 components library for Meteor Blaze.">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
     <!--  iOS: minimal-ui, -->
     <!-- TODO ADD ICONS -->
     <!--
@@ -14,30 +14,43 @@
 </head>
 
 <body>
-<div class="container{{#if fluid}}-fluid{{/if}} my-4">
-    <nav>
-        <h1>Blaze Bootstrap 4 Components</h1>
-        <div class="form-inline">
-            <select class="form-control template-select">
-            {{#each bstemplates}}
-                <option  selected="{{#if isCurrent this.template}}selected{{/if}}" value="{{this.template}}">{{this.name}}</option><!---->
-            {{/each}}
-            </select>
-			<select class="form-control theme-select ml-1">
-				<option selected="{{#if isTheme}}selected{{/if}}">Default theme</option>
-				{{#each bsthemes}}
-					<option  selected="{{#if isTheme this.value}}selected{{/if}}" value="{{this.value}}">{{this.name}}</option><!---->
-				{{/each}}
-			</select>
-			<button class="ml-1 btn btn-{{#if fluid}}primary{{else}}secondary{{/if}} toggle-fluid">Toggle fluid</button>
-        </div>
-        <a href="https://github.com/jankapunkt/meteor-blaze-bs4">
-            <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
-                 alt="Fork me on GitHub">
+<wrapper class="d-flex flex-column">
+{{#navbar fluid=fluid class="m-0" expand="lg" collapse=true}}
+    {{#brand href="/"}}
+        <img src="/media/logo.svg" height="30"/>
+        <a class="ml-2 text-secondary" href="https://github.com/jankapunkt/meteor-blaze-bs4" title="fork me on GitHub">
+            <i class="fa fa-fw fa-github"></i>
         </a>
-    </nav>
-    <hr>
+    {{/brand}}
+    {{> toggler target="navbaraollapse"}}
+    {{#collapse navbar=true id="navbaraollapse"}}
+        <div class="form-inline ml-auto">
+            <select class="form-control template-select">
+                {{#each bstemplates}}
+                    <option selected="{{#if isCurrent this.template}}selected{{/if}}"
+                            value="{{this.template}}">{{this.name}}</option><!---->
+                {{/each}}
+            </select>
+            <select class="form-control theme-select ml-1">
+                <option selected="{{#if isTheme}}selected{{/if}}">Default theme</option>
+                {{#each bsthemes}}
+                    <option selected="{{#if isTheme this.value}}selected{{/if}}"
+                            value="{{this.value}}">{{this.name}}</option>
+                    <!---->
+                {{/each}}
+            </select>
+            <button class="ml-1 btn btn-{{#if fluid}}primary{{else}}secondary{{/if}} toggle-fluid">Toggle fluid</button>
+        </div>
+    {{/collapse}}
+{{/navbar}}
+<main class="container{{#if fluid}}-fluid{{/if}} my-4">
     {{> Template.dynamic template=current}}
-</div>
+</main>
+<footer class="container-fluid w-100 bg-dark text-light py-3">
+    <div class="container">
+        <span>License: MIT, Author(s): Jan Küster, Code on GitHub: https://github.com/jankapunkt/meteor-blaze-bs4</span>
+    </div>
+</footer>
+</wrapper>
 <link id="bbs4-custom-theme" rel="stylesheet" type="text/css" href="">
 </body>

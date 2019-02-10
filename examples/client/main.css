@@ -1,15 +1,18 @@
 body {
-  padding: 10px;
-  font-family: sans-serif;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+wrapper {
+    min-height: 100vh;
 }
 
 .example-container {
 
 }
 
-pre
-{
-  -moz-tab-size: 2;
-  -o-tab-size:   2;
-  tab-size:      2;
+pre {
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
 }

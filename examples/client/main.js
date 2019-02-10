@@ -17,6 +17,7 @@ import '../templates/buttongroups/buttongroups.html'
 import '../templates/dropdowns/dropdowns'
 import '../templates/jumbotron/jumbotron.html'
 import '../templates/modals/modals'
+import '../templates/navbars/navbars'
 import '../templates/progress/progress'
 import '../templates/spinners/spinners.html'
 
@@ -34,33 +35,34 @@ const allTemplates = [
   { template: 'dropdowns', name: 'Dropdown' },
   { template: 'jumbotrons', name: 'Jumbotron' },
   { template: 'modals', name: 'Modal' },
+  { template: 'navbars', name: 'Navbar' },
   { template: 'progressbars', name: 'Progress' },
-  { template: 'spinners', name: 'Spinner' },
+  { template: 'spinners', name: 'Spinner' }
 ]
 
 const allThemes = [
-  {value: 'cerulean', name: 'Cerulean'},
-  {value: 'cosmo', name: 'Cosmo'},
-  {value: 'cyborg', name: 'Cyborg'},
-  {value: 'darkly', name: 'Darkly'},
-  {value: 'flatly', name: 'Flatly'},
-  {value: 'journal', name: 'Journal'},
-  {value: 'litera', name: 'Litera'},
-  {value: 'lumen', name: 'Lumen'},
-  {value: 'lux', name: 'Lux'},
-  {value: 'materia', name: 'Materia'},
-  {value: 'minty', name: 'Minty'},
-  {value: 'pulse', name: 'Pulse'},
-  {value: 'minty', name: 'Minty'},
-  {value: 'sandstone', name: 'Sandstone'},
-  {value: 'simplex', name: 'Simplex'},
-  {value: 'sketchy', name: 'Sketchy'},
-  {value: 'slate', name: 'Slate'},
-  {value: 'solar', name: 'Solar'},
-  {value: 'spacelab', name: 'Spacelab'},
-  {value: 'superhero', name: 'Superhero'},
-  {value: 'united', name: 'United'},
-  {value: 'yeti', name: 'Yeti'},
+  { value: 'cerulean', name: 'Cerulean' },
+  { value: 'cosmo', name: 'Cosmo' },
+  { value: 'cyborg', name: 'Cyborg' },
+  { value: 'darkly', name: 'Darkly' },
+  { value: 'flatly', name: 'Flatly' },
+  { value: 'journal', name: 'Journal' },
+  { value: 'litera', name: 'Litera' },
+  { value: 'lumen', name: 'Lumen' },
+  { value: 'lux', name: 'Lux' },
+  { value: 'materia', name: 'Materia' },
+  { value: 'minty', name: 'Minty' },
+  { value: 'pulse', name: 'Pulse' },
+  { value: 'minty', name: 'Minty' },
+  { value: 'sandstone', name: 'Sandstone' },
+  { value: 'simplex', name: 'Simplex' },
+  { value: 'sketchy', name: 'Sketchy' },
+  { value: 'slate', name: 'Slate' },
+  { value: 'solar', name: 'Solar' },
+  { value: 'spacelab', name: 'Spacelab' },
+  { value: 'superhero', name: 'Superhero' },
+  { value: 'united', name: 'United' },
+  { value: 'yeti', name: 'Yeti' },
 ]
 
 Template.body.onCreated(function () {
