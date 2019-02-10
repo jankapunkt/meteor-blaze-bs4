@@ -1,7 +1,7 @@
 /* eslint-env meteor */
 Package.describe({
   name: 'jkuester:blaze-bs4',
-  version: '0.10.1',
+  version: '0.11.0',
   // Brief, one-line summary of the package.
   summary: 'Generic Bootstrap 4 components library for Meteor Blaze.',
   // URL to the Git repository containing the source code for this package.
@@ -23,6 +23,8 @@ Package.onUse(function (api) {
     'breadcrumb/breadcrumb.html',
     'button/button.html',
     'button/button.js',
+    'collapse/collapse.html',
+    'collapse/collapse.js',
     'dropdown/dropdown.html',
     'dropdown/dropdown.js',
     'item/item.html',
@@ -30,6 +32,9 @@ Package.onUse(function (api) {
     'jumbotron/jumbotron.html',
     'modal/modal.html',
     'modal/modal.js',
+    'nav/nav.html',
+    'navbar/navbar.html',
+    //'navbar/navbar.js',
     'progress/progress.html',
     'progress/progress.js',
     'spinner/spinner.html'
