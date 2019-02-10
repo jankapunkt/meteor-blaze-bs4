@@ -1,0 +1,18 @@
+<template name="nav">
+    <ul class="{{#if navbar}}navbar-{{/if}}nav {{class}}">
+        {{> Template.contentBlock ..}}
+    </ul>
+</template>
+
+<template name="link">
+    <li class="nav-item {{#if active}}active{{/if}} {{class}}">
+        <a id="{{id}}"
+           href="{{href}}"
+           target="{{target}}"
+           tabindex="{{#if disabled}}-1{{/if}}"
+           aria-disabled="{{#if disabled}}true{{/if}}"
+           class="nav-link {{#if disabled}}disabled{{/if}} {{linkclass}}">
+            {{#if label}}{{label}}{{else}}{{>Template.contentBlock ..}}{{/if}}
+        </a>
+    </li>
+</template>
