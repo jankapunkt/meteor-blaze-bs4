@@ -132,6 +132,40 @@
 
     <h2 class="my-4">Navigation</h2>
 
+    <p class="my-4">Tabs</p>
+
+    {{#card class="text-center"}}
+        {{#cardheader}}
+            {{#nav tabs=true card=true}}
+                {{> link href="#cards" active=true label="Active"}}
+                {{> link href="#cards" label="Link"}}
+                {{> link href="#cards" disabled=true label="Disabled"}}
+            {{/nav}}
+        {{/cardheader}}
+        {{#cardbody}}
+            {{> cardtitle label="Card title"}}
+            {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        {{/cardbody}}
+    {{/card}}
+
+    <p class="my-4">Pills</p>
+
+    {{#card class="text-center"}}
+        {{#cardheader}}
+            {{#nav pills=true card=true}}
+                {{> link href="#cards" active=true label="Active"}}
+                {{> link href="#cards" label="Link"}}
+                {{> link href="#cards" disabled=true label="Disabled"}}
+            {{/nav}}
+        {{/cardheader}}
+        {{#cardbody}}
+            {{> cardtitle label="Card title"}}
+            {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        {{/cardbody}}
+    {{/card}}
+
     <h2 class="my-4">Images</h2>
 
     <h3 class="my-4">Image Caps</h3>
