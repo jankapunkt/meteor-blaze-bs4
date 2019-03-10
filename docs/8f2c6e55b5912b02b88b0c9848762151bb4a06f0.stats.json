@@ -3,15 +3,15 @@
     "name": "standard-minifier-js",
     "version": "2.4.0"
   },
-  "totalMinifiedBytes": 858735,
-  "totalMinifiedGzipBytes": 213118,
+  "totalMinifiedBytes": 901158,
+  "totalMinifiedGzipBytes": 217161,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      330889,
+      335967,
       {
         "node_modules": {
           "meteor": {
@@ -38,26 +38,26 @@
           "bootstrap": {
             "dist": {
               "css": {
-                "bootstrap.css": 151969
+                "bootstrap.css": 154674
               },
               "js": {
-                "bootstrap.js": 57766
+                "bootstrap.js": 60109
               }
             },
             "package.json": 86
-          },
-          "popper.js": {
-            "package.json": 88,
-            "dist": {
-              "umd": {
-                "popper.js": 20941
-              }
-            }
           },
           "jquery": {
             "package.json": 80,
             "dist": {
               "jquery.js": 86609
+            }
+          },
+          "popper.js": {
+            "package.json": 88,
+            "dist": {
+              "umd": {
+                "popper.js": 20971
+              }
             }
           },
           "meteor-node-stubs": {
@@ -535,7 +535,7 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      27604,
+      40081,
       {
         "node_modules": {
           "meteor": {
@@ -556,6 +556,11 @@
                 "template.button.js": 2589,
                 "button.js": 237
               },
+              "card": {
+                "card.html": 56,
+                "template.card.js": 9027,
+                "card.js": 38
+              },
               "collapse": {
                 "collapse.html": 60,
                 "template.collapse.js": 524,
@@ -569,10 +574,15 @@
               "item": {
                 "item.html": 56,
                 "template.item.js": 1963,
-                "item.js": 590
+                "item.js": 618
               },
               "jumbotron": {
                 "template.jumbotron.js": 484
+              },
+              "listgroup": {
+                "listgroup.html": 61,
+                "template.listgroup.js": 2423,
+                "listgroup.js": 43
               },
               "modal": {
                 "modal.html": 57,
@@ -580,7 +590,7 @@
                 "modal.js": 39
               },
               "nav": {
-                "template.nav.js": 1631
+                "template.nav.js": 2040
               },
               "navbar": {
                 "template.navbar.js": 2361
@@ -634,7 +644,7 @@
       {}
     ],
     "app/app.js": [
-      122401,
+      147269,
       {
         "templates": {
           "about": {
@@ -664,6 +674,11 @@
             "buttons.html": 59,
             "template.buttons.js": 4142,
             "buttons.js": 299
+          },
+          "cards": {
+            "cards.html": 57,
+            "template.cards.js": 24651,
+            "cards.js": 39
           },
           "code": {
             "code.html": 56,
@@ -705,7 +720,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 3728,
-          "main.js": 2921
+          "main.js": 2987
         }
       }
     ]
