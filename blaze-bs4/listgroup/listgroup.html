@@ -1,0 +1,15 @@
+<template name="listgroup">
+    {{#if links}}
+        <div class="list-group {{#if flush}}list-group-flush{{/if}} {{#if horizontal}}list-group-horizontal{{#if size}}-{{size}}{{/if}}{{/if}} {{class}}" style="{{style}}">
+            {{> Template.contentBlock .. }}
+        </div>
+    {{else if buttons}}
+        <div class="list-group {{#if flush}}list-group-flush{{/if}} {{#if horizontal}}list-group-horizontal{{#if size}}-{{size}}{{/if}}{{/if}} {{class}}" style="{{style}}">
+            {{> Template.contentBlock .. }}
+        </div>
+    {{else}}
+        <ul class="list-group {{#if flush}}list-group-flush{{/if}} {{#if horizontal}}list-group-horizontal{{#if size}}-{{size}}{{/if}}{{/if}} {{class}}" style="{{style}}">
+            {{> Template.contentBlock .. }}
+        </ul>
+    {{/if}}
+</template>
