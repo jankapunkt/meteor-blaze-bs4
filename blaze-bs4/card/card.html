@@ -1,0 +1,103 @@
+<template name="cardgroup">
+    <div class="card-group {{class}}" style="{{style}}">{{> Template.contentBlock ..}}</div>
+</template>
+
+<template name="carddeck">
+    <div class="card-deck {{class}}" style="{{style}}">{{> Template.contentBlock ..}}</div>
+</template>
+
+<template name="cardcolumns">
+    <div class="card-columns {{class}}" style="{{style}}">{{> Template.contentBlock ..}}</div>
+</template>
+
+<template name="cardheader">
+    <div class="card-header {{#if text}}text-{{text}}{{/if}} {{class}}" style="{{style}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="cardbody">
+    <div class="card-body {{#if text}}text-{{text}}{{/if}} {{class}}" style="{{style}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="cardfooter">
+    <div class="card-footer {{#if text}}text-{{text}}{{/if}} {{class}}" style="{{style}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="cardimage">
+    <img src="{{src}}"
+         class="card-img{{#if top}}-top{{/if}} {{class}}"
+         title="{{title}}"
+         alt="{{alt}}"
+         style="{{style}}">
+</template>
+
+<template name="cardtitle">
+    <h5 class="card-title {{class}}" style="{{style}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </h5>
+</template>
+
+<template name="cardsubtitle">
+    <h6 class="card-subtitle {{class}}" style="{{style}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </h6>
+</template>
+
+<template name="cardtext">
+    <p class="card-text {{class}}" style="{{style}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </p>
+</template>
+
+<template name="cardlink">
+    <a href="{{href}}" title="{{title}}" target="{{target}}" class="card-link {{class}}" {{atts}}>
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </a>
+</template>
+
+<template name="card">
+    <div class="card {{#if type}}bg-{{type}}{{/if}} {{#if border}}border-{{border}}{{/if}} {{#if text}}text-{{text}}{{/if}} {{class}}" style="{{style}}">
+        {{#if justbody}}
+            {{#if label}}
+                {{> cardbody label=label}}
+            {{else}}
+                {{#cardbody}}{{> Template.contentBlock ..}}{{/cardbody}}
+            {{/if}}
+        {{else}}
+            {{> Template.contentBlock ..}}
+        {{/if}}
+    </div>
+</template>
