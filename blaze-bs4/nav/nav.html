@@ -1,5 +1,5 @@
 <template name="nav">
-    <ul class="{{#if navbar}}navbar-{{/if}}nav {{class}}">
+    <ul class="{{#if navbar}}navbar-{{/if}}nav {{#if tabs}}nav-tabs{{/if}} {{#if pills}}nav-pills{{/if}} {{#if card}}card-header-{{#if tabs}}tabs{{/if}}{{#if pills}}pills{{/if}}{{/if}} {{class}}">
         {{> Template.contentBlock ..}}
     </ul>
 </template>
