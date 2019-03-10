@@ -4,7 +4,7 @@
     <h2 class="my-4">Example</h2>
 
     {{# card style="width: 18rem;"}}
-        {{> cardimage src="..." alt="..."}}
+        {{> cardimage src="media/imagecap.svg" alt="placeholder image"}}
         {{#cardbody}}
             {{> cardtitle label="Card title"}}
             {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
@@ -55,7 +55,7 @@
     <h2 class="my-4">Kitchen sink</h2>
 
     {{#card style="width: 18rem;"}}
-        {{> cardimage src="..." alt="..."}}
+        {{> cardimage src="media/imagecap.svg" alt="placeholder image"}}
         {{#cardbody}}
             {{> cardtitle label="Card title"}}
             {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
@@ -124,9 +124,44 @@
 
     <h3 class="my-4">Using grid markup</h3>
 
+    <div class="row">
+        <div class="col-sm-6">
+            {{# card justbody=true}}
+                {{> cardtitle label="Special title treatment"}}
+                {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            {{/card}}
+        </div>
+        <div class="col-sm-6">
+            {{# card justbody=true}}
+                {{> cardtitle label="Special title treatment"}}
+                {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            {{/card}}
+        </div>
+    </div>
+
     <h3 class="my-4">Using utilities</h3>
 
+    {{# card class="w-75" justbody=true}}
+        {{> cardtitle label="Special title treatment"}}
+        {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
+        <a href="#" class="btn btn-primary">Button</a>
+    {{/card}}
+
+    {{# card class="w-50" justbody=true}}
+        {{> cardtitle label="Special title treatment"}}
+        {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
+        <a href="#" class="btn btn-primary">Button</a>
+    {{/card}}
+
     <h3 class="my-4">Using custom CSS</h3>
+
+    {{# card style="width: 18rem;" justbody=true}}
+        {{> cardtitle label="Special title treatment"}}
+        {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    {{/card}}
 
     <h2 class="my-4">Text alignment</h2>
 
@@ -170,9 +205,59 @@
 
     <h3 class="my-4">Image Caps</h3>
 
+    <p class="my-4">On top</p>
+
+    {{# card class="mb-3"}}
+        {{> cardimage src="media/imagecap_wide.svg" alt="placeholder image"}}
+        {{#cardbody}}
+            {{> cardtitle label="Card title"}}
+            {{> cardtext label="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."}}
+            {{#cardtext}}
+                <small class="text-muted">Last updated 3 mins ago</small>{{/cardtext}}
+        {{/cardbody}}
+    {{/card}}
+
+    <p class="my-4">At the bottom</p>
+
+    {{# card class="mb-3"}}
+        {{#cardbody}}
+            {{> cardtitle label="Card title"}}
+            {{> cardtext label="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."}}
+            {{#cardtext}}
+                <small class="text-muted">Last updated 3 mins ago</small>{{/cardtext}}
+        {{/cardbody}}
+        {{> cardimage src="media/imagecap_wide.svg" alt="placeholder image"}}
+    {{/card}}
+
     <h3 class="my-4">Image overlays</h3>
 
+    {{# card class="text-light" type="dark"}}
+        {{> cardimage overlay=true src="media/imagecap_wide.svg" alt="placeholder image"}}
+        {{#cardimageoverlay}}
+            {{> cardtitle label="Card title"}}
+            {{> cardtext label="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."}}
+            {{#cardtext}}
+                <small class="text-muted">Last updated 3 mins ago</small>{{/cardtext}}
+        {{/cardimageoverlay}}
+    {{/card}}
+
     <h3 class="my-4">Horizonzal</h3>
+
+    {{# card class="mb-3" style="max-width: 540px;"}}
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                {{> cardimage src="media/imagecap.svg" alt="placeholder image"}}
+            </div>
+            <div class="col-md-8">
+                {{#cardbody}}
+                    {{> cardtitle label="Card title"}}
+                    {{> cardtext label="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."}}
+                    {{#cardtext}}
+                        <small class="text-muted">Last updated 3 mins ago</small>{{/cardtext}}
+                {{/cardbody}}
+            </div>
+        </div>
+    {{/card}}
 
     <h2 class="my-4">Card styles</h2>
 
