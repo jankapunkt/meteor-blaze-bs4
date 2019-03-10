@@ -1,0 +1,143 @@
+<template name="cards">
+    <h1 class="my-4">Cards</h1>
+
+    <h2 class="my-4">Example</h2>
+
+    {{# card style="width: 18rem;"}}
+        {{> cardimage src="..." alt="..."}}
+        {{#cardbody}}
+            {{> cardtitle label="Card title"}}
+            {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        {{/cardbody}}
+    {{/card}}
+
+
+    <h2 class="my-4">Body</h2>
+
+    {{>card justbody=true label="This is some text within a card body."}}
+
+    <h2 class="my-4">Titles, text, and links</h2>
+
+    {{#card justbody=true style="width: 18rem;"}}
+        {{> cardtitle label="Card title"}}
+        {{> cardsubtitle label="Card subtitle" class="mb-2 text-muted"}}
+        {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    {{/card}}
+
+    <h2 class="my-4">Images</h2>
+
+
+    <h2 class="my-4">List groups</h2>
+
+    <h2 class="my-4">Kitchen sink</h2>
+
+    <h2 class="my-4">Header and footer</h2>
+
+    <p class="my-4">Header with no extra styling</p>
+
+    {{#card}}
+        {{> cardheader label="Featured"}}
+        {{#cardbody}}
+            {{> cardtitle label="Special title treatment"}}
+            {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        {{/cardbody}}
+    {{/card}}
+
+    <p class="my-4">Header with headline element</p>
+
+    {{#card}}
+        {{#cardheader}}<h5>Featured</h5>{{/cardheader}}
+        {{#cardbody}}
+            {{> cardtitle label="Special title treatment"}}
+            {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        {{/cardbody}}
+    {{/card}}
+
+    <p class="my-4">Quotations in body</p>
+
+    {{#card}}
+        {{> cardheader label="Quote"}}
+        {{#cardbody}}
+            <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                </footer>
+            </blockquote>
+        {{/cardbody}}
+    {{/card}}
+
+    <p class="my-4">With simple footer</p>
+
+    {{#card class="text-center"}}
+        {{> cardheader label="Featured"}}
+        {{#cardbody}}
+            {{> cardtitle label="Special title treatment"}}
+            {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        {{/cardbody}}
+        {{> cardfooter label="2 days ago" class="text-muted"}}
+    {{/card}}
+
+    <h2 class="my-4">Sizing</h2>
+
+    <h3 class="my-4">Using grid markup</h3>
+
+    <h3 class="my-4">Using utilities</h3>
+
+    <h3 class="my-4">Using custom CSS</h3>
+
+    <h2 class="my-4">Text alignment</h2>
+
+    <h2 class="my-4">Navigation</h2>
+
+    <h2 class="my-4">Images</h2>
+
+    <h3 class="my-4">Image Caps</h3>
+
+    <h3 class="my-4">Image overlays</h3>
+
+    <h3 class="my-4">Horizonzal</h3>
+
+    <h2 class="my-4">Card styles</h2>
+
+    <h3 class="my-4">Background and color</h3>
+
+    {{#each themeColors}}
+        {{#card type=this class="mb-3" text="white" style="max-width: 18rem;"}}
+            {{>cardheader label="Header"}}
+            {{#cardbody}}
+                {{#cardtitle}}{{this}} card title{{/cardtitle}}
+                {{>cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+            {{/cardbody}}
+        {{/card}}
+    {{/each}}
+
+
+
+    <h3 class="my-4">Border</h3>
+
+    {{#each themeColors}}
+        {{#card border=this class="mb-3" style="max-width: 18rem;"}}
+            {{>cardheader label="Header"}}
+            {{#cardbody text=this}}
+                {{#cardtitle}}{{this}} card title{{/cardtitle}}
+                {{>cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+            {{/cardbody}}
+        {{/card}}
+    {{/each}}
+
+    <h3 class="my-4">Mixins utilities</h3>
+
+    <h2 class="my-4">Card layout</h2>
+
+    <h3 class="my-4">Card groups</h3>
+
+    <h3 class="my-4">Card decks</h3>
+
+    <h3 class="my-4">Card columns</h3>
+</template>
