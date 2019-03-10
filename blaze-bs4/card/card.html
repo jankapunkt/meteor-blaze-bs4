@@ -42,10 +42,16 @@
 
 <template name="cardimage">
     <img src="{{src}}"
-         class="card-img{{#if top}}-top{{/if}} {{class}}"
+         class="card-img{{#unless overlay}}-top{{/unless}} {{class}}"
          title="{{title}}"
          alt="{{alt}}"
          style="{{style}}">
+</template>
+
+<template name="cardimageoverlay">
+    <div class="card-img-overlay {{class}}" style="{{style}}">
+        {{> Template.contentBlock ..}}
+    </div>
 </template>
 
 <template name="cardtitle">
