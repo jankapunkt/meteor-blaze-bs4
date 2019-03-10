@@ -5,7 +5,8 @@ import './item.html'
 import { getParentView } from '../utils/getParentTemplate'
 
 const ClassNameMapping = {
-  dropdown: 'dropdown-item'
+  dropdown: 'dropdown-item',
+  listgroup: 'list-group-item'
 }
 
 Template.item.onCreated(function onItemCreated () {

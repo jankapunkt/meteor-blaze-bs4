@@ -32,7 +32,44 @@
 
     <h2 class="my-4">List groups</h2>
 
+    {{#card style="width: 18rem;"}}
+        {{#listgroup flush=true}}
+            {{> item label="Cras justo odio"}}
+            {{> item label="Dapibus ac facilisis in"}}
+            {{> item label="Vestibulum at eros"}}
+        {{/listgroup}}
+    {{/card}}
+
+    <p class="my-4">With header</p>
+
+    {{#card style="width: 18rem;"}}
+        {{>cardheader label="featured"}}
+        {{#listgroup flush=true}}
+            {{> item label="Cras justo odio"}}
+            {{> item label="Dapibus ac facilisis in"}}
+            {{> item label="Vestibulum at eros"}}
+        {{/listgroup}}
+    {{/card}}
+
+
     <h2 class="my-4">Kitchen sink</h2>
+
+    {{#card style="width: 18rem;"}}
+        {{> cardimage src="..." alt="..."}}
+        {{#cardbody}}
+            {{> cardtitle label="Card title"}}
+            {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+        {{/cardbody}}
+        {{#listgroup flush=true}}
+            {{> item label="Cras justo odio"}}
+            {{> item label="Dapibus ac facilisis in"}}
+            {{> item label="Vestibulum at eros"}}
+        {{/listgroup}}
+        {{#cardbody}}
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        {{/cardbody}}
+    {{/card}}
 
     <h2 class="my-4">Header and footer</h2>
 
