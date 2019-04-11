@@ -1,12 +1,12 @@
 {
   "minifier": {
     "name": "standard-minifier-js",
-    "version": "2.4.0"
+    "version": "2.4.1"
   },
-  "totalMinifiedBytes": 901158,
-  "totalMinifiedGzipBytes": 217161,
+  "totalMinifiedBytes": 952200,
+  "totalMinifiedGzipBytes": 220595,
   "minifiedBytesByPackage": {
-    "packages/meteor.js": 9433,
+    "packages/meteor.js": 9484,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
@@ -418,12 +418,12 @@
       }
     ],
     "packages/reload.js": [
-      1896,
+      1977,
       {
         "node_modules": {
           "meteor": {
             "reload": {
-              "reload.js": 1527
+              "reload.js": 1608
             }
           }
         }
@@ -612,12 +612,13 @@
       }
     ],
     "packages/autoupdate.js": [
-      2398,
+      3554,
       {
         "node_modules": {
           "meteor": {
             "autoupdate": {
-              "autoupdate_client.js": 1870
+              "autoupdate_client.js": 1878,
+              "client_versions.js": 1148
             }
           }
         }
@@ -644,7 +645,7 @@
       {}
     ],
     "app/app.js": [
-      147269,
+      197023,
       {
         "templates": {
           "about": {
@@ -668,16 +669,16 @@
           },
           "buttongroups": {
             "buttongroups.html": 64,
-            "template.buttongroups.js": 9099
+            "template.buttongroups.js": 15410
           },
           "buttons": {
             "buttons.html": 59,
-            "template.buttons.js": 4142,
+            "template.buttons.js": 6664,
             "buttons.js": 299
           },
           "cards": {
             "cards.html": 57,
-            "template.cards.js": 24651,
+            "template.cards.js": 46110,
             "cards.js": 39
           },
           "code": {
@@ -695,7 +696,7 @@
           },
           "modals": {
             "modals.html": 58,
-            "template.modals.js": 17844,
+            "template.modals.js": 35810,
             "modals.js": 374
           },
           "navbars": {
@@ -705,7 +706,7 @@
           },
           "progress": {
             "progress.html": 60,
-            "template.progress.js": 4180,
+            "template.progress.js": 5676,
             "progress.js": 443
           },
           "spinners": {
