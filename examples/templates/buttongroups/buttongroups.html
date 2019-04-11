@@ -3,11 +3,20 @@
     <hr>
 
     <h2 class="my-4">Basic Example</h2>
+
     {{#buttonGroup label="Basic example"}}
         {{> button label="left"}}
         {{> button label="middle"}}
         {{> button label="right"}}
     {{/buttonGroup}}
+
+    {{#code}}
+        {{|#buttonGroup label="Basic example"}}
+            {{|> button label="left"}}
+            {{|> button label="middle"}}
+            {{|> button label="right"}}
+        {{|/buttonGroup}}
+    {{/code}}
 
     <h2 class="my-4">Button Toolbar</h2>
 
@@ -28,6 +37,24 @@
         {{/buttonGroup}}
     {{/buttonToolbar}}
 
+    {{#code}}
+    {{|#buttonToolbar label="Toolbar with button groups"}}
+        {{|#buttonGroup class="mr-2" label="First group"}}
+            {{|> button label="1"}}
+            {{|> button label="2"}}
+            {{|> button label="3"}}
+            {{|> button label="4"}}
+        {{|/buttonGroup}}
+        {{|#buttonGroup class="mr-2" label="Second group"}}
+            {{|> button label="5"}}
+            {{|> button label="6"}}
+            {{|> button label="7"}}
+        {{|/buttonGroup}}
+        {{|#buttonGroup label="Third group"}}
+            {{|> button label="8"}}
+        {{|/buttonGroup}}
+    {{|/buttonToolbar}}
+    {{/code}}
 
     {{#buttonToolbar class="my-3" label="Toolbar with button groups"}}
         {{#buttonGroup class="mr-2" label="First group"}}
@@ -44,6 +71,24 @@
                    aria-describedby="btnGroupAddon">
         </div>
     {{/buttonToolbar}}
+    
+    {{#code}}
+        {{|#buttonToolbar class="my-3" label="Toolbar with button groups"}}
+            {{|#buttonGroup class="mr-2" label="First group"}}
+                {{|> button label="1"}}
+                {{|> button label="2"}}
+                {{|> button label="3"}}
+                {{|> button label="4"}}
+            {{|/buttonGroup}}
+            &lt;div class="input-group"&gt;
+                &lt;div class="input-group-prepend"&gt;
+                    &lt;div class="input-group-text" id="btnGroupAddon"&gt;@&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example"
+                       aria-describedby="btnGroupAddon"&gt;
+            &lt;/div&gt;
+        {{|/buttonToolbar}}
+    {{/code}}    
 
     {{#buttonToolbar class="my-3 justify-content-between" label="Toolbar with button groups"}}
         {{#buttonGroup class="mr-2" label="First group"}}
@@ -61,6 +106,24 @@
         </div>
     {{/buttonToolbar}}
 
+    {{#code}}
+        {{|#buttonToolbar class="my-3 justify-content-between" label="Toolbar with button groups"}}
+            {{|#buttonGroup class="mr-2" label="First group"}}
+                {{|> button label="1"}}
+                {{|> button label="2"}}
+                {{|> button label="3"}}
+                {{|> button label="4"}}
+            {{|/buttonGroup}}
+            &lt;div class="input-group"&gt;
+                &lt;div class="input-group-prepend"&gt;
+                    &lt;div class="input-group-text" id="btnGroupAddon2"&gt;@&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example"
+                        aria-describedby="btnGroupAddon2"&gt;
+            &lt;/div&gt;
+        {{|/buttonToolbar}}
+    {{/code}}
+
     <h2 class="my-4">Sizing</h2>
 
     {{#buttonGroup size="lg" label="Basic example"}}
@@ -68,18 +131,42 @@
         {{> button label="middle"}}
         {{> button label="right"}}
     {{/buttonGroup}}
-    <br><br> <!-- bs4 docs also uses <br> here -->
+    
+    {{#code}}
+        {{|#buttonGroup size="lg" label="Basic example"}}
+            {{|> button label="left"}}
+            {{|> button label="middle"}}
+            {{|> button label="right"}}
+        {{|/buttonGroup}}
+    {{/code}}
+
     {{#buttonGroup label="Basic example"}}
         {{> button label="left"}}
         {{> button label="middle"}}
         {{> button label="right"}}
     {{/buttonGroup}}
-    <br><br> <!-- bs4 docs also uses <br> here -->
+    
+    {{#code}}
+        {{|#buttonGroup label="Basic example"}}
+            {{|> button label="left"}}
+            {{|> button label="middle"}}
+            {{|> button label="right"}}
+        {{|/buttonGroup}}
+    {{/code}}
+
     {{#buttonGroup size="sm" label="Basic example"}}
         {{> button label="left"}}
         {{> button label="middle"}}
         {{> button label="right"}}
     {{/buttonGroup}}
+    
+    {{#code}}
+        {{|#buttonGroup size="sm" label="Basic example"}}
+            {{|> button label="left"}}
+            {{|> button label="middle"}}
+            {{|> button label="right"}}
+        {{|/buttonGroup}}
+    {{/code}}
 
     <h2 class="my-4">Nesting</h2>
 
@@ -98,4 +185,20 @@
         {{/buttonGroup}}
     {{/buttonGroup}}
 
+    {{#code}}
+        {{|#buttonGroup label="Button group with nested dropdown"}}
+            {{|&gt; button label="1"}}
+            {{|&gt; button label="2"}}
+            {{|#buttonGroup}}
+                &lt;button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"&gt;
+                    Dropdown
+                &lt;/button&gt;
+                &lt;div class="dropdown-menu" aria-labelledby="btnGroupDrop1"&gt;
+                    &lt;a class="dropdown-item" href="#"&gt;Dropdown link&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="#"&gt;Dropdown link&lt;/a&gt;
+                &lt;/div&gt;
+            {{|/buttonGroup}}
+        {{|/buttonGroup}}
+    {{/code}}
 </template>
