@@ -3,48 +3,106 @@
     <hr>
 
     <h2 class="my-4">Examples</h2>
+    
     {{#each themeColors}}
-    {{> button colortype=this label=this}}
+        {{> button colortype=this label=this}}
     {{/each}}
     {{> button colortype="link" label="link"}}
 
+    {{#code}}
+        {{|#each themeColors}}
+            {{|> button colortype=this label=this}}
+        {{|/each}}
+        {{|> button colortype="link" label="link"}}
+    {{/code}}
+
     <h2 class="my-4">Outline buttons</h2>
+    
     {{#each themeColors}}
         {{> button colortype=this label=this outline=true}}
     {{/each}}
 
+    {{#code}}
+        {{|#each themeColors}}
+            {{|> button colortype=this label=this outline=true}}
+        {{|/each}}
+    {{/code}}
+    
     <h2 class="my-4">Sizes</h2>
 
     <h3>Large Buttons</h3>
+    
     {{> button colortype="primary" label="Large Button" size="lg"}}
     {{> button colortype="secondary" label="Large Button" size="lg"}}
 
+    {{#code}}
+        {{|> button colortype="primary" label="Large Button" size="lg"}}
+        {{|> button colortype="secondary" label="Large Button" size="lg"}}
+    {{/code}}
+    
     <h3>Small Buttons</h3>
+    
     {{> button colortype="primary" label="Small Button" size="sm"}}
     {{> button colortype="secondary" label="Small Button" size="sm"}}
+    
+    {{#code}}
+        {{|> button colortype="primary" label="Small Button" size="sm"}}
+        {{|> button colortype="secondary" label="Small Button" size="sm"}}
+    {{/code}}
 
     <h3>Block Level Buttons</h3>
+    
     {{> button colortype="primary" label="Small Button" size="block"}}
     {{> button colortype="secondary" label="Small Button" size="block"}}
 
+    {{#code}}
+        {{|> button colortype="primary" label="Small Button" size="block"}}
+        {{|> button colortype="secondary" label="Small Button" size="block"}}
+    {{/code}}
+    
     <h3>Disabled State</h3>
+    
     {{> button colortype="primary" label="Primary Button" size="lg" disabled=true}}
     {{> button colortype="secondary" label="Button" size="lg" disabled=true}}
-
-
+    
+    {{#code}}
+        {{|> button colortype="primary" label="Primary Button" size="lg" disabled=true}}
+        {{|> button colortype="secondary" label="Button" size="lg" disabled=true}}
+    {{/code}}
+    
     <h2 class="my-4">Custom Label Content</h2>
+    
     {{# button colortype="primary" size="lg"}}
         <i class="fa fa-fw fa-pencil"></i>
         <span>Custom Label</span>
     {{/button}}
+    
+    {{#code}}
+        {{|#button colortype="primary" size="lg"}}
+            &lt;i class="fa fa-fw fa-pencil"&gt;&lt;/i&gt;
+            &lt;span&gt;Custom Label&lt;/span&gt;
+        {{|/button}}
+    {{/code}}
 
     <h2 class="my-4">Passing Atts</h2>
 
     <h3>Manually Passing atts</h3>
+    
     {{#each themeColors}}
         {{> button id=this class="some-button" colortype=this label=this}}
     {{/each}}
+    
+    {{#code}}
+        {{|#each themeColors}}
+            {{|> button id=this class="some-button" colortype=this label=this}}
+        {{|/each}}
+    {{/code}}
 
     <h3>Passing atts using object</h3>
-    {{> button id="overridden" atts=exampleAtts label="dynamic atts"}}
+
+    {{>button id="overridden" atts=exampleAtts label="dynamic atts"}}
+
+    {{#code}}
+        {{|>button id="overridden" atts=exampleAtts label="dynamic atts"}}
+    {{/code}}
 </template>
