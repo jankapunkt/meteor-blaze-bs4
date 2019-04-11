@@ -8,14 +8,29 @@
         {{#cardbody}}
             {{> cardtitle label="Card title"}}
             {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#cards" class="btn btn-primary">Go somewhere</a>
         {{/cardbody}}
     {{/card}}
-
-
+    
+    {{#code}}
+        {{|# card style="width: 18rem;"}}
+            {{|&gt; cardimage src="media/imagecap.svg" alt="placeholder image"}}
+            {{|#cardbody}}
+                {{|&gt; cardtitle label="Card title"}}
+                {{|&gt; cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                    &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            {{|/cardbody}}
+        {{|/card}}
+    {{/code}}    
+    
     <h2 class="my-4">Body</h2>
 
     {{>card justbody=true label="This is some text within a card body."}}
+
+    {{#code}}
+        {{|>card justbody=true label="This is some text within a card body."}}
+    {{/code}}
+
 
     <h2 class="my-4">Titles, text, and links</h2>
 
@@ -23,12 +38,19 @@
         {{> cardtitle label="Card title"}}
         {{> cardsubtitle label="Card subtitle" class="mb-2 text-muted"}}
         {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+        <a href="#cards" class="card-link">Card link</a>
+        <a href="#cards" class="card-link">Another link</a>
     {{/card}}
-
-    <h2 class="my-4">Images</h2>
-
+    
+    {{#code}}
+        {{|#card justbody=true style="width: 18rem;"}}
+            {{|&gt; cardtitle label="Card title"}}
+            {{|&gt; cardsubtitle label="Card subtitle" class="mb-2 text-muted"}}
+            {{|&gt; cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                &lt;a href="#cards" class="card-link"&gt;Card link&lt;/a&gt;
+                &lt;a href="#cards" class="card-link"&gt;Another link&lt;/a&gt;
+        {{|/card}}
+    {{/code}}
 
     <h2 class="my-4">List groups</h2>
 
@@ -39,7 +61,17 @@
             {{> item label="Vestibulum at eros"}}
         {{/listgroup}}
     {{/card}}
-
+    
+    {{#code}}
+        {{|#card style="width: 18rem;"}}
+            {{|#listgroup flush=true}}
+                {{|> item label="Cras justo odio"}}
+                {{|> item label="Dapibus ac facilisis in"}}
+                {{|> item label="Vestibulum at eros"}}
+            {{|/listgroup}}
+        {{|/card}}
+    {{/code}}
+    
     <p class="my-4">With header</p>
 
     {{#card style="width: 18rem;"}}
@@ -51,6 +83,16 @@
         {{/listgroup}}
     {{/card}}
 
+    {{#code}}
+        {{|#card style="width: 18rem;"}}
+            {{|>cardheader label="featured"}}
+            {{|#listgroup flush=true}}
+                {{|> item label="Cras justo odio"}}
+                {{|> item label="Dapibus ac facilisis in"}}
+                {{|> item label="Vestibulum at eros"}}
+            {{|/listgroup}}
+        {{|/card}}
+    {{/code}}
 
     <h2 class="my-4">Kitchen sink</h2>
 
@@ -66,10 +108,30 @@
             {{> item label="Vestibulum at eros"}}
         {{/listgroup}}
         {{#cardbody}}
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <a href="#cards" class="card-link">Card link</a>
+            <a href="#cards" class="card-link">Another link</a>
         {{/cardbody}}
     {{/card}}
+    
+    {{#code}}
+        {{|#card style="width: 18rem;"}}
+            {{|> cardimage src="media/imagecap.svg" alt="placeholder image"}}
+            {{|#cardbody}}
+                {{|> cardtitle label="Card title"}}
+                {{|> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+            {{|/cardbody}}
+            {{|#listgroup flush=true}}
+                {{|> item label="Cras justo odio"}}
+                {{|> item label="Dapibus ac facilisis in"}}
+                {{|> item label="Vestibulum at eros"}}
+            {{|/listgroup}}
+            {{|#cardbody}}
+                    &lt;a href="#cards" class="card-link"&gt;Card link&lt;/a&gt;
+                    &lt;a href="#cards" class="card-link"&gt;Another link&lt;/a&gt;
+            {{|/cardbody}}
+        {{|/card}}
+    {{/code}}    
+        
 
     <h2 class="my-4">Header and footer</h2>
 
@@ -80,9 +142,20 @@
         {{#cardbody}}
             {{> cardtitle label="Special title treatment"}}
             {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#cards" class="btn btn-primary">Go somewhere</a>
         {{/cardbody}}
     {{/card}}
+    
+    {{#code}}
+        {{|#card}}
+            {{|&gt; cardheader label="Featured"}}
+            {{|#cardbody}}
+                {{|&gt; cardtitle label="Special title treatment"}}
+                {{|&gt; cardtext label="With supporting text below as a natural lead-in to additional content."}}
+                    &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            {{|/cardbody}}
+        {{|/card}}
+    {{/code}}   
 
     <p class="my-4">Header with headline element</p>
 
@@ -91,10 +164,21 @@
         {{#cardbody}}
             {{> cardtitle label="Special title treatment"}}
             {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#cards" class="btn btn-primary">Go somewhere</a>
         {{/cardbody}}
     {{/card}}
-
+    
+    {{#code}}
+        {{|#card}}
+            {{|#cardheader}}&lt;h5&gt;Featured&lt;/h5&gt;{{|/cardheader}}
+            {{|#cardbody}}
+                {{|&gt; cardtitle label="Special title treatment"}}
+                {{|&gt; cardtext label="With supporting text below as a natural lead-in to additional content."}}
+                &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            {{|/cardbody}}
+        {{|/card}}
+    {{/code}}
+    
     <p class="my-4">Quotations in body</p>
 
     {{#card}}
@@ -108,6 +192,19 @@
         {{/cardbody}}
     {{/card}}
 
+    {{#code}}
+        {{|#card}}
+            {{|&gt; cardheader label="Quote"}}
+            {{|#cardbody}}
+                    &lt;blockquote class="blockquote mb-0"&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+                        &lt;footer class="blockquote-footer"&gt;Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+                        &lt;/footer&gt;
+                    &lt;/blockquote&gt;
+            {{|/cardbody}}
+        {{|/card}}
+    {{/code}}
+
     <p class="my-4">With simple footer</p>
 
     {{#card class="text-center"}}
@@ -115,11 +212,24 @@
         {{#cardbody}}
             {{> cardtitle label="Special title treatment"}}
             {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#cards" class="btn btn-primary">Go somewhere</a>
         {{/cardbody}}
         {{> cardfooter label="2 days ago" class="text-muted"}}
     {{/card}}
 
+    {{#code}}
+        {{|#card class="text-center"}}
+            {{|&gt; cardheader label="Featured"}}
+            {{|#cardbody}}
+                {{|&gt; cardtitle label="Special title treatment"}}
+                {{|&gt; cardtext label="With supporting text below as a natural lead-in to additional content."}}
+                    &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            {{|/cardbody}}
+            {{|&gt; cardfooter label="2 days ago" class="text-muted"}}
+        {{|/card}}
+    {{/code}}    
+    
+    
     <h2 class="my-4">Sizing</h2>
 
     <h3 class="my-4">Using grid markup</h3>
@@ -129,41 +239,86 @@
             {{# card justbody=true}}
                 {{> cardtitle label="Special title treatment"}}
                 {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#cards" class="btn btn-primary">Go somewhere</a>
             {{/card}}
         </div>
         <div class="col-sm-6">
             {{# card justbody=true}}
                 {{> cardtitle label="Special title treatment"}}
                 {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#cards" class="btn btn-primary">Go somewhere</a>
             {{/card}}
         </div>
     </div>
+    
+    {{#code}}
+        &lt;div class="row"&gt;
+            &lt;div class="col-sm-6"&gt;
+                {{|# card justbody=true}}
+                    {{|&gt; cardtitle label="Special title treatment"}}
+                    {{|&gt; cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                    &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+                {{|/card}}
+            &lt;/div&gt;
+            &lt;div class="col-sm-6"&gt;
+                {{|# card justbody=true}}
+                    {{|&gt; cardtitle label="Special title treatment"}}
+                    {{|&gt; cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                    &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+                {{|/card}}
+            &lt;/div&gt;
+        &lt;/div&gt;
+    {{/code}}    
 
     <h3 class="my-4">Using utilities</h3>
 
     {{# card class="w-75" justbody=true}}
         {{> cardtitle label="Special title treatment"}}
         {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
-        <a href="#" class="btn btn-primary">Button</a>
+        <a href="#cards" class="btn btn-primary">Button</a>
     {{/card}}
 
+    {{#code}}
+        {{|# card class="w-75" justbody=true}}
+            {{|&gt; cardtitle label="Special title treatment"}}
+            {{|&gt; cardtext label="With supporting text below as a natural lead-in to additional content."}}
+                &lt;a href="#cards" class="btn btn-primary"&gt;Button&lt;/a&gt;
+        {{|/card}}
+    {{/code}}
+    
     {{# card class="w-50" justbody=true}}
         {{> cardtitle label="Special title treatment"}}
         {{> cardtext label="With supporting text below as a natural lead-in to additional content."}}
-        <a href="#" class="btn btn-primary">Button</a>
+        <a href="#cards" class="btn btn-primary">Button</a>
     {{/card}}
 
+    {{#code}}
+        {{|#card class="w-50" justbody=true}}
+            {{|&gt; cardtitle label="Special title treatment"}}
+            {{|&gt; cardtext label="With supporting text below as a natural lead-in to additional content."}}
+                &lt;a href="#cards" class="btn btn-primary"&gt;Button&lt;/a&gt;
+        {{|/card}}
+    {{/code}}
+    
     <h3 class="my-4">Using custom CSS</h3>
 
     {{# card style="width: 18rem;" justbody=true}}
         {{> cardtitle label="Special title treatment"}}
         {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#cards" class="btn btn-primary">Go somewhere</a>
     {{/card}}
+    
+    {{#code}}
+        {{|#card style="width: 18rem;" justbody=true}}
+            {{|&gt; cardtitle label="Special title treatment"}}
+            {{|&gt; cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+        {{|/card}}
+    {{/code}}    
 
     <h2 class="my-4">Text alignment</h2>
+
+    {{> alert heading="Examples to be added"}}
 
     <h2 class="my-4">Navigation</h2>
 
@@ -180,9 +335,26 @@
         {{#cardbody}}
             {{> cardtitle label="Card title"}}
             {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#cards" class="btn btn-primary">Go somewhere</a>
         {{/cardbody}}
     {{/card}}
+    
+    {{#code}}
+        {{|#card class="text-center"}}
+            {{|#cardheader}}
+                {{|#nav tabs=true card=true}}
+                    {{|&gt; link href="#cards" active=true label="Active"}}
+                    {{|&gt; link href="#cards" label="Link"}}
+                    {{|&gt; link href="#cards" disabled=true label="Disabled"}}
+                {{|/nav}}
+            {{|/cardheader}}
+            {{|#cardbody}}
+                {{|&gt; cardtitle label="Card title"}}
+                {{|&gt; cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                    &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            {{|/cardbody}}
+        {{|/card}}
+    {{/code}}    
 
     <p class="my-4">Pills</p>
 
@@ -197,9 +369,26 @@
         {{#cardbody}}
             {{> cardtitle label="Card title"}}
             {{> cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#cards" class="btn btn-primary">Go somewhere</a>
         {{/cardbody}}
     {{/card}}
+
+    {{#code}}
+        {{|#card class="text-center"}}
+            {{|#cardheader}}
+                {{|#nav pills=true card=true}}
+                    {{|&gt; link href="#cards" active=true label="Active"}}
+                    {{|&gt; link href="#cards" label="Link"}}
+                    {{|&gt; link href="#cards" disabled=true label="Disabled"}}
+                {{|/nav}}
+            {{|/cardheader}}
+            {{|#cardbody}}
+                {{|&gt; cardtitle label="Card title"}}
+                {{|&gt; cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                &lt;a href="#cards" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            {{|/cardbody}}
+        {{|/card}}
+    {{/code}}
 
     <h2 class="my-4">Images</h2>
 
@@ -217,6 +406,18 @@
         {{/cardbody}}
     {{/card}}
 
+    {{#code}}
+        {{|# card class="mb-3"}}
+            {{|&gt; cardimage src="media/imagecap_wide.svg" alt="placeholder image"}}
+            {{|#cardbody}}
+                {{|&gt; cardtitle label="Card title"}}
+                {{|&gt; cardtext label="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."}}
+                {{|#cardtext}}
+                        &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;{{|/cardtext}}
+            {{|/cardbody}}
+        {{|/card}}
+    {{/code}}
+
     <p class="my-4">At the bottom</p>
 
     {{# card class="mb-3"}}
@@ -228,6 +429,18 @@
         {{/cardbody}}
         {{> cardimage src="media/imagecap_wide.svg" alt="placeholder image"}}
     {{/card}}
+    
+    {{#code}}
+        {{|# card class="mb-3"}}
+            {{|#cardbody}}
+                {{|&gt; cardtitle label="Card title"}}
+                {{|&gt; cardtext label="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."}}
+                {{|#cardtext}}
+                        &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;{{|/cardtext}}
+            {{|/cardbody}}
+            {{|&gt; cardimage src="media/imagecap_wide.svg" alt="placeholder image"}}
+        {{|/card}}
+    {{/code}}
 
     <h3 class="my-4">Image overlays</h3>
 
@@ -240,6 +453,18 @@
                 <small class="text-muted">Last updated 3 mins ago</small>{{/cardtext}}
         {{/cardimageoverlay}}
     {{/card}}
+    
+    {{#code}}
+        {{|# card class="text-light" type="dark"}}
+            {{|&gt; cardimage overlay=true src="media/imagecap_wide.svg" alt="placeholder image"}}
+            {{|#cardimageoverlay}}
+                {{|&gt; cardtitle label="Card title"}}
+                {{|&gt; cardtext label="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."}}
+                {{|#cardtext}}
+                        &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;{{|/cardtext}}
+            {{|/cardimageoverlay}}
+        {{|/card}}
+    {{/code}}    
 
     <h3 class="my-4">Horizonzal</h3>
 
@@ -258,42 +483,103 @@
             </div>
         </div>
     {{/card}}
+    
+    {{#code}}
+        {{|# card class="mb-3" style="max-width: 540px;"}}
+                &lt;div class="row no-gutters"&gt;
+                    &lt;div class="col-md-4"&gt;
+                        {{|&gt; cardimage src="media/imagecap.svg" alt="placeholder image"}}
+                    &lt;/div&gt;
+                    &lt;div class="col-md-8"&gt;
+                        {{|#cardbody}}
+                            {{|&gt; cardtitle label="Card title"}}
+                            {{|&gt; cardtext label="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."}}
+                            {{|#cardtext}}
+                                &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;{{|/cardtext}}
+                        {{|/cardbody}}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        {{|/card}}
+    {{/code}}    
 
     <h2 class="my-4">Card styles</h2>
 
     <h3 class="my-4">Background and color</h3>
 
-    {{#each themeColors}}
-        {{#card type=this class="mb-3" text="white" style="max-width: 18rem;"}}
-            {{>cardheader label="Header"}}
-            {{#cardbody}}
-                {{#cardtitle}}{{this}} card title{{/cardtitle}}
-                {{>cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-            {{/cardbody}}
-        {{/card}}
-    {{/each}}
-
+    <div class="row">
+        {{#each themeColors}}
+            <div class="col-4">
+                {{#card type=this class="mb-3" text="white"}}
+                    {{>cardheader label="Header"}}
+                    {{#cardbody}}
+                        {{#cardtitle}}{{this}} card title{{/cardtitle}}
+                        {{>cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                    {{/cardbody}}
+                {{/card}}
+            </div>
+        {{/each}}
+    </div>
+    
+    {{#code}}
+        {{|#each themeColors}}
+            {{|#card type=this class="mb-3" text="white"}}
+                {{|>cardheader label="Header"}}
+                {{|#cardbody}}
+                    {{|#cardtitle}}{{|this}} card title{{|/cardtitle}}
+                    {{|>cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                {{|/cardbody}}
+            {{|/card}}
+        {{|/each}}
+    {{/code}}
+        
 
 
     <h3 class="my-4">Border</h3>
 
-    {{#each themeColors}}
-        {{#card border=this class="mb-3" style="max-width: 18rem;"}}
-            {{>cardheader label="Header"}}
-            {{#cardbody text=this}}
-                {{#cardtitle}}{{this}} card title{{/cardtitle}}
-                {{>cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
-            {{/cardbody}}
-        {{/card}}
-    {{/each}}
+    <div class="row">
+        {{#each themeColors}}
+            <div class="col-4">
+                {{#card border=this class="mb-3"}}
+                    {{>cardheader label="Header"}}
+                    {{#cardbody text=this}}
+                        {{#cardtitle}}{{this}} card title{{/cardtitle}}
+                        {{>cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                    {{/cardbody}}
+                {{/card}}
+            </div>
+        {{/each}}
+    </div>
 
+    {{#code}}
+        {{|#each themeColors}}
+            {{|#card border=this class="mb-3"}}
+                {{|>cardheader label="Header"}}
+                {{|#cardbody text=this}}
+                    {{|#cardtitle}}{{|this}} card title{{|/cardtitle}}
+                    {{|>cardtext label="Some quick example text to build on the card title and make up the bulk of the card's content."}}
+                {{|/cardbody}}
+            {{|/card}}
+        {{|/each}}
+    {{/code}}
+    
     <h3 class="my-4">Mixins utilities</h3>
+
+    {{> alert heading="Examples to be added"}}
 
     <h2 class="my-4">Card layout</h2>
 
+    {{> alert heading="Examples to be added"}}
+
     <h3 class="my-4">Card groups</h3>
+
+    {{> alert heading="Examples to be added"}}
 
     <h3 class="my-4">Card decks</h3>
 
+    {{> alert heading="Examples to be added"}}
+
     <h3 class="my-4">Card columns</h3>
+
+    {{> alert heading="Examples to be added"}}
+
 </template>
