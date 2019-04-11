@@ -14,16 +14,31 @@
         {{>progress value=100}}
     </div>
 
+    {{#code}}
+        {{|>progress value=0 }}
+        {{|>progress value=25}}
+        {{|>progress value=50}}
+        {{|>progress value=100}}
+    {{/code}}
+
     <h2 class="my-4">Label</h2>
 
     {{>progress value=25 label="25%"}}
 
+    {{#code}}
+        {{|>progress value=25 label="25%"}}
+    {{/code}}
 
     <h2 class="my-4">Height</h2>
 
     {{>progress value=25 height="1px"}}
     <br>
     {{>progress value=25 height="20px"}}
+
+    {{#code}}
+        {{|>progress value=25 height="1px"}}
+        {{|>progress value=25 height="20px"}}    
+    {{/code}}
 
     <h2 class="my-4">Backgrounds</h2>
 
@@ -34,6 +49,13 @@
     {{>progress value=75 type="warning"}}
     <br>
     {{>progress value=100 type="danger"}}
+    
+    {{#code}}
+        {{|>progress value=25 type="success"}}
+        {{|>progress value=50 type="info"}}
+        {{|>progress value=75 type="warning"}}
+        {{|>progress value=100 type="danger"}}
+    {{/code}}
 
     <h2 class="my-4">Multiple Bars</h2>
 
@@ -50,10 +72,23 @@
     {{>progress value=75 type="warning" striped=true}}
     <br>
     {{>progress value=100 type="danger" striped=true}}
+    
+    {{#code}}
+        {{|>progress value=10 striped=true}}
+        {{|>progress value=25 type="success" striped=true}}
+        {{|>progress value=50 type="info" striped=true}}
+        {{|>progress value=75 type="warning" striped=true}}
+        {{|>progress value=100 type="danger" striped=true}}
+    {{/code}}
 
     <h2 class="my-4">Animated</h2>
 
     {{>progress value=75 striped=true animated=isAnimated}}
     <br>
     {{> button class="toggle-progress-bar" label="Toggle animation"}}
+    
+    {{#code}}
+        {{|>progress value=75 striped=true animated=isAnimated}}
+        {{|>button class="toggle-progress-bar" label="Toggle animation"}}
+    {{/code}}
 </template>
