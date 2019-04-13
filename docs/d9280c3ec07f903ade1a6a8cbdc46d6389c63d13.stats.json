@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.4.1"
   },
-  "totalMinifiedBytes": 952200,
-  "totalMinifiedGzipBytes": 220595,
+  "totalMinifiedBytes": 982998,
+  "totalMinifiedGzipBytes": 222920,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9484,
     "packages/meteor-base.js": 31,
@@ -535,7 +535,7 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      40081,
+      42318,
       {
         "node_modules": {
           "meteor": {
@@ -573,8 +573,8 @@
               },
               "item": {
                 "item.html": 56,
-                "template.item.js": 1963,
-                "item.js": 618
+                "template.item.js": 3733,
+                "item.js": 1085
               },
               "jumbotron": {
                 "template.jumbotron.js": 484
@@ -645,7 +645,7 @@
       {}
     ],
     "app/app.js": [
-      197023,
+      225584,
       {
         "templates": {
           "about": {
@@ -674,7 +674,7 @@
           "buttons": {
             "buttons.html": 59,
             "template.buttons.js": 6664,
-            "buttons.js": 299
+            "buttons.js": 340
           },
           "cards": {
             "cards.html": 57,
@@ -685,14 +685,23 @@
             "code.html": 56,
             "template.code.js": 700
           },
+          "collapses": {
+            "collapses.html": 61,
+            "template.collapses.js": 6141,
+            "collapses.js": 43
+          },
           "dropdowns": {
             "dropdowns.html": 61,
             "template.dropdowns.js": 25512,
-            "dropdowns.js": 364
+            "dropdowns.js": 454
           },
           "jumbotron": {
             "jumbotron.html": 61,
             "template.jumbotron.js": 3318
+          },
+          "listgroups": {
+            "listgroups.html": 62,
+            "template.listgroups.js": 21813
           },
           "modals": {
             "modals.html": 58,
@@ -721,7 +730,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 3728,
-          "main.js": 2987
+          "main.js": 3168
         }
       }
     ]
