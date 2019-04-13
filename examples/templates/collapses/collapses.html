@@ -1,3 +1,55 @@
 <template name="collapses">
     <h1>Collapse</h1>
+
+    <h2 class="my-4">Example</h2>
+
+    {{>button colortype="primary" class="mb-2" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" label="Button with data-target"}}
+
+    {{#collapse id="collapseExample"}}
+        {{>card justbody=true label="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."}}
+    {{/collapse}}
+    
+    {{#code}}
+        {{|>button colortype="primary" class="mb-2" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" label="Button with data-target"}}
+
+        {{|#collapse id="collapseExample"}}
+            {{|>card justbody=true label="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."}}
+        {{|/collapse}}
+    {{/code}}
+
+    <h2 class="my-4">Multiple targets</h2>
+
+    {{>button colortype="primary" class="mb-2" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" label="Toggle first element"}}
+    {{>button colortype="primary" class="mb-2" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" label="Toggle second element"}}
+    {{>button colortype="primary" class="mb-2" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" label="Toggle both elements"}}
+
+    {{#collapse id="multiCollapseExample1" class="multi-collapse"}}
+        {{>card justbody=true label="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."}}
+    {{/collapse}}
+
+    {{#collapse id="multiCollapseExample2" class="multi-collapse"}}
+        {{>card justbody=true label="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."}}
+    {{/collapse}}
+
+    {{#code}}
+        {{|>button colortype="primary" class="mb-2" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" label="Toggle first element"}}
+        {{|>button colortype="primary" class="mb-2" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" label="Toggle second element"}}
+        {{|>button colortype="primary" class="mb-2" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" label="Toggle both elements"}}
+
+        {{|#collapse id="multiCollapseExample1" class="multi-collapse"}}
+            {{|>card justbody=true label="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."}}
+        {{|/collapse}}
+
+        {{|#collapse id="multiCollapseExample2" class="multi-collapse"}}
+            {{|>card justbody=true label="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."}}
+        {{|/collapse}}
+    {{/code}}
+
+    <h2 class="my-4">Accordion example</h2>
+
+    {{>alert heading="not yet implemented"}}
+
+    <h2 class="my-4">Events</h2>
+
+    {{>alert heading="not yet implemented"}}
 </template>
