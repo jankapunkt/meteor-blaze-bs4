@@ -15,6 +15,7 @@ import '../templates/breadcrumb/breadcrumb'
 import '../templates/buttons/buttons'
 import '../templates/buttongroups/buttongroups.html'
 import '../templates/cards/cards'
+import '../templates/collapses/collapses'
 import '../templates/dropdowns/dropdowns'
 import '../templates/jumbotron/jumbotron.html'
 import '../templates/modals/modals'
@@ -34,6 +35,7 @@ const allTemplates = [
   { template: 'buttons', name: 'Button' },
   { template: 'buttongroups', name: 'Button Group' },
   { template: 'cards', name: 'Card' },
+  { template: 'collapses', name: 'Collapse' },
   { template: 'dropdowns', name: 'Dropdown' },
   { template: 'jumbotrons', name: 'Jumbotron' },
   { template: 'modals', name: 'Modal' },
