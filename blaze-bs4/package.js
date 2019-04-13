@@ -38,7 +38,7 @@ Package.onUse(function (api) {
     'modal/modal.js',
     'nav/nav.html',
     'navbar/navbar.html',
-    //'navbar/navbar.js',
+    // 'navbar/navbar.js',
     'progress/progress.html',
     'progress/progress.js',
     'spinner/spinner.html'
