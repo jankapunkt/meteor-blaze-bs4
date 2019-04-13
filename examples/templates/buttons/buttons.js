@@ -1,3 +1,4 @@
+import { Template } from 'meteor/templating'
 import './buttons.html'
 
 Template.buttons.helpers({

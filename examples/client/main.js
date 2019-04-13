@@ -68,7 +68,7 @@ const allThemes = [
   { value: 'spacelab', name: 'Spacelab' },
   { value: 'superhero', name: 'Superhero' },
   { value: 'united', name: 'United' },
-  { value: 'yeti', name: 'Yeti' },
+  { value: 'yeti', name: 'Yeti' }
 ]
 
 Template.body.onCreated(function () {
@@ -120,6 +120,6 @@ Template.body.events({
     const theme = templateInstance.$(event.currentTarget).val()
     const href = `themes/${theme}.min.css`
     console.log(theme, href)
-    $('#bbs4-custom-theme').prop('href', href)
+    global.$('#bbs4-custom-theme').prop('href', href)
   }
 })
