@@ -1,0 +1,53 @@
+<template name="listgroups">
+    <h1>List group</h1>
+
+    <h2 class="my-4">Basic example</h2>
+
+    {{#listgroup}}
+        {{>item label="Cras justo odio"}}
+        {{>item label="Dapibus ac facilisis in"}}
+        {{>item label="Morbi leo risus"}}
+        {{>item label="Porta ac consectetur ac"}}
+        {{>item label="Vestibulum at eros"}}
+    {{/listgroup}}
+    
+    {{#code}}
+        {{|#listgroup}}
+            {{|>item label="Cras justo odio"}}
+            {{|>item label="Dapibus ac facilisis in"}}
+            {{|>item label="Morbi leo risus"}}
+            {{|>item label="Porta ac consectetur ac"}}
+            {{|>item label="Vestibulum at eros"}}
+        {{|/listgroup}}
+    {{/code}}
+
+    <h2 class="my-4">Active items</h2>
+
+    {{#listgroup}}
+        {{>item label="Cras justo odio" active=true}}
+        {{>item label="Dapibus ac facilisis in"}}
+        {{>item label="Morbi leo risus"}}
+        {{>item label="Porta ac consectetur ac"}}
+        {{>item label="Vestibulum at eros"}}
+    {{/listgroup}}
+
+    {{#code}}
+        {{|#listgroup}}
+            {{|>item label="Cras justo odio" active=true}}
+            {{|>item label="Dapibus ac facilisis in"}}
+            {{|>item label="Morbi leo risus"}}
+            {{|>item label="Porta ac consectetur ac"}}
+            {{|>item label="Vestibulum at eros"}}
+        {{|/listgroup}}
+    {{/code}}
+
+    <h2 class="my-4">Disabled items</h2>
+
+    {{#listgroup}}
+        {{>item label="Cras justo odio" disabled=true}}
+        {{>item label="Dapibus ac facilisis in"}}
+        {{>item label="Morbi leo risus"}}
+        {{>item label="Porta ac consectetur ac"}}
+        {{>item label="Vestibulum at eros"}}
+    {{/listgroup}}
+</template>

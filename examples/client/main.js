@@ -18,6 +18,7 @@ import '../templates/cards/cards'
 import '../templates/collapses/collapses'
 import '../templates/dropdowns/dropdowns'
 import '../templates/jumbotron/jumbotron.html'
+import '../templates/listgroups/listgroups.html'
 import '../templates/modals/modals'
 import '../templates/navbars/navbars'
 import '../templates/progress/progress'
@@ -38,6 +39,7 @@ const allTemplates = [
   { template: 'collapses', name: 'Collapse' },
   { template: 'dropdowns', name: 'Dropdown' },
   { template: 'jumbotrons', name: 'Jumbotron' },
+  { template: 'listgroups', name: 'List group' },
   { template: 'modals', name: 'Modal' },
   { template: 'navbars', name: 'Navbar' },
   { template: 'progressbars', name: 'Progress' },
