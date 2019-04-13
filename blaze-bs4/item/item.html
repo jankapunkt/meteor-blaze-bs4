@@ -10,7 +10,7 @@
           {{#if label}}{{label}}{{else}}{{> Template.contentBlock ..}}{{/if}}
       </button>
   {{else}}
-    <li id="{{id}}" class="{{#if type}}{{type}}-item{{else}}{{defaultClassName}}{{/if}} {{#if dropdown}}dropdown{{/if}} {{#if active}}active{{/if}} {{#if disabled}}disabled{{/if}} {{class}}">
+    <li id="{{id}}" class="{{#if type}}{{type}}-item{{else}}{{defaultClassName}}{{/if}} {{additionalClassnames}} {{#if dropdown}}dropdown{{/if}} {{#if active}}active{{/if}} {{#if disabled}}disabled{{/if}} {{class}}">
       {{#if label}}{{label}}{{else}}{{> Template.contentBlock ..}}{{/if}}
     </li>
   {{/if}}

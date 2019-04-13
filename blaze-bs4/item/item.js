@@ -10,12 +10,23 @@ const ClassNameMapping = {
 }
 
 const AdditionalClassnames = {
-  listgroup: 'list-group-item-action'
+  listgroup ({ color, isLink, isButton }) {
+    const classnames = []
+    if (isButton || isLink) {
+      classnames.push('list-group-item-action')
+    }
+    if (color) {
+      classnames.push(`list-group-item-${color}`)
+    }
+    return classnames.join(' ')
+  }
 }
 
 Template.item.onCreated(function onItemCreated () {
   const instance = this
   onCreatedWithDataAtts(instance)
+
+  instance._additionalClassnames = new ReactiveVar()
 
   // if we not explicitly pass the type
   // then there is the need to iterate
@@ -25,13 +36,18 @@ Template.item.onCreated(function onItemCreated () {
     const parentView = getParentView(instance)
     const parentName = parentView.name.split('.')[ 1 ]
     const className = ClassNameMapping[ parentName ]
-    const additionalClassnames = AdditionalClassnames[ parentName ]
     instance._defaultClassName = new ReactiveVar()
     instance._defaultClassName.set(className)
-    instance._additionalClassnames = new ReactiveVar()
-    instance._additionalClassnames.set(additionalClassnames)
-  } else {
-    // TODO how to resolve additional classnames here?
+
+    // resolve additional classnames
+    if (AdditionalClassnames[ parentName ] && (instance.data.color || instance.data.href || instance.data.button)) {
+      const additionalClassnames = AdditionalClassnames[ parentName ]({
+        color: instance.data.color,
+        isLink: instance.data.href,
+        isButton: instance.data.button
+      })
+      instance._additionalClassnames.set(additionalClassnames)
+    }
   }
 })
 
