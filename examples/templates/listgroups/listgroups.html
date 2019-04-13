@@ -21,6 +21,29 @@
         {{|/listgroup}}
     {{/code}}
 
+    <p>
+        General note on <code>Item</code> classes: You can use the <code>label=</code> attribute to add text in one line to the item.
+        However, you can also use the content-block and create more complex content inside the item component. For example:
+    </p>
+
+    {{#listgroup}}
+        {{#item}}<i class="fa fa-fw fa-check"></i> Cras justo odio{{/item}}
+        {{>item label="Dapibus ac facilisis in"}}
+        {{>item label="Morbi leo risus"}}
+        {{>item label="Porta ac consectetur ac"}}
+        {{>item label="Vestibulum at eros"}}
+    {{/listgroup}}
+
+    {{#code}}
+        {{|#listgroup}}
+            {{|#item}}&lt;i class="fa fa-fw fa-check"&gt;&lt;/i&gt; Cras justo odio{{|/item}}
+            {{|>item label="Dapibus ac facilisis in"}}
+            {{|>item label="Morbi leo risus"}}
+            {{|>item label="Porta ac consectetur ac"}}
+            {{|>item label="Vestibulum at eros"}}
+        {{|/listgroup}}
+    {{/code}}
+
     <h2 class="my-4">Active items</h2>
 
     {{#listgroup}}
@@ -50,4 +73,203 @@
         {{>item label="Porta ac consectetur ac"}}
         {{>item label="Vestibulum at eros"}}
     {{/listgroup}}
+    
+    {{#code}}
+        {{|#listgroup}}
+            {{|>item label="Cras justo odio" disabled=true}}
+            {{|>item label="Dapibus ac facilisis in"}}
+            {{|>item label="Morbi leo risus"}}
+            {{|>item label="Porta ac consectetur ac"}}
+            {{|>item label="Vestibulum at eros"}}
+        {{|/listgroup}}
+    {{/code}}
+    
+    <h2 class="my-4">Links and buttons</h2>
+
+    {{#listgroup links=true}}
+        {{>item href="#listgroups" label="Cras justo odio" active=true}}
+        {{>item href="#listgroups" label="Dapibus ac facilisis in"}}
+        {{>item href="#listgroups" label="Morbi leo risus"}}
+        {{>item href="#listgroups" label="Porta ac consectetur ac"}}
+        {{>item href="#listgroups" label="Vestibulum at eros" disabled=true}}
+    {{/listgroup}}
+
+    {{#code}}
+        {{|#listgroup links=true}}
+            {{|>item href="#listgroups" label="Cras justo odio" active=true}}
+            {{|>item href="#listgroups" label="Dapibus ac facilisis in"}}
+            {{|>item href="#listgroups" label="Morbi leo risus"}}
+            {{|>item href="#listgroups" label="Porta ac consectetur ac"}}
+            {{|>item href="#listgroups" label="Vestibulum at eros" disabled=true}}
+        {{|/listgroup}}
+    {{/code}}
+
+    {{#listgroup links=true}}
+        {{>item button=true label="Cras justo odio" active=true}}
+        {{>item button=true label="Dapibus ac facilisis in"}}
+        {{>item button=true label="Morbi leo risus"}}
+        {{>item button=true label="Porta ac consectetur ac"}}
+        {{>item button=true label="Vestibulum at eros" disabled=true}}
+    {{/listgroup}}
+    
+    {{#code}}
+        {{|#listgroup links=true}}
+            {{|>item button=true label="Cras justo odio" active=true}}
+            {{|>item button=true label="Dapibus ac facilisis in"}}
+            {{|>item button=true label="Morbi leo risus"}}
+            {{|>item button=true label="Porta ac consectetur ac"}}
+            {{|>item button=true label="Vestibulum at eros" disabled=true}}
+        {{|/listgroup}}
+    {{/code}}
+
+    <h2 class="my-4">Flush</h2>
+
+    {{#listgroup flush=true}}
+        {{>item label="Cras justo odio"}}
+        {{>item label="Dapibus ac facilisis in"}}
+        {{>item label="Morbi leo risus"}}
+        {{>item label="Porta ac consectetur ac"}}
+        {{>item label="Vestibulum at eros"}}
+    {{/listgroup}}
+
+
+    <h2 class="my-4">Contextual classes</h2>
+
+    {{#listgroup}}
+        {{>item label="Dapibus ac facilisis in"}}
+        {{#each themeColors}}
+            {{#item color=this}}A simple {{this}} list group item{{/item}}
+        {{/each}}
+    {{/listgroup}}
+    
+    {{#code}}
+        {{|#listgroup}}
+            {{|>item label="Dapibus ac facilisis in"}}
+            {{|#each themeColors}}
+                {{|#item color=this}}A simple {{|this}} list group item{{|/item}}
+            {{|/each}}
+        {{|/listgroup}}
+    {{/code}}
+
+    {{#listgroup}}
+        {{>item label="Dapibus ac facilisis in"}}
+        {{#each themeColors}}
+            {{#item href="#listgroups" color=this}}A simple {{this}} list group item{{/item}}
+        {{/each}}
+    {{/listgroup}}
+    
+    {{#code}}
+        {{|#listgroup}}
+            {{|>item label="Dapibus ac facilisis in"}}
+            {{|#each themeColors}}
+                {{|#item href="#listgroups" color=this}}A simple {{|this}} list group item{{|/item}}
+            {{|/each}}
+        {{|/listgroup}}
+    {{/code}}
+
+    <h2 class="my-4">With badges</h2>
+
+    {{#listgroup}}
+        {{#item class="d-flex justify-content-between align-items-center"}}
+            Cras justo odio
+            {{>badge type="primary" content="14"}}
+        {{/item}}
+        {{#item class="d-flex justify-content-between align-items-center"}}
+            Dapibus ac facilisis in
+            {{>badge type="primary" content="2"}}
+        {{/item}}
+        {{#item class="d-flex justify-content-between align-items-center"}}
+            Morbi leo risus
+            {{>badge type="primary" content="1"}}
+        {{/item}}
+    {{/listgroup}}
+    
+    {{#code}}
+        {{|#listgroup}}
+            {{|#item class="d-flex justify-content-between align-items-center"}}
+                Cras justo odio
+                {{|>badge type="primary" content="14"}}
+            {{|/item}}
+            {{|#item class="d-flex justify-content-between align-items-center"}}
+                Dapibus ac facilisis in
+                {{|>badge type="primary" content="2"}}
+            {{|/item}}
+            {{|#item class="d-flex justify-content-between align-items-center"}}
+                Morbi leo risus
+                {{|>badge type="primary" content="1"}}
+            {{|/item}}
+        {{|/listgroup}}
+    {{/code}}
+    
+    <h2 class="my-4">Custom content</h2>
+
+    {{#listgroup links=true}}
+        {{#item href="#listgroups" active=true}}
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <small>Donec id elit non mi porta.</small>
+        {{/item}}
+        {{#item href="#listgroups"}}
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <small class="text-muted">Donec id elit non mi porta.</small>
+        {{/item}}
+        {{#item href="#listgroups"}}
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <small class="text-muted">Donec id elit non mi porta.</small>
+        {{/item}}
+    {{/listgroup}}
+    
+    {{#code}}
+        {{|#listgroup links=true}}
+            {{|#item href="#listgroups" active=true}}
+                &lt;div class="d-flex w-100 justify-content-between"&gt;
+                    &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+                    &lt;small&gt;3 days ago&lt;/small&gt;
+                &lt;/div&gt;
+                &lt;p class="mb-1"&gt;Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.&lt;/p&gt;
+                &lt;small&gt;Donec id elit non mi porta.&lt;/small&gt;
+            {{|/item}}
+            {{|#item href="#listgroups"}}
+                &lt;div class="d-flex w-100 justify-content-between"&gt;
+                    &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+                    &lt;small class="text-muted"&gt;3 days ago&lt;/small&gt;
+                &lt;/div&gt;
+                &lt;p class="mb-1"&gt;Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.&lt;/p&gt;
+                &lt;small class="text-muted"&gt;Donec id elit non mi porta.&lt;/small&gt;
+            {{|/item}}
+            {{|#item href="#listgroups"}}
+                &lt;div class="d-flex w-100 justify-content-between"&gt;
+                    &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+                    &lt;small class="text-muted"&gt;3 days ago&lt;/small&gt;
+                &lt;/div&gt;
+                &lt;p class="mb-1"&gt;Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.&lt;/p&gt;
+                &lt;small class="text-muted"&gt;Donec id elit non mi porta.&lt;/small&gt;
+            {{|/item}}
+        {{|/listgroup}}
+    {{/code}}    
+
+    <h2 class="my-4">JavaScript behavior</h2>
+
+    {{>alert heading="Not yet implemented"}}
+
+    <h2 class="my-4">Methods</h2>
+
+    {{>alert heading="No documentation added yet"}}
+
+    <h2 class="my-4">Events</h2>
+
+    {{>alert heading="No documentation added yet"}}
+
+
 </template>
