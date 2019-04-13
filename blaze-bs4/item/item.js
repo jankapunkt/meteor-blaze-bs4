@@ -9,6 +9,10 @@ const ClassNameMapping = {
   listgroup: 'list-group-item'
 }
 
+const AdditionalClassnames = {
+  listgroup: 'list-group-item-action'
+}
+
 Template.item.onCreated(function onItemCreated () {
   const instance = this
   onCreatedWithDataAtts(instance)
@@ -21,16 +25,24 @@ Template.item.onCreated(function onItemCreated () {
     const parentView = getParentView(instance)
     const parentName = parentView.name.split('.')[ 1 ]
     const className = ClassNameMapping[ parentName ]
+    const additionalClassnames = AdditionalClassnames[ parentName ]
     instance._defaultClassName = new ReactiveVar()
     instance._defaultClassName.set(className)
+    instance._additionalClassnames = new ReactiveVar()
+    instance._additionalClassnames.set(additionalClassnames)
   } else {
-
+    // TODO how to resolve additional classnames here?
   }
 })
 
 Template.item.helpers({
   data_atts: dataAttsHelper,
   defaultClassName () {
-    return Template.instance()._defaultClassName.get()
+    const { _defaultClassName } = Template.instance()
+    return _defaultClassName.get() && _defaultClassName.get()
+  },
+  additionalClassnames () {
+    const { _additionalClassnames } = Template.instance()
+    return _additionalClassnames && _additionalClassnames.get()
   }
 })
