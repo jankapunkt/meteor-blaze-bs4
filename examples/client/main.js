@@ -23,6 +23,7 @@ import '../templates/modals/modals'
 import '../templates/navbars/navbars'
 import '../templates/progress/progress'
 import '../templates/spinners/spinners.html'
+import '../templates/tooltips/tooltips'
 
 import './main.html'
 
@@ -43,7 +44,8 @@ const allTemplates = [
   { template: 'modals', name: 'Modal' },
   { template: 'navbars', name: 'Navbar' },
   { template: 'progressbars', name: 'Progress' },
-  { template: 'spinners', name: 'Spinner' }
+  { template: 'spinners', name: 'Spinner' },
+  { template: 'tooltips', name: 'Tooltips' }
 ]
 
 const allThemes = [

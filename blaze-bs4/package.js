@@ -41,6 +41,8 @@ Package.onUse(function (api) {
     // 'navbar/navbar.js',
     'progress/progress.html',
     'progress/progress.js',
-    'spinner/spinner.html'
+    'spinner/spinner.html',
+    'tooltip/tooltip.html',
+    'tooltip/tooltip.js'
   ], 'client')
 })
