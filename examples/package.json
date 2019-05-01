@@ -9,7 +9,7 @@
     "test": "TEST_WATCH=1 meteor test --driver-package meteortesting:mocha",
     "test-cli": "meteor test --once --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
-    "lint": "stand  ard",
+    "lint": "standard",
     "lint-fix": "standard --fix"
   },
   "dependencies": {
