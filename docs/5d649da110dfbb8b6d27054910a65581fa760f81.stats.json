@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.4.1"
   },
-  "totalMinifiedBytes": 990751,
-  "totalMinifiedGzipBytes": 224152,
+  "totalMinifiedBytes": 997262,
+  "totalMinifiedGzipBytes": 225083,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9484,
     "packages/meteor-base.js": 31,
@@ -535,7 +535,7 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      43671,
+      45240,
       {
         "node_modules": {
           "meteor": {
@@ -574,10 +574,15 @@
               "item": {
                 "item.html": 56,
                 "template.item.js": 3733,
-                "item.js": 1085
+                "item.js": 1100
               },
               "jumbotron": {
                 "template.jumbotron.js": 484
+              },
+              "link": {
+                "link.html": 56,
+                "template.link.js": 554,
+                "link.js": 570
               },
               "listgroup": {
                 "listgroup.html": 61,
@@ -590,7 +595,7 @@
                 "modal.js": 39
               },
               "nav": {
-                "template.nav.js": 2040
+                "template.nav.js": 2049
               },
               "navbar": {
                 "template.navbar.js": 2361
@@ -608,6 +613,7 @@
                 "tooltip.js": 610
               },
               "utils": {
+                "atts.js": 178,
                 "dataAtts.js": 442,
                 "getParentTemplate.js": 323
               }
@@ -650,7 +656,7 @@
       {}
     ],
     "app/app.js": [
-      231984,
+      236926,
       {
         "templates": {
           "about": {
@@ -704,6 +710,11 @@
             "jumbotron.html": 61,
             "template.jumbotron.js": 3318
           },
+          "links": {
+            "link.html": 56,
+            "template.link.js": 4411,
+            "links.js": 256
+          },
           "listgroups": {
             "listgroups.html": 62,
             "template.listgroups.js": 21813
@@ -715,7 +726,7 @@
           },
           "navbars": {
             "navbars.html": 59,
-            "template.navbars.js": 21389,
+            "template.navbars.js": 21488,
             "navbars.js": 41
           },
           "progress": {
@@ -740,7 +751,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 3728,
-          "main.js": 3247
+          "main.js": 3314
         }
       }
     ]
