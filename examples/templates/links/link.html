@@ -1,0 +1,61 @@
+<template name="links">
+    <h1>Links</h1>
+
+    <p>This package comes with a support class named <code>link</code>. It is not part of the bootstrap components but a
+        neat support to create links of various kinds.</p>
+
+    <h2 class="my-4">Examples</h2>
+
+
+    {{> link href="/#links" title="Some link to click on" label="Textlink" class="d-block my-1"}}
+
+    {{> link href="/#links" title="Some link with icon to click on" icon="link" label="Iconlink" class="d-block my-1"}}
+
+    {{> link href="/#links" title="Some link with icon to click on" icon="link" class="d-block my-1"}}
+
+    {{> link href="/#links" target="_blank" title="Some link with target to click on" label="target link" class="d-block my-1"}}
+
+    {{#code}}
+
+        {{|> link href="/#links" title="Some link to click on" label="Textlink" class="d-block my-1"}}
+
+        {{|> link href="/#links" title="Some link with icon to click on" icon="link" label="Iconlink" class="d-block my-1"}}
+
+        {{|> link href="/#links" title="Some link with icon to click on" icon="link" class="d-block my-1"}}
+
+        {{|> link href="/#links" target="_blank" title="Some link with target to click on" label="target link" class="d-block my-1"}}
+    {{/code}}
+
+        {{#each themeColors}}
+        {{> link href="/#links" button=this title="Some link to click on" label="Textlink"}}
+    {{/each}}
+
+    {{#code}}
+        {{|#each themeColors}}
+            {{|> link href="/#links" button=this title="Some link to click on" label="Textlink"}}
+        {{|/each}}
+    {{/code}}
+
+    <h2 class="my-4">Download</h2>
+
+    {{> link href="media/logo.svg" button="primary" download="Blaze-Bootstrap-Logo.svg" icon="download" label="Download Sample File"}}
+
+    {{#code}}
+        {{|> link href="media/logo.svg" button="primary" download="Blaze-Bootstrap-Logo.svg" icon="download" label="Download Sample File"}}
+    {{/code}}
+
+    <h2 class="my-4">Tooltips</h2>
+
+    <p>Use the <code>tooltip</code> template to surround links and omit the title attribute of the link:</p>
+
+    {{#tooltip title="Some link with icon to click on"}}
+        {{> link href="/#links" icon="external-link" label="Some text"}}
+    {{/tooltip}}
+
+    {{#each themeColors}}
+        {{#tooltip title=this}}
+            {{> link href="/#links" button=this icon="link"}}
+        {{/tooltip}}
+    {{/each}}
+
+</template>

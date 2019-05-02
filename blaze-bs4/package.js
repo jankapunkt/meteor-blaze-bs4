@@ -32,6 +32,8 @@ Package.onUse(function (api) {
     'item/item.html',
     'item/item.js',
     'jumbotron/jumbotron.html',
+    'link/link.html',
+    'link/link.js',
     'listgroup/listgroup.html',
     'listgroup/listgroup.js',
     'modal/modal.html',

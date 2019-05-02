@@ -6,7 +6,8 @@ import { getParentView } from '../utils/getParentTemplate'
 
 const ClassNameMapping = {
   dropdown: 'dropdown-item',
-  listgroup: 'list-group-item'
+  listgroup: 'list-group-item',
+  nav: 'nav-item'
 }
 
 const AdditionalClassnames = {

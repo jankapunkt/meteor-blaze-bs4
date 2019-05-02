@@ -60,10 +60,10 @@
         {{>toggler target="exampleNav"}}
         {{#collapse navbar=true id="exampleNav"}}
             {{#nav navbar=true}}
-                {{> link href="#navbars" label="Home" active=true }}
-                {{> link href="#navbars" label="Features"}}
-                {{> link href="#navbars" label="Pricing"}}
-                {{> link href="#navbars" label="Disabled" disabled=true}}
+                {{> navlink href="#navbars" label="Home" active=true }}
+                {{> navlink href="#navbars" label="Features"}}
+                {{> navlink href="#navbars" label="Pricing"}}
+                {{> navlink href="#navbars" label="Disabled" disabled=true}}
             {{/nav}}
         {{/collapse}}
     {{/navbar}}
@@ -74,10 +74,10 @@
         {{|>toggler target="exampleNav"}}
         {{|#collapse navbar=true id="exampleNav"}}
             {{|#nav navbar=true}}
-                {{|> link href="#navbars" label="Home" active=true }}
-                {{|> link href="#navbars" label="Features"}}
-                {{|> link href="#navbars" label="Pricing"}}
-                {{|> link href="#navbars" label="Disabled" disabled=true}}
+                {{|> navlink href="#navbars" label="Home" active=true }}
+                {{|> navlink href="#navbars" label="Features"}}
+                {{|> navlink href="#navbars" label="Pricing"}}
+                {{|> navlink href="#navbars" label="Disabled" disabled=true}}
             {{|/nav}}
         {{|/collapse}}
     {{|/navbar}}
@@ -90,19 +90,19 @@
         {{>toggler target="exampleNav"}}
         {{#collapse navbar=true id="exampleNav"}}
             {{#nav navbar=true}}
-                {{> link href="#" label="Home" active=true }}
-                {{> link href="#" label="Features"}}
-                {{> link href="#" label="Pricing"}}
-                {{> link href="#" label="Disabled" disabled=true}}
+                {{> navlink href="#" label="Home" active=true }}
+                {{> navlink href="#" label="Features"}}
+                {{> navlink href="#" label="Pricing"}}
+                {{> navlink href="#" label="Disabled" disabled=true}}
                 {{#item type="nav" dropdown=true}}
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown link
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        {{> item type="dropdown" href="#dropdowns" label="Action" data-value="Action"}}
-                        {{> item type="dropdown" href="#dropdowns" label="Another action" data-value="Another action"}}
-                        {{> item type="dropdown" href="#dropdowns" label="Something else here" data-value="Something else here"}}
+                        {{> navlink type="dropdown" href="#dropdowns" label="Action" data-value="Action"}}
+                        {{> navlink type="dropdown" href="#dropdowns" label="Another action" data-value="Another action"}}
+                        {{> navlink type="dropdown" href="#dropdowns" label="Something else here" data-value="Something else here"}}
                     </div>
                 {{/item}}
             {{/nav}}
@@ -152,9 +152,9 @@
         {{>toggler target="exampleNav"}}
         {{#collapse navbar=true id="exampleNav"}}
             {{#nav navbar=true class="mr-auto"}}
-                {{> link href="#navbars" label="Home" active=true }}
-                {{> link href="#navbars" label="Features"}}
-                {{> link href="#navbars" label="Pricing"}}
+                {{> navlink href="#navbars" label="Home" active=true }}
+                {{> navlink href="#navbars" label="Features"}}
+                {{> navlink href="#navbars" label="Pricing"}}
             {{/nav}}
             <span class="navbar-text">
              Navbar text with an inline element
@@ -168,9 +168,9 @@
         {{|>toggler target="exampleNav"}}
         {{|#collapse navbar=true id="exampleNav"}}
             {{|#nav navbar=true class="mr-auto"}}
-                {{|> link href="#navbars" label="Home" active=true }}
-                {{|> link href="#navbars" label="Features"}}
-                {{|> link href="#navbars" label="Pricing"}}
+                {{|> navlink href="#navbars" label="Home" active=true }}
+                {{|> navlink href="#navbars" label="Features"}}
+                {{|> navlink href="#navbars" label="Pricing"}}
             {{|/nav}}
             &lt;span class="navbar-text"&gt;
              Navbar text with an inline element
@@ -186,10 +186,10 @@
         {{>toggler target="exampleNav"}}
         {{#collapse navbar=true id="exampleNav"}}
             {{#nav navbar=true}}
-                {{> link href="#navbars" label="Home" active=true }}
-                {{> link href="#navbars" label="Features"}}
-                {{> link href="#navbars" label="Pricing"}}
-                {{> link href="#navbars" label="Disabled" disabled=true}}
+                {{> navlink href="#navbars" label="Home" active=true }}
+                {{> navlink href="#navbars" label="Features"}}
+                {{> navlink href="#navbars" label="Pricing"}}
+                {{> navlink href="#navbars" label="Disabled" disabled=true}}
             {{/nav}}
         {{/collapse}}
         <form class="form-inline">
@@ -209,10 +209,10 @@
         {{>toggler target="exampleNav"}}
         {{#collapse navbar=true id="exampleNav"}}
             {{#nav navbar=true}}
-                {{> link href="#navbars" label="Home" active=true }}
-                {{> link href="#navbars" label="Features"}}
-                {{> link href="#navbars" label="Pricing"}}
-                {{> link href="#navbars" label="Disabled" disabled=true}}
+                {{> navlink href="#navbars" label="Home" active=true }}
+                {{> navlink href="#navbars" label="Features"}}
+                {{> navlink href="#navbars" label="Pricing"}}
+                {{> navlink href="#navbars" label="Disabled" disabled=true}}
             {{/nav}}
         {{/collapse}}
         <form class="form-inline">
@@ -232,10 +232,10 @@
         {{>toggler target="exampleNav"}}
         {{#collapse navbar=true id="exampleNav"}}
             {{#nav navbar=true}}
-                {{> link href="#navbars" label="Home" active=true }}
-                {{> link href="#navbars" label="Features"}}
-                {{> link href="#navbars" label="Pricing"}}
-                {{> link href="#navbars" label="Disabled" disabled=true}}
+                {{> navlink href="#navbars" label="Home" active=true }}
+                {{> navlink href="#navbars" label="Features"}}
+                {{> navlink href="#navbars" label="Pricing"}}
+                {{> navlink href="#navbars" label="Disabled" disabled=true}}
             {{/nav}}
         {{/collapse}}
         <form class="form-inline">
