@@ -15,7 +15,7 @@ const withDiv = function withDiv (callback) {
   try {
     callback(el)
   } finally {
-    document.body.removeChild(el)
+    // document.body.removeChild(el)
   }
 }
 
