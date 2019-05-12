@@ -43,7 +43,7 @@ import popper from 'popper.js'
 global.Popper = popper // fixes some issues with Popper and Meteor
 ``` 
 
-### Installing
+### Installing this package
 
 You can install the package from atmosphere via:
 
@@ -57,9 +57,21 @@ The templates are automatically added and are immediately available. Note, that 
 
 Please consult the [API Documentation](API.md) on how to use this package.
 
-## Running the tests
+## Running the tests locally
 
-To run the tests you need clone this project to your local machine. Inside
+The package folder `blaze-bs4/` contains all the components and also the test files.
+We use `mocha` and `chai` to run the unit tests.
+
+To run the tests `cd` into the `blaze-bs4` folder and run the following command:
+
+```bash
+$ TEST_WATCH=1 meteor test-packages ./ --driver-package meteortesting:mocha
+```
+
+## Running the examples locally
+
+When developing components and improving this package you may also want to improve the examples project.
+To run it you need clone this project to your local machine. Inside
 
 ```bash
 $ git clone git@github.com:jankapunkt/meteor-blaze-bs4.git
