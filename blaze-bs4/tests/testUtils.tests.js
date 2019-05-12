@@ -7,6 +7,7 @@ import { _ } from 'meteor/underscore'
 import { Template } from 'meteor/templating'
 import { Blaze } from 'meteor/blaze'
 import { Tracker } from 'meteor/tracker'
+import { assert } from 'meteor/practicalmeteor:chai'
 
 const withDiv = function withDiv (callback) {
   const el = document.createElement('div')
@@ -26,3 +27,21 @@ export const withRenderedTemplate = function withRenderedTemplate (template, dat
     callback(el)
   })
 }
+
+export const toBBS4Name = name => `.bbs4-${name}`
+
+export const toColorName = (name, colorType, outline = false) => {
+  if (outline) {
+    return `.${name}-outline-${colorType}`
+  } else {
+    return `.${name}-${colorType}`
+  }
+}
+
+export const exists = (target, selector, length = 1) => {
+  const element = global.$(target).find(selector)
+  assert.equal(element.length, length, selector)
+  return global.$(target).find(selector)
+}
+
+export const colorTypes = [ 'primary', 'secondary', 'success', 'warning', 'danger', 'info', 'dark', 'light' ]

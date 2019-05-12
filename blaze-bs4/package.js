@@ -58,5 +58,8 @@ Package.onTest(function (api) {
   api.use('practicalmeteor:chai')
   api.use('meteortesting:mocha')
   api.use('jkuester:blaze-bs4')
+  api.addFiles([
+    'tests/main.tests.html'
+  ], 'client')
   api.mainModule('tests/main.tests.js', 'client')
 })

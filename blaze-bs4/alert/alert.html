@@ -1,10 +1,9 @@
-
 <template name="alert">
-    <div id="{{id}}" class="alert alert-{{#if type}}{{type}}{{else}}secondary{{/if}} {{#if dismissible}}alert-dismissible fade show{{/if}}" role="alert">
+    <div id="{{id}}" class="bbs4-alert alert alert-{{#if type}}{{type}}{{else}}secondary{{/if}} {{#if dismissible}}alert-dismissible fade show{{/if}}" role="alert">
         {{#with heading}}<h4 class="alert-heading">{{this}}</h4>{{/with}}
         {{> Template.contentBlock ..}}
         {{#if dismissible}}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button type="button" class="bbs4-alertButton close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         {{/if}}
