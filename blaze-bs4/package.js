@@ -48,3 +48,15 @@ Package.onUse(function (api) {
     'tooltip/tooltip.js'
   ], 'client')
 })
+
+Package.onTest(function (api) {
+  api.use('ecmascript')
+  api.use('blaze')
+  api.use('underscore')
+  api.use('templating')
+  api.use('tracker')
+  api.use('practicalmeteor:chai')
+  api.use('meteortesting:mocha')
+  api.use('jkuester:blaze-bs4')
+  api.mainModule('tests/main.tests.js', 'client')
+})
