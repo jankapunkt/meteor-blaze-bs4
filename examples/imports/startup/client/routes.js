@@ -2,8 +2,10 @@ import { Template } from 'meteor/templating'
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
 import { Routes } from '../../api/Routes'
 
+const prefix = Meteor.isDevelopment ? '' : '/meteor-blaze-bs4' // fix for GitHub pages
+
 Routes.forEach(route => {
-  const path = `/${route.template}`
+  const path = `${prefix}/${route.template}`
 
   FlowRouter.route(path, {
     name: route.template,
@@ -23,10 +25,13 @@ Routes.forEach(route => {
 
 // Create 404 route (catch-all)
 FlowRouter.route('/', {
-  triggersEnter: [() => FlowRouter.go('/about')]
+  triggersEnter: [() => FlowRouter.go('/about')],
+  waitOn() {
+    return Routes[0].load() // instant fix to handle redirect and async loading
+  }
 })
 
 // Create 404 route (catch-all)
 FlowRouter.route('*', {
-  triggersEnter: [() => FlowRouter.go('/')]
+  triggersEnter: [() => FlowRouter.go('/about')]
 })

@@ -7,7 +7,7 @@ export const Routes = [ {
     import '../ui/templates/about/about'
     return [
       BlazeBs4.button.load(),
-  ]
+    ]
   },
 }, {
   template: 'alerts',
