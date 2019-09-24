@@ -8,7 +8,14 @@ Routes.forEach(route => {
   FlowRouter.route(path, {
     name: route.template,
     waitOn () {
-      return route.load()
+      if (Meteor.isDevelopment) {
+        return route.load()
+      } else {
+        // this is to make this work wihtout dynamic import,
+        // thus working without a server --> so it can be
+        // hosted as a client-only application
+        return route.loadSync()
+      }
     },
     action () {
       if (!Template[route.template]) {
