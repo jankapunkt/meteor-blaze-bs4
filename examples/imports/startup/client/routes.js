@@ -12,6 +12,10 @@ Routes.forEach(route => {
       ]
     },
     action () {
+      if (!Template[route.template]) {
+        console.info(`[${route.template}] not yet loaded, skip rendering`)
+        return
+      }
       // Render a template using Blaze
       this.render('mainTarget', route.template)
     }
