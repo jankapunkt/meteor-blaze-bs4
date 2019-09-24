@@ -1,4 +1,6 @@
 import { Template } from 'meteor/templating'
+import { ReactiveVar } from 'meteor/reactive-var'
+import { ReactiveDict } from 'meteor/reactive-dict'
 import { Themes } from '../imports/api/Themes'
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
 import { Routes } from '../imports/api/Routes'
@@ -16,15 +18,15 @@ Template.mainTarget.onCreated(function () {
   const instance = this
   instance.state = new ReactiveDict()
 
-  const all = Promise.all([
+  Promise.all([
     BlazeBs4.navbar.load(),
     BlazeBs4.collapse.load()
   ]).then(() => instance.state.set('navLoaded', true))
 
   instance.autorun(() => {
-    FlowRouter.watchPathChange();
-    const currentContext = FlowRouter.current();
-    const {path } = currentContext
+    FlowRouter.watchPathChange()
+    const currentContext = FlowRouter.current()
+    const { path } = currentContext
     current.set(path.replace('/', ''))
   })
 })

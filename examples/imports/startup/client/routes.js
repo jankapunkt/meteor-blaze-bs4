@@ -1,3 +1,4 @@
+import { Template } from 'meteor/templating'
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
 import { Routes } from '../../api/Routes'
 
@@ -7,7 +8,7 @@ Routes.forEach(route => {
   FlowRouter.route(path, {
     name: route.template,
     waitOn () {
-        return route.load()
+      return route.load()
     },
     action () {
       if (!Template[route.template]) {
@@ -22,10 +23,10 @@ Routes.forEach(route => {
 
 // Create 404 route (catch-all)
 FlowRouter.route('/', {
-  triggersEnter: [ () => FlowRouter.go('/about') ]
+  triggersEnter: [() => FlowRouter.go('/about')]
 })
 
 // Create 404 route (catch-all)
 FlowRouter.route('*', {
-  triggersEnter: [ () => FlowRouter.go('/') ]
+  triggersEnter: [() => FlowRouter.go('/')]
 })

@@ -1,6 +1,6 @@
 import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
 
-export const Routes = [ {
+export const Routes = [{
   template: 'about',
   name: 'About',
   load () {
@@ -152,7 +152,7 @@ export const Routes = [ {
       BlazeBs4.button.load(),
       BlazeBs4.progress.load(),
       import('../ui/templates/progress/progress')
-      ]
+    ]
   }
 }, {
   template: 'spinners',
@@ -171,6 +171,6 @@ export const Routes = [ {
     return [
       BlazeBs4.tooltip.load(),
       import('../ui/templates/tooltips/tooltips')
-      ]
+    ]
   }
-} ]
+}]
