@@ -16,40 +16,7 @@ Package.onUse(function (api) {
   api.use('ecmascript')
   api.use('random')
   api.use('templating@1.3.2')
-  /*
-  api.addFiles([
-    'alert/alert.js',
-    'alert/alert.html',
-    'badge/badge.html',
-    'breadcrumb/breadcrumb.html',
-    'button/button.html',
-    'button/button.js',
-    'card/card.html',
-    'card/card.js',
-    'collapse/collapse.html',
-    'collapse/collapse.js',
-    'dropdown/dropdown.html',
-    'dropdown/dropdown.js',
-    'item/item.html',
-    'item/item.js',
-    'jumbotron/jumbotron.html',
-    'link/link.html',
-    'link/link.js',
-    'listgroup/listgroup.html',
-    'listgroup/listgroup.js',
-    'modal/modal.html',
-    'modal/modal.js',
-    'nav/nav.html',
-    'navbar/navbar.html',
-    // 'navbar/navbar.js',
-    'progress/progress.html',
-    'progress/progress.js',
-    'spinner/spinner.html',
-    'tooltip/tooltip.html',
-    'tooltip/tooltip.js'
-  ], 'client')
-  */
-  api.mainModules('blaze-bs4.js', 'client')
+  api.mainModule('blaze-bs4.js', 'client')
 })
 
 Package.onTest(function (api) {
