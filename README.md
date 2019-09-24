@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://jankapunkt.github.io/meteor-blaze-bs4/media/logo.svg" width="30%"/>
+<img src="/examples/public/media/logo.svg" width="30%"/>
 <h1>Meteor Blaze Bootstrap 4 Components</h1>
 <p>Generic Bootstrap 4 components library for Meteor Blaze. See the <a href="https://jankapunkt.github.io/meteor-blaze-bs4/">DEMO</a></p>
 </p>
