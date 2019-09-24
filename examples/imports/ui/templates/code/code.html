@@ -1,8 +1,10 @@
 <template name="code">
 	<div class="card my-4">
-		<div class="card-header bg-light">
-			<small class="text-muted">{{#if label}}{{label}}{{else}}Code example{{/if}}</small>
+		<div class="card-header bg-light text-right">
+			<small class="text-muted font-weight-bold">{{#if label}}{{label}}{{else}}Code example{{/if}}</small>
 		</div>
-		<pre><code>{{> Template.contentBlock ..}}</code></pre>
+		<div class="card-body bg-dark text-light">
+			<pre><code class="text-light">{{> Template.contentBlock ..}}</code></pre>
+		</div>
 	</div>
 </template>
