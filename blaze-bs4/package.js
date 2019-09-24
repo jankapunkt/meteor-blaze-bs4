@@ -16,6 +16,7 @@ Package.onUse(function (api) {
   api.use('ecmascript')
   api.use('random')
   api.use('templating@1.3.2')
+  /*
   api.addFiles([
     'alert/alert.js',
     'alert/alert.html',
@@ -47,6 +48,8 @@ Package.onUse(function (api) {
     'tooltip/tooltip.html',
     'tooltip/tooltip.js'
   ], 'client')
+  */
+  api.mainModules('blaze-bs4.js', 'client')
 })
 
 Package.onTest(function (api) {
