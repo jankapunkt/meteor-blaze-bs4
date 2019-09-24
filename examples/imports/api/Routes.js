@@ -5,6 +5,7 @@ export const Routes = [ {
   name: 'About',
   load () {
     return [
+      BlazeBs4.button.load(),
       import('../ui/templates/about/about')
     ]
   }
