@@ -1,5 +1,7 @@
 import { Template } from 'meteor/templating'
 import { Themes } from '../imports/api/Themes'
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
+import { Routes } from '../imports/api/Routes'
 import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
 import '../imports/startup/client/bootstrap'
 import '../imports/startup/client/routes'
@@ -7,7 +9,7 @@ import '../imports/startup/client/templateHelpers'
 import '../imports/ui/templates/code/code.html'
 import './main.html'
 
-const allTemplates = Object.values(BlazeBs4).map(t => ({ template: t.template, name: t.template }))
+const allTemplates = Object.values(Routes)
 
 Template.mainTarget.onCreated(function () {
   const instance = this
@@ -46,7 +48,7 @@ Template.mainTarget.helpers({
 Template.mainTarget.events({
   'change .template-select' (event, templateInstance) {
     const template = templateInstance.$(event.currentTarget).val()
-    global.window.location.href = `#${template}`
+    FlowRouter.go(`/${template}`)
     templateInstance.state.set('current', template)
   },
   'click .toggle-fluid' (event, templateInstance) {
@@ -57,7 +59,6 @@ Template.mainTarget.events({
   'change .theme-select' (event, templateInstance) {
     const theme = templateInstance.$(event.currentTarget).val()
     const href = `themes/${theme}.min.css`
-    console.log(theme, href)
     global.$('#bbs4-custom-theme').prop('href', href)
   }
 })
