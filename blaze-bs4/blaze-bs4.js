@@ -41,6 +41,12 @@ export const BlazeBs4 = {
       return import('./dropdown/dropdown.js')
     }
   },
+  item: {
+    template: 'item',
+    async load () {
+      return import('./item/item.js')
+    }
+  },
   jumnbotron: {
     template: 'jumbotron',
     async load () {
