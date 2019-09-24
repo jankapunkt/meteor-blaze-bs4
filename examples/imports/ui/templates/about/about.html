@@ -5,11 +5,36 @@
     </div>
     <hr>
 
-    <h2>Goal and perspective</h2>
+	<div class="card-body text-center">
+		{{#each template in templates}}
+			<a href="/{{template.template}}" class="m-1 btn btn-primary">{{template.name}}</a>
+		{{/each}}
+	</div>
 
-    <p>
-        Consider the usual way you write your layout: some Bootstrap-infused HTML template code that is mixed with Blaze helpers. Such code gets easily complex when helpers, conditions, iterations and object contexts are introduced.
-    </p>
+	<h2>Hassle-free Bootstrap components for your Meteor Blaze app!</h2>
+
+	<p>Just install the package and Bootstrap and you are free to start using it's components:</p>
+
+	{{#code}}
+		meteor add jkuester:blaze-bs4
+		meteor npm install --save bootstrap jquery popper.js
+	{{/code}}
+
+
+	<h2>Lightweight using dynamic imports!</h2>
+
+	<p>The templates are decoupled from the main module, so you initially just import a plain Object. This keeps your package size small and only loads the components you really use:</p>
+
+	{{#code}}
+		import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
+
+		BlazeBs4.alert.load().then(() => {
+			// ... code when the alert template is loaded
+		})
+	{{/code}}
+
+	<p>You can for example load this component in your Router's hooks so it's available when the template needs to be drawn.</p>
+
     <p>
       An <strong>abstraction</strong> of the most generic rendering logic can help you to keep things cleaner.
     </p>
