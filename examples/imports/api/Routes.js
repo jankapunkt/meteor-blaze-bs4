@@ -1,14 +1,21 @@
+import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
+
 export const Routes = [ {
   template: 'about',
   name: 'About',
   load () {
-    return import('../ui/templates/about/about')
+    return [
+      import('../ui/templates/about/about')
+    ]
   }
 }, {
   template: 'alerts',
   name: 'Alert',
   load () {
-    return import('../ui/templates/alert/alert')
+    return [
+      BlazeBs4.alert.load(),
+      import('../ui/templates/alert/alert')
+    ]
   }
 }, {
   template: 'badges',

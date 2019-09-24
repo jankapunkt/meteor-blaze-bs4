@@ -7,9 +7,7 @@ Routes.forEach(route => {
   FlowRouter.route(path, {
     name: route.template,
     waitOn () {
-      return [
-        route.load()
-      ]
+        return route.load()
     },
     action () {
       if (!Template[route.template]) {
