@@ -9,9 +9,9 @@ export const defaultAtts = ['title', 'tabindex']
 export const getAtts = function getAtts (attsList, data) {
   const atts = {}
   attsList.forEach(name => {
-    const value = data[ name ]
+    const value = data[name]
     if (typeof value !== 'undefined') {
-      atts[ name ] = value
+      atts[name] = value
     }
   })
   return atts

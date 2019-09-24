@@ -57,16 +57,15 @@ describe('alert', function () {
   })
 
   describe('events', function () {
-
     it('triggers onClose', function (done) {
       function onClose () {
         done()
       }
 
-      withRenderedTemplate('alert', { dismissible: true, onClose, heading: "close" }, (el) => {
+      withRenderedTemplate('alert', { dismissible: true, onClose, heading: 'close' }, (el) => {
         setTimeout(() => {
           const button = exists(el, 'button[data-dismiss="alert"]')
-          //button.click()
+          button.click()
         }, 100)
       })
     })

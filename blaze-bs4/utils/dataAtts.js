@@ -13,7 +13,7 @@ export const getDataAtts = function getDataAtts (instanceData) {
   const data = {}
   Object.keys(instanceData).forEach(key => {
     if (key.indexOf('data-') > -1) {
-      data[ key ] = instanceData[ key ]
+      data[key] = instanceData[key]
     }
   })
   return data

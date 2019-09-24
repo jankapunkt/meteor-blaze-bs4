@@ -3,7 +3,7 @@ import { getDataAtts } from '../utils/dataAtts'
 import { defaultAtts, getAtts } from '../utils/atts'
 import './link.html'
 
-const attributes = defaultAtts.concat([ 'href', 'download', 'hreflang', 'media', 'ping', 'rel', 'target', 'type', 'style' ])
+const attributes = defaultAtts.concat(['href', 'download', 'hreflang', 'media', 'ping', 'rel', 'target', 'type', 'style'])
 
 Template.link.helpers({
   attributes () {

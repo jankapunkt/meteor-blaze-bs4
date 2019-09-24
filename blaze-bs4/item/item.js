@@ -35,14 +35,14 @@ Template.item.onCreated(function onItemCreated () {
   // resolve it by the mapping
   if (!instance.data.type) {
     const parentView = getParentView(instance)
-    const parentName = parentView.name.split('.')[ 1 ]
-    const className = ClassNameMapping[ parentName ]
+    const parentName = parentView.name.split('.')[1]
+    const className = ClassNameMapping[parentName]
     instance._defaultClassName = new ReactiveVar()
     instance._defaultClassName.set(className)
 
     // resolve additional classnames
-    if (AdditionalClassnames[ parentName ] && (instance.data.color || instance.data.href || instance.data.button)) {
-      const additionalClassnames = AdditionalClassnames[ parentName ]({
+    if (AdditionalClassnames[parentName] && (instance.data.color || instance.data.href || instance.data.button)) {
+      const additionalClassnames = AdditionalClassnames[parentName]({
         color: instance.data.color,
         isLink: instance.data.href,
         isButton: instance.data.button

@@ -21,7 +21,7 @@ const withDiv = function withDiv (callback) {
 
 export const withRenderedTemplate = function withRenderedTemplate (template, data, callback) {
   withDiv((el) => {
-    const ourTemplate = _.isString(template) ? Template[ template ] : template
+    const ourTemplate = _.isString(template) ? Template[template] : template
     Blaze.renderWithData(ourTemplate, data, el)
     Tracker.flush()
     callback(el)
@@ -44,4 +44,4 @@ export const exists = (target, selector, length = 1) => {
   return global.$(target).find(selector)
 }
 
-export const colorTypes = [ 'primary', 'secondary', 'success', 'warning', 'danger', 'info', 'dark', 'light' ]
+export const colorTypes = ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'dark', 'light']
