@@ -3,6 +3,8 @@ import { Themes } from '../imports/api/Themes'
 import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
 import '../imports/startup/client/bootstrap'
 import '../imports/startup/client/routes'
+import '../imports/startup/client/templateHelpers'
+import '../imports/ui/templates/code/code.html'
 import './main.html'
 
 const allTemplates = Object.values(BlazeBs4).map(t => ({ template: t.template, name: t.template }))
