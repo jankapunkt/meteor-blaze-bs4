@@ -10,6 +10,7 @@ import '../imports/ui/templates/code/code.html'
 import './main.html'
 
 const allTemplates = Object.values(Routes)
+const current = new ReactiveVar()
 
 Template.mainTarget.onCreated(function () {
   const instance = this
@@ -19,6 +20,13 @@ Template.mainTarget.onCreated(function () {
     BlazeBs4.navbar.load(),
     BlazeBs4.collapse.load()
   ]).then(() => instance.state.set('navLoaded', true))
+
+  instance.autorun(() => {
+    FlowRouter.watchPathChange();
+    const currentContext = FlowRouter.current();
+    const {path } = currentContext
+    current.set(path.replace('/', ''))
+  })
 })
 
 Template.mainTarget.helpers({
@@ -32,10 +40,10 @@ Template.mainTarget.helpers({
     return Themes
   },
   current () {
-    return Template.instance().state.get('current')
+    return current.get()
   },
   isCurrent (name) {
-    return Template.instance().state.get('current') === name
+    return current.get() === name
   },
   isTheme (value) {
     return Template.instance().state.get('theme') === value
