@@ -17,13 +17,13 @@
 <wrapper class="d-flex flex-column">
 	{{#if navLoaded}}
 		{{#navbar fluid=fluid class="m-0" expand="lg" collapse=true}}
-			{{#brand href="/"}}
-				<img src="media/logo.svg" height="30" />
-				<a class="ml-2 text-secondary" href="https://github.com/jankapunkt/meteor-blaze-bs4"
-				   title="fork me on GitHub">
-					<i class="fa fa-fw fa-github"></i>
-				</a>
+			{{#brand href="/" class="text-secondary"}}
+				<i class="fa fa-fw fa-home"></i>
 			{{/brand}}
+			<a class="ml-2 text-secondary" href="https://github.com/jankapunkt/meteor-blaze-bs4"
+			   title="fork me on GitHub">
+				<i class="fa fa-fw fa-github"></i>
+			</a>
 			{{> toggler target="navbaraollapse"}}
 			{{#collapse navbar=true id="navbaraollapse"}}
 				<div class="form-inline ml-auto">
