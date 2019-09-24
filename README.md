@@ -13,6 +13,7 @@ However, there are already releases on atmosphere for trying out the latest stat
 
 ## Features
 
+* NEW! All components are imported using dynamic import, resulting in an initial package size of about 3KB!
 * All Bootstrap components as parameterized Blaze Templates (see the [project overview](https://github.com/jankapunkt/meteor-blaze-bs4/projects/1) for supported components)
 * Write Template code that is easier to reason about
 * Keeps the naming conventions from Bootstrap
@@ -53,9 +54,31 @@ $ meteor add jkuester:blaze-bs4
 
 The templates are automatically added and are immediately available. Note, that the 
 
-### API Documentation / How to use
+### How to use
 
-Please consult the [API Documentation](API.md) on how to use this package.
+The components are loaded using dynamic imports, so the initial bundle size is kept small.
+
+To import the packages, you need to first import the context via
+
+```javascript
+import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
+
+BlazeBs4.button.load().then(loaded => console.log('button template loaded'))
+```
+
+you can also load multiple components at once using
+
+```javascript
+import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
+
+Promise.all([
+  BlazeBs4.button.load(),
+  BlazeBs4.tooltip.load(),
+  BlazeBs4.modal.load()
+]).then(loaded => console.log('required templates loaded'))
+```
+
+For a full documentation of each supported component, please run the [examples DEMO](https://jankapunkt.github.io/meteor-blaze-bs4/)
 
 ## Running the tests locally
 
