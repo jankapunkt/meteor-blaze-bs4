@@ -2,8 +2,10 @@ import { Template } from 'meteor/templating'
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
 import { Routes } from '../../api/Routes'
 
+const prefix = Meteor.isDevelopment ? '' : '/meteor-blaze-bs4' // fix for GitHub pages
+
 Routes.forEach(route => {
-  const path = `/${route.template}`
+  const path = `${prefix}/${route.template}`
 
   FlowRouter.route(path, {
     name: route.template,
