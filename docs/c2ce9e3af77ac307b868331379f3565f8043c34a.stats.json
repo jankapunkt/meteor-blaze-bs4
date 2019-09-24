@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.4.1"
   },
-  "totalMinifiedBytes": 1053222,
-  "totalMinifiedGzipBytes": 241501,
+  "totalMinifiedBytes": 1014432,
+  "totalMinifiedGzipBytes": 238429,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9484,
     "packages/meteor-base.js": 31,
@@ -141,7 +141,7 @@
       }
     ],
     "packages/dynamic-import.js": [
-      4583,
+      7982,
       {
         "node_modules": {
           "meteor": {
@@ -149,7 +149,7 @@
               "client.js": 1552,
               "cache.js": 1930,
               "common.js": 60,
-              "dynamic-versions.js": 640
+              "dynamic-versions.js": 4039
             }
           }
         }
@@ -535,101 +535,101 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      46473,
+      4318,
       {
         "node_modules": {
           "meteor": {
             "jkuester:blaze-bs4": {
-              "blaze-bs4.js": 2130,
+              "blaze-bs4.js": 1421,
               "alert": {
-                "alert.html": 57,
-                "template.alert.js": 1212,
-                "alert.js": 610
+                "alert.html": 23,
+                "template.alert.js": 2,
+                "alert.js": 36
               },
               "badge": {
-                "badge.html": 57,
-                "template.badge.js": 1322,
-                "badge.js": 39
+                "badge.html": 23,
+                "template.badge.js": 2,
+                "badge.js": 16
               },
               "breadcrumb": {
-                "breadcrumb.html": 62,
-                "template.breadcrumb.js": 1040,
-                "breadcrumb.js": 44
+                "breadcrumb.html": 28,
+                "template.breadcrumb.js": 2,
+                "breadcrumb.js": 21
               },
               "button": {
-                "button.html": 58,
-                "template.button.js": 2589,
-                "button.js": 237
+                "button.html": 24,
+                "template.button.js": 2,
+                "button.js": 57
               },
               "card": {
-                "card.html": 56,
-                "template.card.js": 9027,
-                "card.js": 38
+                "card.html": 22,
+                "template.card.js": 2,
+                "card.js": 15
               },
               "collapse": {
-                "collapse.html": 60,
-                "template.collapse.js": 524,
-                "collapse.js": 42
+                "collapse.html": 26,
+                "template.collapse.js": 2,
+                "collapse.js": 19
               },
               "dropdown": {
-                "dropdown.html": 60,
-                "template.dropdown.js": 3122,
-                "dropdown.js": 804
+                "dropdown.html": 26,
+                "template.dropdown.js": 2,
+                "dropdown.js": 55
               },
               "item": {
-                "item.html": 56,
-                "template.item.js": 3733,
-                "item.js": 1100
+                "item.html": 22,
+                "template.item.js": 2,
+                "item.js": 106
               },
               "jumbotron": {
-                "jumbotron.html": 61,
-                "template.jumbotron.js": 484,
-                "jumbotron.js": 43
+                "jumbotron.html": 27,
+                "template.jumbotron.js": 2,
+                "jumbotron.js": 20
               },
               "link": {
-                "link.html": 56,
-                "template.link.js": 554,
-                "link.js": 570
+                "link.html": 22,
+                "template.link.js": 2,
+                "link.js": 71
               },
               "listgroup": {
-                "listgroup.html": 61,
-                "template.listgroup.js": 2423,
-                "listgroup.js": 43
+                "listgroup.html": 27,
+                "template.listgroup.js": 2,
+                "listgroup.js": 20
               },
               "modal": {
-                "modal.html": 57,
-                "template.modal.js": 2827,
-                "modal.js": 39
+                "modal.html": 23,
+                "template.modal.js": 2,
+                "modal.js": 16
               },
               "nav": {
-                "nav.html": 55,
-                "template.nav.js": 2049,
-                "nav.js": 37
+                "nav.html": 21,
+                "template.nav.js": 2,
+                "nav.js": 14
               },
               "navbar": {
-                "navbar.html": 58,
-                "template.navbar.js": 2361,
-                "navbar.js": 40
+                "navbar.html": 24,
+                "template.navbar.js": 2,
+                "navbar.js": 17
               },
               "progress": {
-                "progress.html": 60,
-                "template.progress.js": 1612,
-                "progress.js": 42
+                "progress.html": 26,
+                "template.progress.js": 2,
+                "progress.js": 19
               },
               "spinner": {
-                "spinner.html": 59,
-                "template.spinner.js": 993,
-                "spinner.js": 41
+                "spinner.html": 25,
+                "template.spinner.js": 2,
+                "spinner.js": 18
               },
               "tooltip": {
-                "tooltip.html": 59,
-                "template.tooltip.js": 484,
-                "tooltip.js": 610
+                "tooltip.html": 25,
+                "template.tooltip.js": 2,
+                "tooltip.js": 38
               },
               "utils": {
-                "atts.js": 178,
-                "dataAtts.js": 442,
-                "getParentTemplate.js": 323
+                "atts.js": 2,
+                "dataAtts.js": 43,
+                "getParentTemplate.js": 2
               }
             }
           }
@@ -710,7 +710,7 @@
       {}
     ],
     "app/app.js": [
-      243597,
+      243563,
       {
         "imports": {
           "ui": {
@@ -809,7 +809,7 @@
           "startup": {
             "client": {
               "bootstrap.js": 141,
-              "routes.js": 544,
+              "routes.js": 510,
               "templateHelpers.js": 196
             }
           },
