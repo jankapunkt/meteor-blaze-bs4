@@ -3,22 +3,22 @@
     "name": "standard-minifier-js",
     "version": "2.4.1"
   },
-  "totalMinifiedBytes": 997262,
-  "totalMinifiedGzipBytes": 225083,
+  "totalMinifiedBytes": 1053222,
+  "totalMinifiedGzipBytes": 241501,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9484,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      335967,
+      337501,
       {
         "node_modules": {
           "meteor": {
             "modules": {
               "client.js": 124,
               "css.js": 261,
-              "install-packages.js": 1946,
+              "install-packages.js": 2067,
               "process.js": 347,
               "reify.js": 71,
               "stubs.js": 97,
@@ -49,7 +49,7 @@
           "jquery": {
             "package.json": 80,
             "dist": {
-              "jquery.js": 86609
+              "jquery.js": 88058
             }
           },
           "popper.js": {
@@ -75,7 +75,7 @@
           },
           "@babel": {
             "runtime": {
-              "package.json": 397,
+              "package.json": 361,
               "helpers": {
                 "interopRequireDefault.js": 79,
                 "objectSpread.js": 380,
@@ -535,21 +535,26 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      45240,
+      46473,
       {
         "node_modules": {
           "meteor": {
             "jkuester:blaze-bs4": {
+              "blaze-bs4.js": 2130,
               "alert": {
-                "alert.js": 585,
                 "alert.html": 57,
-                "template.alert.js": 1184
+                "template.alert.js": 1212,
+                "alert.js": 610
               },
               "badge": {
-                "template.badge.js": 1322
+                "badge.html": 57,
+                "template.badge.js": 1322,
+                "badge.js": 39
               },
               "breadcrumb": {
-                "template.breadcrumb.js": 1040
+                "breadcrumb.html": 62,
+                "template.breadcrumb.js": 1040,
+                "breadcrumb.js": 44
               },
               "button": {
                 "button.html": 58,
@@ -577,7 +582,9 @@
                 "item.js": 1100
               },
               "jumbotron": {
-                "template.jumbotron.js": 484
+                "jumbotron.html": 61,
+                "template.jumbotron.js": 484,
+                "jumbotron.js": 43
               },
               "link": {
                 "link.html": 56,
@@ -595,17 +602,24 @@
                 "modal.js": 39
               },
               "nav": {
-                "template.nav.js": 2049
+                "nav.html": 55,
+                "template.nav.js": 2049,
+                "nav.js": 37
               },
               "navbar": {
-                "template.navbar.js": 2361
+                "navbar.html": 58,
+                "template.navbar.js": 2361,
+                "navbar.js": 40
               },
               "progress": {
+                "progress.html": 60,
                 "template.progress.js": 1612,
-                "progress.js": 12
+                "progress.js": 42
               },
               "spinner": {
-                "template.spinner.js": 993
+                "spinner.html": 59,
+                "template.spinner.js": 993,
+                "spinner.js": 41
               },
               "tooltip": {
                 "tooltip.html": 59,
@@ -635,6 +649,46 @@
         }
       }
     ],
+    "packages/ostrio_flow-router-extra.js": [
+      46520,
+      {
+        "node_modules": {
+          "meteor": {
+            "ostrio:flow-router-extra": {
+              "client": {
+                "_init.js": 2336,
+                "active.route.js": 3671,
+                "group.js": 1638,
+                "modules.js": 296,
+                "renderer.js": 5939,
+                "route.js": 5349,
+                "router.js": 7798,
+                "triggers.js": 1067
+              },
+              "lib": {
+                "_helpers.js": 1250
+              },
+              "node_modules": {
+                "page": {
+                  "package.json": 90,
+                  "page.js": 8676
+                },
+                "qs": {
+                  "package.json": 74,
+                  "lib": {
+                    "index.js": 126,
+                    "stringify.js": 2315,
+                    "utils.js": 2178,
+                    "formats.js": 222,
+                    "parse.js": 2618
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
     "packages/webapp.js": [
       694,
       {
@@ -656,102 +710,118 @@
       {}
     ],
     "app/app.js": [
-      236926,
+      243597,
       {
-        "templates": {
-          "about": {
-            "about.html": 57,
-            "template.about.js": 3916
+        "imports": {
+          "ui": {
+            "templates": {
+              "about": {
+                "about.html": 57,
+                "template.about.js": 6228,
+                "about.js": 205
+              },
+              "alert": {
+                "alert.html": 57,
+                "template.alert.js": 5322,
+                "alert.js": 187
+              },
+              "badge": {
+                "badge.html": 57,
+                "template.badge.js": 5571,
+                "badge.js": 185
+              },
+              "breadcrumb": {
+                "breadcrumb.html": 62,
+                "template.breadcrumb.js": 1032,
+                "breadcrumb.js": 289
+              },
+              "buttongroups": {
+                "buttongroups.html": 64,
+                "template.buttongroups.js": 15410,
+                "buttongroups.js": 46
+              },
+              "buttons": {
+                "buttons.html": 59,
+                "template.buttons.js": 6664,
+                "buttons.js": 340
+              },
+              "cards": {
+                "cards.html": 57,
+                "template.cards.js": 46110,
+                "cards.js": 39
+              },
+              "code": {
+                "code.html": 56,
+                "template.code.js": 818
+              },
+              "collapses": {
+                "collapses.html": 61,
+                "template.collapses.js": 6141,
+                "collapses.js": 43
+              },
+              "dropdowns": {
+                "dropdowns.html": 61,
+                "template.dropdowns.js": 25512,
+                "dropdowns.js": 454
+              },
+              "jumbotron": {
+                "jumbotron.html": 61,
+                "template.jumbotron.js": 3318,
+                "jumbotron.js": 43
+              },
+              "links": {
+                "link.html": 56,
+                "template.link.js": 4411,
+                "links.js": 256
+              },
+              "listgroups": {
+                "listgroups.html": 62,
+                "template.listgroups.js": 21813,
+                "listgroups.js": 44
+              },
+              "modals": {
+                "modals.html": 58,
+                "template.modals.js": 35810,
+                "modals.js": 374
+              },
+              "navbars": {
+                "navbars.html": 59,
+                "template.navbars.js": 21488,
+                "navbars.js": 41
+              },
+              "progress": {
+                "progress.html": 60,
+                "template.progress.js": 5676,
+                "progress.js": 443
+              },
+              "spinners": {
+                "spinners.html": 60,
+                "template.spinners.js": 9366,
+                "spinners.js": 42
+              },
+              "tooltips": {
+                "tooltips.html": 60,
+                "template.tooltips.js": 5931,
+                "tooltips.js": 263
+              }
+            }
           },
-          "alert": {
-            "alert.html": 57,
-            "template.alert.js": 5322,
-            "alert.js": 187
+          "startup": {
+            "client": {
+              "bootstrap.js": 141,
+              "routes.js": 544,
+              "templateHelpers.js": 196
+            }
           },
-          "badge": {
-            "badge.html": 57,
-            "template.badge.js": 5571,
-            "badge.js": 185
-          },
-          "breadcrumb": {
-            "breadcrumb.html": 62,
-            "template.breadcrumb.js": 1032,
-            "breadcrumb.js": 289
-          },
-          "buttongroups": {
-            "buttongroups.html": 64,
-            "template.buttongroups.js": 15410
-          },
-          "buttons": {
-            "buttons.html": 59,
-            "template.buttons.js": 6664,
-            "buttons.js": 340
-          },
-          "cards": {
-            "cards.html": 57,
-            "template.cards.js": 46110,
-            "cards.js": 39
-          },
-          "code": {
-            "code.html": 56,
-            "template.code.js": 700
-          },
-          "collapses": {
-            "collapses.html": 61,
-            "template.collapses.js": 6141,
-            "collapses.js": 43
-          },
-          "dropdowns": {
-            "dropdowns.html": 61,
-            "template.dropdowns.js": 25512,
-            "dropdowns.js": 454
-          },
-          "jumbotron": {
-            "jumbotron.html": 61,
-            "template.jumbotron.js": 3318
-          },
-          "links": {
-            "link.html": 56,
-            "template.link.js": 4411,
-            "links.js": 256
-          },
-          "listgroups": {
-            "listgroups.html": 62,
-            "template.listgroups.js": 21813
-          },
-          "modals": {
-            "modals.html": 58,
-            "template.modals.js": 35810,
-            "modals.js": 374
-          },
-          "navbars": {
-            "navbars.html": 59,
-            "template.navbars.js": 21488,
-            "navbars.js": 41
-          },
-          "progress": {
-            "progress.html": 60,
-            "template.progress.js": 5676,
-            "progress.js": 443
-          },
-          "spinners": {
-            "spinners.html": 60,
-            "template.spinners.js": 9366
-          },
-          "tooltips": {
-            "tooltips.html": 60,
-            "template.tooltips.js": 5931,
-            "tooltips.js": 263
-          },
-          "helpers": {
-            "helpers.js": 194,
-            "shared.js": 186
+          "api": {
+            "Routes.js": 4215,
+            "Themes.js": 737
           }
         },
         "client": {
           "main.html": 56,
-          "template.main.js": 3728,
-          "main.js": 3314
+          "template.main.js": 3767,
+          "main.js": 1524
         }
       }
     ]
