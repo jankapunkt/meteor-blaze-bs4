@@ -9,11 +9,6 @@ export const Routes = [ {
       import('../ui/templates/about/about')
     ]
   },
-  loadSync () {
-    BlazeBs4.button.loadSync()
-    import '../ui/templates/about/about'
-    return true
-  }
 }, {
   template: 'alerts',
   name: 'Alert',
@@ -37,11 +32,6 @@ export const Routes = [ {
       import('../ui/templates/badge/badge')
     ]
   },
-  loadSync () {
-    BlazeBs4.badge.loadSync()
-    import '../ui/templates/badge/badge'
-    return true
-  }
 }, {
   template: 'breadcrumbs',
   name: 'Breadcrumb',
@@ -51,12 +41,6 @@ export const Routes = [ {
       import('../ui/templates/breadcrumb/breadcrumb')
     ]
   },
-  loadSync () {
-    BlazeBs4.breadcrumb.loadSync()
-    import '../ui/templates/breadcrumb/breadcrumb'
-    return true
-  }
-
 }, {
   template: 'buttons',
   name: 'Button',
@@ -66,11 +50,6 @@ export const Routes = [ {
       import('../ui/templates/buttons/buttons')
     ]
   },
-  loadSync () {
-    BlazeBs4.button.loadSync()
-    import '../ui/templates/buttons/buttons'
-    return true
-  }
 }, {
   template: 'buttongroups',
   name: 'Button Group',
@@ -80,11 +59,6 @@ export const Routes = [ {
       import('../ui/templates/buttongroups/buttongroups.js')
     ]
   },
-  loadSync () {
-    BlazeBs4.button.loadSync()
-    import '../ui/templates/buttongroups/buttongroups.js'
-    return true
-  }
 }, {
   template: 'cards',
   name: 'Card',
@@ -99,16 +73,6 @@ export const Routes = [ {
       import('../ui/templates/cards/cards')
     ]
   },
-  loadSync () {
-    BlazeBs4.alert.loadSync()
-    BlazeBs4.nav.loadSync()
-    BlazeBs4.link.loadSync()
-    BlazeBs4.card.loadSync()
-    BlazeBs4.listgroup.loadSync()
-    BlazeBs4.item.loadSync()
-    import '../ui/templates/cards/cards'
-    return true
-  }
 }, {
   template: 'collapses',
   name: 'Collapse',
@@ -121,14 +85,6 @@ export const Routes = [ {
       import('../ui/templates/collapses/collapses')
     ]
   },
-  loadSync () {
-    BlazeBs4.alert.loadSync()
-    BlazeBs4.button.loadSync()
-    BlazeBs4.card.loadSync()
-    BlazeBs4.collapse.loadSync()
-    import '../ui/templates/collapses/collapses'
-    return true
-  }
 }, {
   template: 'dropdowns',
   name: 'Dropdown',
@@ -139,12 +95,6 @@ export const Routes = [ {
       import('../ui/templates/dropdowns/dropdowns')
     ]
   },
-  loadSync () {
-    BlazeBs4.dropdown.loadSync()
-    BlazeBs4.item.loadSync()
-    import '../ui/templates/dropdowns/dropdowns'
-    return true
-  }
 }, {
   template: 'jumbotrons',
   name: 'Jumbotron',
@@ -154,11 +104,6 @@ export const Routes = [ {
       import('../ui/templates/jumbotron/jumbotron.js')
     ]
   },
-  loadSync () {
-    BlazeBs4.jumnbotron.loadSync()
-    import '../ui/templates/jumbotron/jumbotron.js'
-    return true
-  }
 }, {
   template: 'links',
   name: 'Links',
@@ -169,12 +114,6 @@ export const Routes = [ {
       import('../ui/templates/links/links')
     ]
   },
-  loadSync () {
-    BlazeBs4.link.loadSync()
-    BlazeBs4.tooltip.loadSync()
-    import '../ui/templates/links/links'
-    return true
-  }
 }, {
   template: 'listgroups',
   name: 'List group',
@@ -187,14 +126,6 @@ export const Routes = [ {
       import('../ui/templates/listgroups/listgroups')
     ]
   },
-  loadSync () {
-    BlazeBs4.listgroup.loadSync()
-    BlazeBs4.item.loadSync()
-    BlazeBs4.badge.loadSync()
-    BlazeBs4.alert.loadSync()
-    import '../ui/templates/listgroups/listgroups'
-    return true
-  }
 }, {
   template: 'modals',
   name: 'Modal',
@@ -205,12 +136,6 @@ export const Routes = [ {
       import('../ui/templates/modals/modals')
     ]
   },
-  loadSync () {
-    BlazeBs4.modal.loadSync()
-    BlazeBs4.button.loadSync()
-    import '../ui/templates/modals/modals'
-    return true
-  }
 }, {
   template: 'navbars',
   name: 'Navbar',
@@ -223,14 +148,6 @@ export const Routes = [ {
       import('../ui/templates/navbars/navbars')
     ]
   },
-  loadSync () {
-    BlazeBs4.navbar.loadSync()
-    BlazeBs4.nav.loadSync()
-    BlazeBs4.item.loadSync()
-    BlazeBs4.collapse.loadSync()
-    import '../ui/templates/navbars/navbars'
-    return true
-  }
 }, {
   template: 'progressbars',
   name: 'Progress',
@@ -242,13 +159,6 @@ export const Routes = [ {
       import('../ui/templates/progress/progress')
     ]
   },
-  loadSync () {
-    BlazeBs4.alert.loadSync()
-    BlazeBs4.button.loadSync()
-    BlazeBs4.progress.loadSync()
-    import '../ui/templates/progress/progress'
-    return true
-  }
 }, {
   template: 'spinners',
   name: 'Spinner',
@@ -259,12 +169,6 @@ export const Routes = [ {
       import('../ui/templates/spinners/spinners.js')
     ]
   },
-  loadSync () {
-    BlazeBs4.spinner.loadSync()
-    BlazeBs4.button.loadSync()
-    import '../ui/templates/spinners/spinners.js'
-    return true
-  }
 }, {
   template: 'tooltips',
   name: 'Tooltips',
@@ -274,10 +178,4 @@ export const Routes = [ {
       import('../ui/templates/tooltips/tooltips')
     ]
   },
-  loadSync () {
-    BlazeBs4.tooltip.loadSync()
-    BlazeBs4.button.loadSync()
-    import '../ui/templates/tooltips/tooltips'
-    return true
-  }
 } ]
