@@ -12,11 +12,55 @@ Package.describe({
 })
 
 Package.onUse(function (api) {
+  const allowSync = !!(process.env.BBS4_SYNC_IMPORT)
+
   api.versionsFrom('1.8.0.1')
   api.use('ecmascript')
   api.use('random')
   api.use('templating@1.3.2')
-  api.mainModule('blaze-bs4.js', 'client')
+
+  if (allowSync) {
+    api.addFiles([
+      './alert/alert.html',
+      './alert/alert.js',
+      './badge/badge.html',
+      './badge/badge.js',
+      './breadcrumb/breadcrumb.html',
+      './breadcrumb/breadcrumb.js',
+      './button/button.html',
+      './button/button.js',
+      './card/card.html',
+      './card/card.js',
+      './collapse/collapse.html',
+      './collapse/collapse.js',
+      './dropdown/dropdown.html',
+      './dropdown/dropdown.js',
+      './item/item.html',
+      './item/item.js',
+      './jumbotron/jumbotron.html',
+      './jumbotron/jumbotron.js',
+      './link/link.html',
+      './link/link.js',
+      './listgroup/listgroup.html',
+      './listgroup/listgroup.js',
+      './modal/modal.html',
+      './modal/modal.js',
+      './nav/nav.html',
+      './nav/nav.js',
+      './navbar/navbar.html',
+      './navbar/navbar.js',
+      './progress/progress.html',
+      './progress/progress.js',
+      './spinner/spinner.html',
+      './spinner/spinner.js',
+      './tooltip/tooltip.html',
+      './tooltip/tooltip.js',
+    ], 'client')
+    api.mainModule('blaze-bs4-sync.js', 'client')
+  } else {
+    api.mainModule('blaze-bs4.js', 'client')
+  }
+
 })
 
 Package.onTest(function (api) {
