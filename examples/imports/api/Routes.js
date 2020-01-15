@@ -96,7 +96,7 @@ export const Routes = [ {
   load () {
     import '../ui/templates/jumbotron/jumbotron.js'
     return [
-      BlazeBs4.jumnbotron.load(),
+      BlazeBs4.jumbotron.load(),
   ]
   },
 }, {

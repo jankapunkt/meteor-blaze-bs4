@@ -52,7 +52,7 @@ export const BlazeBs4 = {
     },
 
   },
-  jumnbotron: {
+  jumbotron: {
     template: 'jumbotron',
     load () {
       import './jumbotron/jumbotron.js'
