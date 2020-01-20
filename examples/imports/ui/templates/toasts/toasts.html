@@ -12,7 +12,7 @@
 {{|/each}}
 
 Template.toasts.events({
-  'click button.new-toast'(event, instance) {
+  'click button'(event, instance) {
     const color = event.currentTarget.dataset.color;
     BlazeBs4.toast.add({
       label: `Hello World ${color}`,
@@ -77,6 +77,7 @@ BlazeBs4.toast.add = function({
   headerBg = "warning",
   headerFg = "light",
   transparent = true,
+  animation = true,
   showId = false,
   width = 'inherit' }
 )
