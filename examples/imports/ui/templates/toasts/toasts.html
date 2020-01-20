@@ -1,0 +1,84 @@
+<template name='toasts'>
+  <h1>Toasts</h1>
+  <hr>
+
+  <h2>Event Handler</h2>
+  {{#each themeColors}}
+    {{> button colortype=this data-color=this label="Add Toast"}}
+  {{/each}}
+  {{#code}}
+{{|#each themeColors}}
+  {{|> button colortype=this data-color=this label="Add Toast"}}
+{{|/each}}
+
+Template.toasts.events({
+  'click button.new-toast'(event, instance) {
+    const color = event.currentTarget.dataset.color;
+    BlazeBs4.toast.add({
+      label: `Hello World ${color}`,
+      body:`This is my ${englishCount(instance.counter++)} toast`,
+      headerBg: color,
+      headerFg: color == 'light' ? 'dark' : 'light',
+      width:'30em',
+      transparent: false,
+      showId: true,
+    });
+  }
+})
+  {{/code}}
+
+  <h2>Embed the parent for the toasts on your page</h2>
+{{#code}}
+Template.mainTarget.onCreated(function () {
+  const instance = this
+  instance.state = new ReactiveDict()
+
+  Promise.all([
+    BlazeBs4.navbar.load(),
+    BlazeBs4.collapse.load(),
+    BlazeBs4.toast.load(),
+  ]).then(() => instance.state.set('navLoaded', true))
+
+  instance.autorun(() => {
+    FlowRouter.watchPathChange()
+    const currentContext = FlowRouter.current()
+    const { path } = currentContext
+    current.set(path.replace('/', ''))
+  })
+})
+{{/code}}
+
+{{#code}}
+.
+.
+.
+&lt;template name="mainTarget"&gt;
+	&lt;main class="container{{|#if fluid}}-fluid{{|/if}} my-4"&gt;
+		{{|#if navLoaded}}
+			{{|>toast}}
+		{{|/if}}
+		{{|> yield}}
+  &lt;main&gt;
+&lt;template&gt;
+.
+.
+.
+{{/code}}
+
+
+  <h2>Arguments for BlazeBs4.toast.add and its defaults</h2>
+  {{#code}}
+BlazeBs4.toast.add = function({
+  label = "test",
+  body = "body",
+  small = '',
+  autohide = true,
+  delay = 5000,
+  headerBg = "warning",
+  headerFg = "light",
+  transparent = true,
+  showId = false,
+  width = 'inherit' }
+)
+  {{/code}}
+</template>
