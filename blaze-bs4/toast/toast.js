@@ -4,7 +4,7 @@ import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4';
 
 import './toast.html';
 
-BlazeBs4.toast.add = function({ label = "test", body = "body", autohide = true, delay = 5000, headerBg = "warning", headerFg = "light", transparent = true, small = '', showId = false, width = 'inherit' }) {
+BlazeBs4.toast.add = function({ label = "test", body = "Toast Body", autohide = true, delay = 5000, headerBg = "warning", headerFg = "light", transparent = true, small = '', showId = false, width = 'inherit', animation = true }) {
   const self = this;
   var id = Random.id();
   if (showId) small = id;
@@ -21,6 +21,7 @@ BlazeBs4.toast.add = function({ label = "test", body = "body", autohide = true, 
     small: small,
     transparent: transparent,
     width: width,
+    animation: animation,
   };
   if (self.parentNode) {
     const view = Blaze.renderWithData(Template.toast_entry, toast, self.parentNode);
@@ -51,6 +52,7 @@ Template.toast_entry.onRendered(function () {
   instance.element
     .toast({
       autohide: instance.data.autohide === true,
+      animation: instance.data.animation === true,
       delay: instance.data.delay ? parseInt(instance.data.delay) : 2000,
     })
     .toast('show')

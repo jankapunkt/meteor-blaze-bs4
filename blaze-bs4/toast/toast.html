@@ -3,7 +3,7 @@
     class="toasts" 
     aria-live="polite" 
     aria-atomic="true"
-    style="position: absolute;min-height: 200px;right: 30px;" 
+    style="position: fixed;min-height: 200px;right: 30px;z-index:1000" 
   >
     <div id="toasts" style="position: absolute; top: 0; right: 0;z-index:1000"> </div>
   </div>
@@ -29,11 +29,7 @@
       {{/unless}}
     </div>
     <div class="toast-body">
-      {{#if body}}
-        {{body}}
-      {{else}}
-        Toast Body
-      {{/if}}
+      {{{body}}}
     </div>
   </div>
 </template>
