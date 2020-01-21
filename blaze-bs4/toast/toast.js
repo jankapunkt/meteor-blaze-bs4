@@ -4,7 +4,7 @@ import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4';
 
 import './toast.html';
 
-BlazeBs4.toast.add = function({ label = "test", body = "Toast Body", autohide = true, delay = 5000, headerBg = "warning", headerFg = "light", transparent = true, small = '', showId = false, width = 'inherit', animation = true }) {
+BlazeBs4.toast.add = function({ label = "test", body = "Toast Body", autohide = true, delay = 5000, headerBg = "warning", headerFg = "light", transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true }) {
   const self = this;
   var id = Random.id();
   if (showId) small = id;
@@ -24,7 +24,13 @@ BlazeBs4.toast.add = function({ label = "test", body = "Toast Body", autohide = 
     animation: animation,
   };
   if (self.parentNode) {
-    const view = Blaze.renderWithData(Template.toast_entry, toast, self.parentNode);
+    const nextNode = document.getElementsByClassName('toast');
+    var view = null;
+    if(nextNode.length && prepend === true){
+      view = Blaze.renderWithData(Template.toast_entry, toast, self.parentNode, nextNode[0]);
+    }else{
+      view = Blaze.renderWithData(Template.toast_entry, toast, self.parentNode);
+    }
     if (BlazeBs4.toast.debug) console.log(`created toast ${toast.id}`, view);
   } else {
     console.error(`BlazeBs4.toast: no parentNode`, self);
@@ -43,6 +49,20 @@ Template.toast.onRendered(function () {
       instance.toasts.style.maxWidth = instance.data.width;
     }
   }
+  //
+  // keep toasts visible when scrolling
+  //
+  var $document = $(document),
+    className = 'hasScrolled';
+
+  $document.scroll(function () {
+    const s = $document.scrollTop();
+    if (s >= document.querySelector('nav').offsetHeight) {
+      instance.toasts.classList.add(className);
+    } else {
+      instance.toasts.classList.remove(className);
+    }
+  });
 });
 
 Template.toast_entry.onRendered(function () {

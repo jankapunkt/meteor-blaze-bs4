@@ -1,11 +1,22 @@
 <template name='toast'>
+  <style type="text/css">
+  .toasts {
+    position: absolute;
+    right: 30px;
+    z-index:1000;
+    top: 70px;
+  }
+  .hasScrolled {
+    position: fixed;
+    top: 10px;
+  }
+  </style>
   <div
     class="toasts" 
     aria-live="polite" 
     aria-atomic="true"
-    style="position: fixed;min-height: 200px;right: 30px;z-index:1000" 
   >
-    <div id="toasts" style="position: absolute; top: 0; right: 0;z-index:1000"> </div>
+    <div id="toasts" style="position: absolute; top: 0; right: 0;xz-index:1000;"> </div>
   </div>
 </template>
 
