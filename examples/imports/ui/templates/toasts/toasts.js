@@ -2,6 +2,8 @@ import './toasts.html'
 import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
 import { Template } from 'meteor/templating'
 
+const positions = ['top-right', 'top-left', 'bottom-left', 'bottom-right']
+
 const englishCount = function (n) {
   var r = `${n}th`
   if (n === 1) r = '1st'
@@ -13,6 +15,7 @@ const englishCount = function (n) {
 Template.toasts.onCreated(function () {
   const instance = this
   instance.counter = 1
+  instance.position = 0
 })
 
 Template.toasts.events({
@@ -27,7 +30,9 @@ Template.toasts.events({
       transparent: false,
       autohide: false,
       animation: true,
-      showId: true
+      showId: true,
+      position: positions[instance.position++]
     })
+    if (instance.position>=positions.length) instance.position = 0
   }
 })

@@ -2,22 +2,49 @@
   <style type="text/css">
   .toasts {
     position: absolute;
-    top: 5rem;
-    right: 1rem;
     z-index:1000;
   }
-  .hasScrolled {
+  #toasts {
+    top: 5rem;
+    right: 0;
+  }
+  .toasts.top.hasScrolled {
     position: fixed;
     top: 1rem;
+  }
+  .toasts.bottom.hasScrolled {
+    position: fixed;
+    bottom: 1rem;
+  }
+  .toasts.top {
+    top:4rem;
+  }
+  .toasts.bottom {
+    bottom: 0;
+  }
+  .toasts.right {
+    right: 1rem;
+  }
+  .toasts.left {
+    left: 1rem;
+  }
+  .toasts.right .toast {
+    /* make toasts right-justified */
+    margin-left: auto;
+  }
+  .toasts.left .toast {
+    margin-right: auto;
   }
   </style>
   <div
     id="toasts"
-    class="toasts" 
     aria-live="polite" 
     aria-atomic="true"
   >
-    <!-- <div id="toasts" style="position: absolute; top: 0; right: 0;xz-index:1000;"> </div> -->
+    <div class="toasts top left" id="toasts-top-left"> </div>
+    <div class="toasts top right" id="toasts-top-right"> </div>
+    <div class="toasts bottom left" id="toasts-bottom-left"> </div>
+    <div class="toasts bottom right" id="toasts-bottom-right"> </div>
   </div>
 </template>
 

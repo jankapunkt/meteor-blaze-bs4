@@ -11,23 +11,36 @@
   {{|> button colortype=this data-color=this label="Add Toast"}}
 {{|/each}}
 
+const positions = ['top-right', 'top-left', 'bottom-left', 'bottom-right']
+Template.toasts.onCreated(function () {
+  const instance = this
+  instance.counter = 1
+  instance.position = 0
+})
+
 Template.toasts.events({
-  'click button'(event, instance) {
-    const color = event.currentTarget.dataset.color;
+  'click button' (event, instance) {
+    const color = event.currentTarget.dataset.color
     BlazeBs4.toast.add({
       label: `Hello World ${color}`,
-      body:`This is my ${englishCount(instance.counter++)} toast`,
+      body: `<p>This is my ${englishCount(instance.counter++)} toast</p><p>${new Date()}</p>`,
       headerBg: color,
-      headerFg: color == 'light' ? 'dark' : 'light',
-      width:'30em',
+      headerFg: color === 'light' ? 'dark' : 'light',
+      width: '30em',
       transparent: false,
+      autohide: false,
+      animation: true,
       showId: true,
-    });
+      position: positions[instance.position++]
+    })
+    if (instance.position>=positions.length) instance.position = 0
   }
 })
+
   {{/code}}
 
   <h2>Embed the parent for the toasts on your page</h2>
+  <h3>Load the BlazeBs4.toast component</h3>
 {{#code}}
 Template.mainTarget.onCreated(function () {
   const instance = this
@@ -47,7 +60,7 @@ Template.mainTarget.onCreated(function () {
   })
 })
 {{/code}}
-
+  <h3>Embed the {{|>toasts}} so they are visible on every page</h3>
 {{#code}}
 .
 .
@@ -79,7 +92,8 @@ BlazeBs4.toast.add = function({
   transparent = true,
   animation = true,
   showId = false,
-  width = 'inherit' }
-)
+  width = 'inherit',
+  position = 'top-right' // top-right, top-left, bottom-right, bottom-left
+})
   {{/code}}
 </template>
