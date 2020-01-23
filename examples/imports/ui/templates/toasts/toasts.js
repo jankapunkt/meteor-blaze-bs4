@@ -1,6 +1,7 @@
 import './toasts.html'
 import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
 import { Template } from 'meteor/templating'
+import { ReactiveVar } from 'meteor/reactive-var'
 
 const positions = ['top-right', 'top-left', 'bottom-left', 'bottom-right']
 
@@ -16,9 +17,30 @@ Template.toasts.onCreated(function () {
   const instance = this
   instance.counter = 1
   instance.position = 0
-})
+  instance.loaded = new ReactiveVar(false)
+  instance.transparent = false
+  instance.autohide = false
+  instance.prepend = true
 
+  Promise.all([
+    BlazeBs4.jumbotron.load()
+  ]).then(() => instance.loaded.set(true))
+})
+Template.toasts.helpers({
+  loaded () {
+    return Template.instance().loaded.get()
+  }
+})
 Template.toasts.events({
+  'change input#transparent' (event, instance) {
+    instance.transparent = event.currentTarget.checked
+  },
+  'change input#autohide'(event, instance) {
+    instance.autohide = event.currentTarget.checked
+  },
+  'change input#prepend'(event, instance) {
+    instance.prepend = event.currentTarget.checked
+  },
   'click button' (event, instance) {
     const color = event.currentTarget.dataset.color
     BlazeBs4.toast.add({
@@ -27,8 +49,9 @@ Template.toasts.events({
       headerBg: color,
       headerFg: color === 'light' ? 'dark' : 'light',
       width: '30em',
-      transparent: false,
-      autohide: false,
+      transparent: instance.transparent,
+      autohide: instance.autohide,
+      prepend: instance.prepend,
       animation: true,
       showId: true,
       position: positions[instance.position++]

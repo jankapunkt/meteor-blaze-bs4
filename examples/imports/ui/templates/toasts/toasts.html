@@ -1,14 +1,31 @@
 <template name='toasts'>
   <h1>Toasts</h1>
   <hr>
+  {{#if loaded}}
 
-  <h2>Event Handler</h2>
+  {{#jumbotron}}
+  <h2>Add Toasts</h2>
   {{#each themeColors}}
-    {{> button colortype=this data-color=this label="Add Toast"}}
+    {{> button colortype=this data-color=this label=this}}
   {{/each}}
+  <h2>Parameters</h2>
+    <div class="form-group form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" value="" id="transparent">
+      <label class="form-check-label" for="transparent"> Transparent </label>
+    </div>
+    <div class="form-group form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" value="" id="autohide">
+      <label class="form-check-label" for="autohide"> Autohide </label>
+    </div>
+    <div class="form-group form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" checked value="" id="prepend">
+      <label class="form-check-label" for="prepend"> Prepend </label>
+    </div>
+  {{/jumbotron}}
+
   {{#code}}
 {{|#each themeColors}}
-  {{|> button colortype=this data-color=this label="Add Toast"}}
+  {{|> button colortype=this data-color=this label=this}}
 {{|/each}}
 
 const positions = ['top-right', 'top-left', 'bottom-left', 'bottom-right']
@@ -16,19 +33,41 @@ Template.toasts.onCreated(function () {
   const instance = this
   instance.counter = 1
   instance.position = 0
-})
+  instance.loaded = new ReactiveVar(false)
+  instance.transparent = false
+  instance.autohide = false
+  instance.prepend = true
 
+  Promise.all([
+    BlazeBs4.jumbotron.load()
+  ]).then(() => instance.loaded.set(true))
+})
+Template.toasts.helpers({
+  loaded () {
+    return Template.instance().loaded.get()
+  }
+})
 Template.toasts.events({
+  'change input#transparent' (event, instance) {
+    instance.transparent = event.currentTarget.checked
+  },
+  'change input#autohide'(event, instance) {
+    instance.autohide = event.currentTarget.checked
+  },
+  'change input#prepend'(event, instance) {
+    instance.prepend = event.currentTarget.checked
+  },
   'click button' (event, instance) {
     const color = event.currentTarget.dataset.color
     BlazeBs4.toast.add({
       label: `Hello World ${color}`,
-      body: `<p>This is my ${englishCount(instance.counter++)} toast</p><p>${new Date()}</p>`,
+      body: `&lt;p&gt;This is my ${englishCount(instance.counter++)} toast&lt;/p&gt;&lt;p&gt;${new Date()}&lt;/p&gt;`,
       headerBg: color,
       headerFg: color === 'light' ? 'dark' : 'light',
       width: '30em',
-      transparent: false,
-      autohide: false,
+      transparent: instance.transparent,
+      autohide: instance.autohide,
+      prepend: instance.prepend,
       animation: true,
       showId: true,
       position: positions[instance.position++]
@@ -36,7 +75,6 @@ Template.toasts.events({
     if (instance.position>=positions.length) instance.position = 0
   }
 })
-
   {{/code}}
 
   <h2>Embed the parent for the toasts on your page</h2>
@@ -96,4 +134,5 @@ BlazeBs4.toast.add = function({
   position = 'top-right' // top-right, top-left, bottom-right, bottom-left
 })
   {{/code}}
+  {{/if}}
 </template>
