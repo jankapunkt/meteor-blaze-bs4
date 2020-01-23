@@ -117,7 +117,7 @@ export const BlazeBs4 = {
   toast: {
     template: 'toasts',
     debug: false,
-    async load() {
+    load() {
       return import('./toast/toast.js');
     }
   }
