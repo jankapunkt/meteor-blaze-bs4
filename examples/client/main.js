@@ -27,7 +27,7 @@ Template.mainTarget.onCreated(function () {
     FlowRouter.watchPathChange()
     const currentContext = FlowRouter.current()
     const { path } = currentContext
-    current.set(path.replace('/', ''))
+    current.set(path.replace('/meteor-blaze-bs4/', ''))
   })
 })
 
@@ -58,7 +58,7 @@ Template.mainTarget.helpers({
 Template.mainTarget.events({
   'change .template-select' (event, templateInstance) {
     const template = templateInstance.$(event.currentTarget).val()
-    FlowRouter.go(`/${template}`)
+    FlowRouter.go(`/meteor-blaze-bs4/${template}`)
     templateInstance.state.set('current', template)
   },
   'click .toggle-fluid' (event, templateInstance) {

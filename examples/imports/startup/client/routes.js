@@ -3,7 +3,7 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
 import { Routes } from '../../api/Routes'
 
 Routes.forEach(route => {
-  const path = `/${route.template}`
+  const path = `/meteor-blaze-bs4/${route.template}`
 
   FlowRouter.route(path, {
     name: route.template,
@@ -22,8 +22,8 @@ Routes.forEach(route => {
 })
 
 // Create 404 route (catch-all)
-FlowRouter.route('/', {
-  triggersEnter: [() => FlowRouter.go('/about')],
+FlowRouter.route('/meteor-blaze-bs4', {
+  triggersEnter: [() => FlowRouter.go('/meteor-blaze-bs4/about')],
   waitOn() {
     return Routes[0].load() // instant fix to handle redirect and async loading
   }
@@ -31,5 +31,5 @@ FlowRouter.route('/', {
 
 // Create 404 route (catch-all)
 FlowRouter.route('*', {
-  triggersEnter: [() => FlowRouter.go('/about')]
+  triggersEnter: [() => FlowRouter.go('/meteor-blaze-bs4/about')]
 })
