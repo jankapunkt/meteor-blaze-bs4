@@ -40,7 +40,7 @@
 	<p>Just pass your paramters to manipulate the component rendering:</p>
 
 	<div class="card-body">
-		{{> button type="primary" label="Click me" }}
+        {{#if loadComplete}}{{> button type="primary" label="Click me" }}{{/if}}
 	</div>
 
 	{{#code}}
@@ -53,10 +53,12 @@
 	<p>Many components are flexible enough to allow to inject content:</p>
 
 	<div class="card-body">
+    {{#if loadComplete}}
 		{{#button type="primary"}}
 			<i class="fas fa fa-fw fa-question"></i>
 			<span>Click me</span>
 		{{/button}}
+    {{/if}}
 	</div>
 
 	{{#code}}

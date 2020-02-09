@@ -20,7 +20,7 @@ Template.mainTarget.onCreated(function () {
 
   Promise.all([
     BlazeBs4.navbar.load(),
-    BlazeBs4.collapse.load()
+    BlazeBs4.collapse.load(),
   ]).then(() => instance.state.set('navLoaded', true))
 
   instance.autorun(() => {
