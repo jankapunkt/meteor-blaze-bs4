@@ -7,7 +7,7 @@ import './toast.html'
 
 BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide = true, delay = 5000, headerBg = 'warning', headerFg = 'light', transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true, position = 'top-right' }) {
   const self = this
-  var id = Random.id()
+  let id = Random.id()
   if (showId) small = id
   const toast = {
     id: id,
@@ -28,7 +28,7 @@ BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide =
   if (parentNode) {
     const nextNodeQuery = `.toasts.${position.replace('-', '.')} .toast`
     const nextNode = document.querySelector(nextNodeQuery)
-    var view = null
+    let view = null
     if (nextNode && prepend === true) {
       view = Blaze.renderWithData(Template.toast_entry, toast, parentNode, nextNode)
     } else {
@@ -51,8 +51,8 @@ Template.toast.onRendered(function () {
   //
   // keep top toasts visible when scrolling
   //
-  var $document = $(document)
-  var className = 'hasScrolled'
+  let $document = $(document)
+  let className = 'hasScrolled'
 
   $document.scroll(function () {
     const s = $document.scrollTop()
@@ -96,6 +96,9 @@ Template.toast_entry.events({
     const toast = event.currentTarget
     if (BlazeBs4.toast.debug) console.log(`hidden ${toast.id}`)
     // since we Blaze.renderWithData we need to Blaze.remove
-    Blaze.remove(instance.view)
+    // delay removal so parent event handlers fire
+    Meteor.setTimeout(() => {
+      Blaze.remove(instance.view)
+    }, 500)
   }
 })
