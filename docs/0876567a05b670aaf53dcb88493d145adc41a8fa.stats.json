@@ -3,22 +3,22 @@
     "name": "standard-minifier-js",
     "version": "2.4.1"
   },
-  "totalMinifiedBytes": 1023468,
-  "totalMinifiedGzipBytes": 240902,
+  "totalMinifiedBytes": 1068490,
+  "totalMinifiedGzipBytes": 245347,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9484,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      337553,
+      337558,
       {
         "node_modules": {
           "meteor": {
             "modules": {
               "client.js": 124,
               "css.js": 261,
-              "install-packages.js": 2119,
+              "install-packages.js": 2124,
               "process.js": 347,
               "reify.js": 71,
               "stubs.js": 97,
@@ -141,7 +141,7 @@
       }
     ],
     "packages/dynamic-import.js": [
-      8218,
+      4583,
       {
         "node_modules": {
           "meteor": {
@@ -149,7 +149,7 @@
               "client.js": 1552,
               "cache.js": 1930,
               "common.js": 60,
-              "dynamic-versions.js": 4275
+              "dynamic-versions.js": 640
             }
           }
         }
@@ -535,107 +535,107 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      4629,
+      53188,
       {
         "node_modules": {
           "meteor": {
             "jkuester:blaze-bs4": {
-              "blaze-bs4.js": 1505,
               "alert": {
-                "alert.html": 23,
-                "template.alert.js": 2,
-                "alert.js": 36
+                "alert.html": 57,
+                "template.alert.js": 1212,
+                "alert.js": 610
               },
               "badge": {
-                "badge.html": 23,
-                "template.badge.js": 2,
-                "badge.js": 16
+                "badge.html": 57,
+                "template.badge.js": 1322,
+                "badge.js": 39
               },
               "breadcrumb": {
-                "breadcrumb.html": 28,
-                "template.breadcrumb.js": 2,
-                "breadcrumb.js": 21
+                "breadcrumb.html": 62,
+                "template.breadcrumb.js": 1040,
+                "breadcrumb.js": 44
               },
               "button": {
-                "button.html": 24,
-                "template.button.js": 2,
-                "button.js": 57
+                "button.html": 58,
+                "template.button.js": 2589,
+                "button.js": 237
               },
               "card": {
-                "card.html": 22,
-                "template.card.js": 2,
-                "card.js": 15
+                "card.html": 56,
+                "template.card.js": 9027,
+                "card.js": 38
               },
               "collapse": {
-                "collapse.html": 26,
-                "template.collapse.js": 2,
-                "collapse.js": 19
+                "collapse.html": 60,
+                "template.collapse.js": 524,
+                "collapse.js": 42
               },
               "dropdown": {
-                "dropdown.html": 26,
-                "template.dropdown.js": 2,
-                "dropdown.js": 55
+                "dropdown.html": 60,
+                "template.dropdown.js": 3122,
+                "dropdown.js": 804
               },
               "item": {
-                "item.html": 22,
-                "template.item.js": 2,
-                "item.js": 106
+                "item.html": 56,
+                "template.item.js": 3733,
+                "item.js": 1100
               },
               "jumbotron": {
-                "jumbotron.html": 27,
-                "template.jumbotron.js": 2,
-                "jumbotron.js": 20
+                "jumbotron.html": 61,
+                "template.jumbotron.js": 484,
+                "jumbotron.js": 43
               },
               "link": {
-                "link.html": 22,
-                "template.link.js": 2,
-                "link.js": 71
+                "link.html": 56,
+                "template.link.js": 554,
+                "link.js": 570
               },
               "listgroup": {
-                "listgroup.html": 27,
-                "template.listgroup.js": 2,
-                "listgroup.js": 20
+                "listgroup.html": 61,
+                "template.listgroup.js": 2423,
+                "listgroup.js": 43
               },
               "modal": {
-                "modal.html": 23,
-                "template.modal.js": 2,
-                "modal.js": 16
+                "modal.html": 57,
+                "template.modal.js": 2827,
+                "modal.js": 39
               },
               "nav": {
-                "nav.html": 21,
-                "template.nav.js": 2,
-                "nav.js": 14
+                "nav.html": 55,
+                "template.nav.js": 2049,
+                "nav.js": 37
               },
               "navbar": {
-                "navbar.html": 24,
-                "template.navbar.js": 2,
-                "navbar.js": 17
+                "navbar.html": 58,
+                "template.navbar.js": 2361,
+                "navbar.js": 40
               },
               "progress": {
-                "progress.html": 26,
-                "template.progress.js": 2,
-                "progress.js": 19
+                "progress.html": 60,
+                "template.progress.js": 1612,
+                "progress.js": 42
               },
               "spinner": {
-                "spinner.html": 25,
-                "template.spinner.js": 2,
-                "spinner.js": 18
-              },
-              "toast": {
-                "toast.css": 18,
-                "toast.html": 23,
-                "template.toast.js": 2,
-                "toast.js": 109
+                "spinner.html": 59,
+                "template.spinner.js": 993,
+                "spinner.js": 41
               },
               "tooltip": {
-                "tooltip.html": 25,
-                "template.tooltip.js": 2,
-                "tooltip.js": 38
+                "tooltip.html": 59,
+                "template.tooltip.js": 484,
+                "tooltip.js": 610
+              },
+              "blaze-bs4-sync.js": 1266,
+              "toast": {
+                "toast.css": 395,
+                "toast.html": 57,
+                "template.toast.js": 1955,
+                "toast.js": 2796
               },
               "utils": {
-                "atts.js": 2,
-                "dataAtts.js": 43,
-                "getParentTemplate.js": 2
+                "atts.js": 178,
+                "dataAtts.js": 442,
+                "getParentTemplate.js": 323
               }
             }
           }
@@ -728,7 +728,7 @@
       {}
     ],
     "app/app.js": [
-      251462,
+      251555,
       {
         "imports": {
           "ui": {
@@ -844,7 +844,7 @@
         "client": {
           "main.html": 56,
           "template.main.js": 3967,
-          "main.js": 1574
+          "main.js": 1667
         }
       }
     ]

@@ -4,7 +4,7 @@ import { ReactiveDict } from 'meteor/reactive-dict'
 import { Themes } from '../imports/api/Themes'
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
 import { Routes } from '../imports/api/Routes'
-import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
+import { BlazeBs4, Status } from 'meteor/jkuester:blaze-bs4'
 import '../imports/startup/client/bootstrap'
 import '../imports/startup/client/routes'
 import '../imports/startup/client/templateHelpers'
@@ -13,6 +13,8 @@ import './main.html'
 
 const allTemplates = Object.values(Routes)
 const current = new ReactiveVar()
+
+console.info('[BlazeBs4]: startup ==<load Templates sync?>==> ', Status.isSync())
 
 Template.mainTarget.onCreated(function () {
   const instance = this

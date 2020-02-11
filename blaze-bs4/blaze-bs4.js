@@ -109,3 +109,7 @@ export const BlazeBs4 = {
     }
   }
 }
+
+export const Status = {
+  isSync: () => false
+}
