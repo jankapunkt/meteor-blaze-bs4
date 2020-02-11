@@ -49,6 +49,9 @@
 		{{/navbar}}
 	{{/if}}
 	<main class="container{{#if fluid}}-fluid{{/if}} my-4">
+		{{#if navLoaded}}
+			{{>toast}}
+		{{/if}}
 		{{> yield}}
 	</main>
 	<footer class="container-fluid w-100 bg-dark text-light py-3">

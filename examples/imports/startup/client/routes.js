@@ -21,7 +21,7 @@ Routes.forEach(route => {
   })
 })
 
-// Create 404 route (catch-all)
+
 FlowRouter.route('/meteor-blaze-bs4', {
   triggersEnter: [() => FlowRouter.go('/meteor-blaze-bs4/about')],
   waitOn() {

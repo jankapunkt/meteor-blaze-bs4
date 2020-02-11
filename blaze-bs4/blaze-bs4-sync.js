@@ -113,6 +113,12 @@ export const BlazeBs4 = {
     load () {
       import './tooltip/tooltip.js'
     },
-
+  },
+  toast: {
+    template: 'toasts',
+    debug: false,
+    load() {
+      import './toast/toast.js'
+    }
   }
 }

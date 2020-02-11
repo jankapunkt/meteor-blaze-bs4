@@ -1,0 +1,153 @@
+<template name='toasts'>
+  <h1>Toasts</h1>
+  <hr>
+
+  {{#if loaded}}
+
+  <h2 class="my-4">Add Toasts</h2>
+
+  {{#each themeColors}}
+    {{> button colortype=this data-color=this label=this}}
+  {{/each}}
+
+  <h4 class="my-4">Parameters</h4>
+
+    <div class="form-group form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" value="" id="transparent">
+      <label class="form-check-label" for="transparent"> Transparent </label>
+    </div>
+    <div class="form-group form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" value="" id="autohide">
+      <label class="form-check-label" for="autohide"> Autohide </label>
+    </div>
+    <div class="form-group form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" checked value="" id="prepend">
+      <label class="form-check-label" for="prepend"> Prepend </label>
+    </div>
+
+  <p class="my-4">Toasts are added using the <code>BlazeBs4.toast.add</code> function. The following example shows how the toasts are implemented for the form above:</p>
+
+  {{#code}}
+{{|#each themeColors}}
+  {{|> button colortype=this data-color=this label=this}}
+{{|/each}}
+
+const positions = ['top-right', 'top-left', 'bottom-left', 'bottom-right']
+Template.toasts.onCreated(function () {
+  const instance = this
+  instance.counter = 1
+  instance.position = 0
+  instance.loaded = new ReactiveVar(false)
+  instance.transparent = false
+  instance.autohide = false
+  instance.prepend = true
+
+  Promise.all([
+    BlazeBs4.jumbotron.load()
+  ]).then(() => instance.loaded.set(true))
+})
+Template.toasts.helpers({
+  loaded () {
+    return Template.instance().loaded.get()
+  }
+})
+Template.toasts.events({
+  'change input#transparent' (event, instance) {
+    instance.transparent = event.currentTarget.checked
+  },
+  'change input#autohide'(event, instance) {
+    instance.autohide = event.currentTarget.checked
+  },
+  'change input#prepend'(event, instance) {
+    instance.prepend = event.currentTarget.checked
+  },
+  'click button' (event, instance) {
+    const color = event.currentTarget.dataset.color
+    BlazeBs4.toast.add({
+      label: `Hello World ${color}`,
+      body: `&lt;p&gt;This is my ${englishCount(instance.counter++)} toast&lt;/p&gt;&lt;p&gt;${new Date()}&lt;/p&gt;`,
+      headerBg: color,
+      headerFg: color === 'light' ? 'dark' : 'light',
+      width: '30em',
+      transparent: instance.transparent,
+      autohide: instance.autohide,
+      prepend: instance.prepend,
+      animation: true,
+      showId: true,
+      position: positions[instance.position++]
+    })
+    if (instance.position>=positions.length) instance.position = 0
+  }
+})
+  {{/code}}
+
+      <h2 class="my-4">Toast parent</h2>
+
+      <p class="my-4">In order to make toasts work properly, you need to integrate the toast-parent in your render target (or body template).
+    The following steps illustrate this using a Template target, which is used by common routers (in this example <code>ostrio:flow-router-extra</code>):</p>
+
+      <h3 class="my-4">1. Load the BlazeBs4.toast component</h3>
+
+      <p>First, you always need to load the toast component (and all other components, required for your layout):</p>
+
+{{#code}}
+Template.mainTarget.onCreated(function () {
+  const instance = this
+  instance.state = new ReactiveDict()
+
+  Promise.all([
+    BlazeBs4.navbar.load(),
+    BlazeBs4.collapse.load(),
+    BlazeBs4.toast.load(),
+  ]).then(() => instance.state.set('navLoaded', true))
+})
+{{/code}}
+
+
+  <h3 class="my-4">2. Embed the toasts so they are visible on every page</h3>
+
+  <p class="my-4">Example A: The following illustrates a Template layout, which is used as render target for dynamically rendering routes.</p>
+
+{{#code}}
+&lt;template name="mainTarget"&gt;
+	&lt;main&gt;
+		{{|#if navLoaded}}
+			{{|>toast}}
+		{{|/if}}
+		{{|> yield}}
+  &lt;main&gt;
+&lt;template&gt;
+{{/code}}
+
+      <p class="my-4">Example B: The following illustrates a classic body-based Template layout:</p>
+
+{{#code}}
+&lt;body&gt;
+    {{|#if navLoaded}}
+        {{|>toast}}
+    {{|/if}}
+    {{|>layout}}
+&lt;/body&gt;
+{{/code}}
+
+
+  <h2 class="my-4">Arguments and defaults</h2>
+
+{{#code}}
+BlazeBs4.toast.add = function({
+  label = "test",
+  body = "body",
+  small = '',
+  autohide = true,
+  delay = 5000,
+  headerBg = "warning",
+  headerFg = "light",
+  transparent = true,
+  animation = true,
+  showId = false,
+  width = 'inherit',
+  position = 'top-right' // top-right, top-left, bottom-right, bottom-left
+})
+{{/code}}
+  {{/if}}
+</template>
