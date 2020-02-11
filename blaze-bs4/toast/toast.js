@@ -6,12 +6,13 @@ import { Blaze } from 'meteor/blaze'
 import './toast.css'
 import './toast.html'
 
-BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide = true, delay = 5000, headerBg = 'warning', headerFg = 'light', transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true, position = 'top-right' }) {
+BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide = true, delay = 5000, headerBg = 'warning', headerFg = 'light', transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true, position = 'top-right', debug = BlazeBs4.toast.debug }) {
   const self = this
   let id = Random.id()
   if (showId) small = id
   const toast = {
     id: id,
+    debug: debug,
     active: true,
     rendered: false,
     label: label,
@@ -35,7 +36,7 @@ BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide =
     } else {
       view = Blaze.renderWithData(Template.toast_entry, toast, parentNode)
     }
-    if (BlazeBs4.toast.debug) console.log(`created toast ${toast.id}`, view)
+    if (debug) console.log(`created toast ${toast.id}`, view)
   } else {
     console.error('BlazeBs4.toast: no parentNode', self)
   }
@@ -68,7 +69,7 @@ Template.toast.onRendered(function () {
 Template.toast_entry.onRendered(function () {
   const instance = this
   instance.element = instance.$('div.toast')
-  if (BlazeBs4.toast.debug) console.log(`${instance.view.name}`, instance.data)
+  if (instance.data.debug) console.log(`${instance.view.name}`, instance.data)
   instance.element
     .toast({
       autohide: instance.data.autohide === true,
@@ -80,7 +81,7 @@ Template.toast_entry.onRendered(function () {
 })
 Template.toast_entry.onDestroyed(function () {
   const instance = this
-  if (BlazeBs4.toast.debug) console.info(`${instance.view.name}.onDestroyed ${instance.data.id}`)
+  if (instance.data.debug) console.info(`${instance.view.name}.onDestroyed ${instance.data.id}`)
 })
 Template.toast_entry.helpers({
   transparent () {
@@ -89,13 +90,33 @@ Template.toast_entry.helpers({
   }
 })
 Template.toast_entry.events({
-  'shown.bs.toast div.toast' (event) {
+  'show.bs.toast div.toast' (event, templateInstance) {
     const toast = event.currentTarget
-    if (BlazeBs4.toast.debug) console.log(`shown ${toast.id}`)
+    if (templateInstance.data.onShow) {
+      templateInstance.data.onShow({ toast })
+    }
+    if (templateInstance.data.debug) console.log(`show ${toast.id}`)
   },
-  'hidden.bs.toast div.toast' (event, instance) {
+  'shown.bs.toast div.toast' (event, templateInstance) {
     const toast = event.currentTarget
-    if (BlazeBs4.toast.debug) console.log(`hidden ${toast.id}`)
+    if (templateInstance.data.onShown) {
+      templateInstance.data.onShown({ toast })
+    }
+    if (templateInstance.data.debug) console.log(`shown ${toast.id}`)
+  },
+  'hide.bs.toast div.toast' (event, templateInstance) {
+    const toast = event.currentTarget
+    if (templateInstance.data.onHide) {
+      templateInstance.data.onHide({ toast })
+    }
+    if (templateInstance.data.debug) console.log(`hide ${toast.id}`)
+  },
+  'hidden.bs.toast div.toast' (event, templateInstance) {
+    const toast = event.currentTarget
+    if (templateInstance.data.onHidden) {
+      templateInstance.data.onHidden({ toast })
+    }
+    if (templateInstance.data.debug) console.log(`hidden ${toast.id}`)
     // since we Blaze.renderWithData we need to Blaze.remove
     // delay removal so parent event handlers fire
     Meteor.setTimeout(() => {
