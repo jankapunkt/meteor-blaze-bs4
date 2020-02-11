@@ -135,6 +135,7 @@ Template.mainTarget.onCreated(function () {
 
 {{#code}}
 BlazeBs4.toast.add = function({
+  id = Random.id(),
   label = "test",
   body = "body",
   small = '',
@@ -146,8 +147,30 @@ BlazeBs4.toast.add = function({
   animation = true,
   showId = false,
   width = 'inherit',
-  position = 'top-right' // top-right, top-left, bottom-right, bottom-left
+  debug = BlazeBs4.toast.debug, // defaults to undefined
+  position = 'top-right' // top-right, top-left, bottom-right, bottom-left,
+  onShow = undefined,
+  onShown = undefined,
+  onHide = undefined,
+  onHidden = undefined
 })
 {{/code}}
+
+  <h2 class="my-4">Events</h2>
+
+  <p class="my-4">The toasts allows you to easily listen for the events <code>show.bs.toast</code>, <code>shown.bs.toast</code>, <code>hide.bs.toast</code> and <code>hidden.bs.toast</code>.
+    You can do this by passing the corresponding callback function <code>onShow</code>, <code>onShown</code>, <code>onHide</code> and <code>onHidden</code> as parameter:</p>
+
+{{#code}}
+const id = 'my-cool-toast'
+const onShow = toast => console.log(id, toast.id) // equal
+BlazeBs4.toast.add({ id, onShow })
+{{/code}}
+
+      <h2 class="my-4">Debug</h2>
+
+      <p class="my-4">You can debug toasts on a global level by setting <code>BlazeBs4.toast.debug</code> to <code>true</code>.
+          However, you can also debug on a component level by setting <code>debug</code> to <code>true</code> as parameter for <code>BlazeBs4.toast.add</code></p>
+
   {{/if}}
 </template>

@@ -1,7 +1,7 @@
-import './toasts.html'
 import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
 import { Template } from 'meteor/templating'
 import { ReactiveVar } from 'meteor/reactive-var'
+import './toasts.html'
 
 const positions = ['top-right', 'top-left', 'bottom-left', 'bottom-right']
 
