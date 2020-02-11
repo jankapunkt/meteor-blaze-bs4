@@ -3,22 +3,22 @@
     "name": "standard-minifier-js",
     "version": "2.4.1"
   },
-  "totalMinifiedBytes": 1052609,
-  "totalMinifiedGzipBytes": 241417,
+  "totalMinifiedBytes": 1023468,
+  "totalMinifiedGzipBytes": 240902,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9484,
     "packages/meteor-base.js": 31,
     "packages/mobile-experience.js": 37,
     "packages/modules-runtime.js": 4199,
     "packages/modules.js": [
-      337506,
+      337553,
       {
         "node_modules": {
           "meteor": {
             "modules": {
               "client.js": 124,
               "css.js": 261,
-              "install-packages.js": 2072,
+              "install-packages.js": 2119,
               "process.js": 347,
               "reify.js": 71,
               "stubs.js": 97,
@@ -141,7 +141,7 @@
       }
     ],
     "packages/dynamic-import.js": [
-      4583,
+      8218,
       {
         "node_modules": {
           "meteor": {
@@ -149,7 +149,7 @@
               "client.js": 1552,
               "cache.js": 1930,
               "common.js": 60,
-              "dynamic-versions.js": 640
+              "dynamic-versions.js": 4275
             }
           }
         }
@@ -236,12 +236,12 @@
       }
     ],
     "packages/base64.js": [
-      1823,
+      1847,
       {
         "node_modules": {
           "meteor": {
             "base64": {
-              "base64.js": 1454
+              "base64.js": 1478
             }
           }
         }
@@ -535,101 +535,107 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      47810,
+      4629,
       {
         "node_modules": {
           "meteor": {
             "jkuester:blaze-bs4": {
+              "blaze-bs4.js": 1505,
               "alert": {
-                "alert.html": 57,
-                "template.alert.js": 1212,
-                "alert.js": 610
+                "alert.html": 23,
+                "template.alert.js": 2,
+                "alert.js": 36
               },
               "badge": {
-                "badge.html": 57,
-                "template.badge.js": 1322,
-                "badge.js": 39
+                "badge.html": 23,
+                "template.badge.js": 2,
+                "badge.js": 16
               },
               "breadcrumb": {
-                "breadcrumb.html": 62,
-                "template.breadcrumb.js": 1040,
-                "breadcrumb.js": 44
+                "breadcrumb.html": 28,
+                "template.breadcrumb.js": 2,
+                "breadcrumb.js": 21
               },
               "button": {
-                "button.html": 58,
-                "template.button.js": 2589,
-                "button.js": 237
+                "button.html": 24,
+                "template.button.js": 2,
+                "button.js": 57
               },
               "card": {
-                "card.html": 56,
-                "template.card.js": 9027,
-                "card.js": 38
+                "card.html": 22,
+                "template.card.js": 2,
+                "card.js": 15
               },
               "collapse": {
-                "collapse.html": 60,
-                "template.collapse.js": 524,
-                "collapse.js": 42
+                "collapse.html": 26,
+                "template.collapse.js": 2,
+                "collapse.js": 19
               },
               "dropdown": {
-                "dropdown.html": 60,
-                "template.dropdown.js": 3122,
-                "dropdown.js": 804
+                "dropdown.html": 26,
+                "template.dropdown.js": 2,
+                "dropdown.js": 55
               },
               "item": {
-                "item.html": 56,
-                "template.item.js": 3733,
-                "item.js": 1100
+                "item.html": 22,
+                "template.item.js": 2,
+                "item.js": 106
               },
               "jumbotron": {
-                "jumbotron.html": 61,
-                "template.jumbotron.js": 484,
-                "jumbotron.js": 43
+                "jumbotron.html": 27,
+                "template.jumbotron.js": 2,
+                "jumbotron.js": 20
               },
               "link": {
-                "link.html": 56,
-                "template.link.js": 554,
-                "link.js": 570
+                "link.html": 22,
+                "template.link.js": 2,
+                "link.js": 71
               },
               "listgroup": {
-                "listgroup.html": 61,
-                "template.listgroup.js": 2423,
-                "listgroup.js": 43
+                "listgroup.html": 27,
+                "template.listgroup.js": 2,
+                "listgroup.js": 20
               },
               "modal": {
-                "modal.html": 57,
-                "template.modal.js": 2827,
-                "modal.js": 39
+                "modal.html": 23,
+                "template.modal.js": 2,
+                "modal.js": 16
               },
               "nav": {
-                "nav.html": 55,
-                "template.nav.js": 2049,
-                "nav.js": 37
+                "nav.html": 21,
+                "template.nav.js": 2,
+                "nav.js": 14
               },
               "navbar": {
-                "navbar.html": 58,
-                "template.navbar.js": 2361,
-                "navbar.js": 40
+                "navbar.html": 24,
+                "template.navbar.js": 2,
+                "navbar.js": 17
               },
               "progress": {
-                "progress.html": 60,
-                "template.progress.js": 1612,
-                "progress.js": 42
+                "progress.html": 26,
+                "template.progress.js": 2,
+                "progress.js": 19
               },
               "spinner": {
-                "spinner.html": 59,
-                "template.spinner.js": 993,
-                "spinner.js": 41
+                "spinner.html": 25,
+                "template.spinner.js": 2,
+                "spinner.js": 18
+              },
+              "toast": {
+                "toast.css": 18,
+                "toast.html": 23,
+                "template.toast.js": 2,
+                "toast.js": 109
               },
               "tooltip": {
-                "tooltip.html": 59,
-                "template.tooltip.js": 484,
-                "tooltip.js": 610
+                "tooltip.html": 25,
+                "template.tooltip.js": 2,
+                "tooltip.js": 38
               },
-              "blaze-bs4-sync.js": 1166,
               "utils": {
-                "atts.js": 178,
-                "dataAtts.js": 442,
-                "getParentTemplate.js": 323
+                "atts.js": 2,
+                "dataAtts.js": 43,
+                "getParentTemplate.js": 2
               }
             }
           }
@@ -650,7 +656,7 @@
       }
     ],
     "packages/ostrio_flow-router-extra.js": [
-      46520,
+      46587,
       {
         "node_modules": {
           "meteor": {
@@ -660,8 +666,8 @@
                 "active.route.js": 3671,
                 "group.js": 1638,
                 "modules.js": 296,
-                "renderer.js": 5939,
-                "route.js": 5349,
+                "renderer.js": 6046,
+                "route.js": 5309,
                 "router.js": 7798,
                 "triggers.js": 1067
               },
@@ -689,6 +695,18 @@
         }
       }
     ],
+    "packages/force-ssl.js": [
+      445,
+      {
+        "node_modules": {
+          "meteor": {
+            "force-ssl": {
+              "force_ssl_both.js": 67
+            }
+          }
+        }
+      }
+    ],
     "packages/webapp.js": [
       694,
       {
@@ -710,15 +728,15 @@
       {}
     ],
     "app/app.js": [
-      241642,
+      251462,
       {
         "imports": {
           "ui": {
             "templates": {
               "about": {
                 "about.html": 57,
-                "template.about.js": 6228,
-                "about.js": 205
+                "template.about.js": 6488,
+                "about.js": 508
               },
               "alert": {
                 "alert.html": 57,
@@ -786,7 +804,7 @@
               },
               "navbars": {
                 "navbars.html": 59,
-                "template.navbars.js": 21488,
+                "template.navbars.js": 21484,
                 "navbars.js": 41
               },
               "progress": {
@@ -799,6 +817,11 @@
                 "template.spinners.js": 9366,
                 "spinners.js": 42
               },
+              "toasts": {
+                "toasts.html": 58,
+                "template.toasts.js": 7452,
+                "toasts.js": 1245
+              },
               "tooltips": {
                 "tooltips.html": 60,
                 "template.tooltips.js": 5931,
@@ -809,19 +832,19 @@
           "startup": {
             "client": {
               "bootstrap.js": 141,
-              "routes.js": 510,
+              "routes.js": 605,
               "templateHelpers.js": 196
             }
           },
           "api": {
-            "Routes.js": 2294,
+            "Routes.js": 2396,
             "Themes.js": 737
           }
         },
         "client": {
           "main.html": 56,
-          "template.main.js": 3767,
-          "main.js": 1524
+          "template.main.js": 3967,
+          "main.js": 1574
         }
       }
     ]
