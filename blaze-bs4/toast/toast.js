@@ -6,7 +6,7 @@ import { Blaze } from 'meteor/blaze'
 import './toast.css'
 import './toast.html'
 
-BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide = true, delay = 5000, headerBg = 'warning', headerFg = 'light', transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true, position = 'top-right', debug = BlazeBs4.toast.debug }) {
+BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide = true, delay = 5000, headerBg = 'warning', headerFg = 'light', transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true, position = 'top-right', debug = BlazeBs4.toast.debug, onShow, onShown, onHide, onHidden }) {
   const self = this
   let id = Random.id()
   if (showId) small = id
@@ -24,7 +24,8 @@ BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide =
     small: small,
     transparent: transparent,
     width: width,
-    animation: animation
+    animation: animation,
+    onShow, onShown, onHide, onHidden
   }
   const parentNode = BlazeBs4.toast.positions[position] ? BlazeBs4.toast.positions[position] : BlazeBs4.toast.positions['top-right']
   if (parentNode) {
@@ -120,7 +121,7 @@ Template.toast_entry.events({
     // since we Blaze.renderWithData we need to Blaze.remove
     // delay removal so parent event handlers fire
     Meteor.setTimeout(() => {
-      Blaze.remove(instance.view)
+      Blaze.remove(templateInstance.view)
     }, 500)
   }
 })
