@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.4.1"
   },
-  "totalMinifiedBytes": 1013827,
-  "totalMinifiedGzipBytes": 238502,
+  "totalMinifiedBytes": 1023468,
+  "totalMinifiedGzipBytes": 240902,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9484,
     "packages/meteor-base.js": 31,
@@ -141,7 +141,7 @@
       }
     ],
     "packages/dynamic-import.js": [
-      7982,
+      8218,
       {
         "node_modules": {
           "meteor": {
@@ -149,7 +149,7 @@
               "client.js": 1552,
               "cache.js": 1930,
               "common.js": 60,
-              "dynamic-versions.js": 4039
+              "dynamic-versions.js": 4275
             }
           }
         }
@@ -535,12 +535,12 @@
     "packages/templating-runtime.js": 3045,
     "packages/templating.js": 103,
     "packages/jkuester_blaze-bs4.js": [
-      4317,
+      4629,
       {
         "node_modules": {
           "meteor": {
             "jkuester:blaze-bs4": {
-              "blaze-bs4.js": 1420,
+              "blaze-bs4.js": 1505,
               "alert": {
                 "alert.html": 23,
                 "template.alert.js": 2,
@@ -620,6 +620,12 @@
                 "spinner.html": 25,
                 "template.spinner.js": 2,
                 "spinner.js": 18
+              },
+              "toast": {
+                "toast.css": 18,
+                "toast.html": 23,
+                "template.toast.js": 2,
+                "toast.js": 109
               },
               "tooltip": {
                 "tooltip.html": 25,
@@ -722,7 +728,7 @@
       {}
     ],
     "app/app.js": [
-      242369,
+      251462,
       {
         "imports": {
           "ui": {
@@ -811,6 +817,11 @@
                 "template.spinners.js": 9366,
                 "spinners.js": 42
               },
+              "toasts": {
+                "toasts.html": 58,
+                "template.toasts.js": 7452,
+                "toasts.js": 1245
+              },
               "tooltips": {
                 "tooltips.html": 60,
                 "template.tooltips.js": 5931,
@@ -826,14 +837,14 @@
             }
           },
           "api": {
-            "Routes.js": 2293,
+            "Routes.js": 2396,
             "Themes.js": 737
           }
         },
         "client": {
           "main.html": 56,
-          "template.main.js": 3806,
-          "main.js": 1559
+          "template.main.js": 3967,
+          "main.js": 1574
         }
       }
     ]
