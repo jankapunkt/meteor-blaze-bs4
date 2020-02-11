@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const BlazeBs4 = {
   alert: {
     template: 'alert',
@@ -122,6 +123,7 @@ export const BlazeBs4 = {
     }
   }
 }
+/* eslint-enable */
 
 export const Status = {
   isSync: () => true

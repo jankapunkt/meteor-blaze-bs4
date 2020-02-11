@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor'
 import { Template } from 'meteor/templating'
 import { Random } from 'meteor/random'
 import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
@@ -24,7 +25,10 @@ BlazeBs4.toast.add = function ({ id = Random.id(), label = 'test', body = 'Toast
     transparent: transparent,
     width: width,
     animation: animation,
-    onShow, onShown, onHide, onHidden
+    onShow,
+    onShown,
+    onHide,
+    onHidden
   }
   const parentNode = BlazeBs4.toast.positions[position] ? BlazeBs4.toast.positions[position] : BlazeBs4.toast.positions['top-right']
   if (parentNode) {
@@ -53,8 +57,8 @@ Template.toast.onRendered(function () {
   //
   // keep top toasts visible when scrolling
   //
-  let $document = $(document)
-  let className = 'hasScrolled'
+  const $document = window.$(document)
+  const className = 'hasScrolled'
 
   $document.scroll(function () {
     const s = $document.scrollTop()
