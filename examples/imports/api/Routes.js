@@ -173,4 +173,14 @@ export const Routes = [ {
       BlazeBs4.tooltip.load(),
   ]
   },
-} ]
+}, {
+  template:'toasts',
+  name:'Toasts',
+  load(){
+    import '../ui/templates/toasts/toasts';
+    return [
+      BlazeBs4.button.load()
+    ]
+  }
+} 
+]

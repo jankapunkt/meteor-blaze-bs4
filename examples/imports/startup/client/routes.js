@@ -24,7 +24,7 @@ Routes.forEach(route => {
 // Create 404 route (catch-all)
 FlowRouter.route('/', {
   triggersEnter: [() => FlowRouter.go('/about')],
-  waitOn() {
+  waitOn () {
     return Routes[0].load() // instant fix to handle redirect and async loading
   }
 })
