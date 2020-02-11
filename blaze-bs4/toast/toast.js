@@ -3,6 +3,7 @@ import { Random } from 'meteor/random'
 import { BlazeBs4 } from 'meteor/jkuester:blaze-bs4'
 import { Blaze } from 'meteor/blaze'
 
+import './toast.css'
 import './toast.html'
 
 BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide = true, delay = 5000, headerBg = 'warning', headerFg = 'light', transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true, position = 'top-right' }) {
@@ -88,7 +89,7 @@ Template.toast_entry.helpers({
   }
 })
 Template.toast_entry.events({
-  'shown.bs.toast div.toast' (event, instance) {
+  'shown.bs.toast div.toast' (event) {
     const toast = event.currentTarget
     if (BlazeBs4.toast.debug) console.log(`shown ${toast.id}`)
   },
