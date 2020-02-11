@@ -6,9 +6,8 @@ import { Blaze } from 'meteor/blaze'
 import './toast.css'
 import './toast.html'
 
-BlazeBs4.toast.add = function ({ label = 'test', body = 'Toast Body', autohide = true, delay = 5000, headerBg = 'warning', headerFg = 'light', transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true, position = 'top-right', debug = BlazeBs4.toast.debug, onShow, onShown, onHide, onHidden }) {
+BlazeBs4.toast.add = function ({ id = Random.id(), label = 'test', body = 'Toast Body', autohide = true, delay = 5000, headerBg = 'warning', headerFg = 'light', transparent = true, small = '', showId = false, width = 'inherit', animation = true, prepend = true, position = 'top-right', debug = BlazeBs4.toast.debug, onShow, onShown, onHide, onHidden }) {
   const self = this
-  let id = Random.id()
   if (showId) small = id
   const toast = {
     id: id,
