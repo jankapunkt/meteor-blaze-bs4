@@ -2,7 +2,7 @@
   "name": "tests",
   "private": true,
   "scripts": {
-    "build": "BBS4_SYNC_IMPORT=1 METEOR_PACKAGE_DIRS=../ meteor meteor-build-client ../docs -t ../build/template.html --path='' --settings=settings.json && cp ../build/loadingScreen.css ../docs && chmod -R 770 ../docs",
+    "build": "BBS4_SYNC_IMPORT=1 METEOR_PACKAGE_DIRS=../ ROOT_URL=\"https://jankapunkt.github.io\" meteor meteor-build-client ../docs -t ../build/template.html --path='' --settings=settings.json && cp ../build/loadingScreen.css ../docs && chmod -R 770 ../docs",
     "update": "METEOR_PACKAGE_DIRS=../ meteor update --all-packages",
     "examples": "METEOR_PACKAGE_DIRS=../ meteor",
     "examples-sync": "BBS4_SYNC_IMPORT=1  METEOR_PACKAGE_DIRS=../ meteor",
