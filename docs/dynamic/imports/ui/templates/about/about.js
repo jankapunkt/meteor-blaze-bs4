@@ -1,2 +1,0 @@
-function module(e,t,l){let o,a,n,s;l.link("meteor/templating",{Template(e){o=e}},0),l.link("meteor/reactive-dict",{ReactiveDict(e){a=e}},1),l.link("../../../api/Routes",{Routes(e){n=e}},2),l.link("meteor/jkuester:blaze-bs4",{BlazeBs4(e){s=e}},3),l.link("./about.html");const i=Object.values(n);o.about.onCreated((function(){const e=this;e.state=new a,Promise.all([s.button.load()]).then(()=>e.state.set("loadComplete",!0))})),o.about.helpers({loadComplete:()=>o.instance().state.get("loadComplete"),templates:()=>i})}
-
