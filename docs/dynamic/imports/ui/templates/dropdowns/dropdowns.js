@@ -1,0 +1,2 @@
+function module(e,l,t){let a;t.link("meteor/templating",{Template(e){a=e}},0),t.link("./dropdowns.html"),a.dropdowns.helpers({getOnShow:()=>e=>global.alert("shown via "+e.relatedTarget.id),getOnShown:()=>e=>global.alert("shown via "+e.relatedTarget.id),getOnHide:()=>e=>global.alert("selected: "+global.$(e.clickEvent.originalEvent.target).data("value")),getOnHidden:()=>e=>global.alert("selected: "+global.$(e.clickEvent.originalEvent.target).data("value"))})}
+
