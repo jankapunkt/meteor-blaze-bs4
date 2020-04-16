@@ -21,10 +21,9 @@ Routes.forEach(route => {
   })
 })
 
-
 FlowRouter.route('/meteor-blaze-bs4', {
   triggersEnter: [() => FlowRouter.go('/meteor-blaze-bs4/about')],
-  waitOn() {
+  waitOn () {
     return Routes[0].load() // instant fix to handle redirect and async loading
   }
 })

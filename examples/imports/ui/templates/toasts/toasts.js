@@ -35,10 +35,10 @@ Template.toasts.events({
   'change input#transparent' (event, instance) {
     instance.transparent = event.currentTarget.checked
   },
-  'change input#autohide'(event, instance) {
+  'change input#autohide' (event, instance) {
     instance.autohide = event.currentTarget.checked
   },
-  'change input#prepend'(event, instance) {
+  'change input#prepend' (event, instance) {
     instance.prepend = event.currentTarget.checked
   },
   'click button' (event, instance) {
@@ -56,6 +56,6 @@ Template.toasts.events({
       showId: true,
       position: positions[instance.position++]
     })
-    if (instance.position>=positions.length) instance.position = 0
+    if (instance.position >= positions.length) instance.position = 0
   }
 })

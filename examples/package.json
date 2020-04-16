@@ -12,8 +12,8 @@
     "test-cli": "meteor test --once --driver-package meteortesting:mocha",
     "visualize": "METEOR_PACKAGE_DIRS=../ meteor --production --extra-packages bundle-visualizer,dynamic-import",
     "visualize-sync": "BBS4_SYNC_IMPORT=1 METEOR_PACKAGE_DIRS=../ meteor --production --extra-packages bundle-visualizer,dynamic-import",
-    "lint": "standard",
-    "lint-fix": "standard --fix"
+    "lint": "standard | snazzy",
+    "lint-fix": "standard --fix | snazzy"
   },
   "dependencies": {
     "@babel/runtime": "^7.9.2",
