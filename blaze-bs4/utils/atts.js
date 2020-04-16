@@ -1,4 +1,4 @@
-export const defaultAtts = ['title', 'tabindex']
+export const defaultAtts = ['title', 'tabindex', 'disabled']
 
 /**
  * Creates attributes from the instance's data. Only undefined values are not added to the atts,

@@ -12,15 +12,23 @@ Template.link.helpers({
 
     const atts = getAtts(attributes, data)
     let classNames = ''
+
     if (data.button) {
-      classNames += `btn btn-${data.button} `
+      classNames += ` btn btn-${data.button} `
     }
     if (data.class) {
-      classNames += `${data.class} `
+      classNames += ` ${data.class} `
     }
+
+    if (data.disabled) {
+      atts.classNames += ` disabled text-muted`
+      atts.href = null
+    }
+
     if (classNames.length > 0) {
       atts.class = classNames
     }
+
     return atts
   },
   dataAttributes () {
