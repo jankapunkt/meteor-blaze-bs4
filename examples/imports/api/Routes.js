@@ -103,11 +103,9 @@ export const Routes = [{
   template: 'links',
   name: 'Links',
   load () {
-    return ([
-      require('../ui/templates/links/links'),
-      BlazeBs4.link.load(),
-      BlazeBs4.tooltip.load()
-    ])
+    import '../ui/templates/links/links'
+    BlazeBs4.link.load()
+    BlazeBs4.tooltip.load()
   }
 }, {
   template: 'listgroups',
