@@ -1,4 +1,5 @@
 <template name="alert">
+	<!-- TODO move atts to attributes helper -->
     <div id="{{id}}" class="bbs4-alert alert alert-{{#if type}}{{type}}{{else}}secondary{{/if}} {{#if dismissible}}alert-dismissible fade show{{/if}}" role="alert">
         {{#with heading}}<h4 class="alert-heading">{{this}}</h4>{{/with}}
         {{> Template.contentBlock ..}}
