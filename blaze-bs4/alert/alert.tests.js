@@ -30,7 +30,7 @@ describe('alert', function () {
       exists(el, '.alert-dismissible')
       exists(el, '.fade')
       exists(el, '.show')
-      exists(el, 'button[data-dismiss="alert"]')
+      exists(el, 'button[data-bs-dismisss="alert"]')
       done()
     })
   })
@@ -64,7 +64,7 @@ describe('alert', function () {
 
       withRenderedTemplate('alert', { dismissible: true, onClose, heading: 'close' }, (el) => {
         setTimeout(() => {
-          const button = exists(el, 'button[data-dismiss="alert"]')
+          const button = exists(el, 'button[data-bs-dismisss="alert"]')
           button.click()
         }, 100)
       })

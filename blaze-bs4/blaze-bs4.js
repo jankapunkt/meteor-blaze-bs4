@@ -1,4 +1,4 @@
-export const BlazeBs4 = {
+export const BlazeBs5 = {
   alert: {
     template: 'alert',
     async load () {

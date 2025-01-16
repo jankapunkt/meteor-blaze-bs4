@@ -1,9 +1,9 @@
 /* eslint-env meteor */
 Package.describe({
-  name: 'jkuester:blaze-bs4',
-  version: '0.16.2',
+  name: 'jkuester:blaze-bs5',
+  version: '1.0.0',
   // Brief, one-line summary of the package.
-  summary: 'Generic Bootstrap 4 components library for Meteor Blaze.',
+  summary: 'Generic Bootstrap 5 components library for Meteor Blaze.',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/jankapunkt/meteor-blaze-bs4.git',
   // By default, Meteor will default to using README.md for documentation.
@@ -14,10 +14,10 @@ Package.describe({
 Package.onUse(function (api) {
   const allowSync = !!(process.env.BBS4_SYNC_IMPORT)
 
-  api.versionsFrom('1.8.0.1')
+  api.versionsFrom(['1.8.0.1', '2.3', '3.0.1'])
   api.use('ecmascript')
   api.use('random')
-  api.use('templating@1.3.2')
+  api.use('templating@1.4.4')
 
   if (allowSync) {
     api.addFiles([
@@ -70,7 +70,7 @@ Package.onTest(function (api) {
   api.use('tracker')
   api.use('practicalmeteor:chai')
   api.use('meteortesting:mocha')
-  api.use('jkuester:blaze-bs4')
+  api.use('jkuester:blaze-bs5')
   api.addFiles([
     'tests/main.tests.html'
   ], 'client')

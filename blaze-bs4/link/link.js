@@ -35,3 +35,7 @@ Template.link.helpers({
     return getDataAtts(Template.instance().data || {})
   }
 })
+
+export const Link = {
+  template: Template.link
+}
